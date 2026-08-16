@@ -1,0 +1,25 @@
+# Robots.txt for Oulun Ju-Jutsu ry - Itsepuolustus Oulu
+# Optimized for Google, Bing, and AI Search Engines (ChatGPT, Perplexity, Gemini, Claude)
+
+User-agent: *
+Allow: /
+
+# Specific AI Search Engine Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap & LLM Locations
+Sitemap: https://www.oulunjujutsu.com/sitemap.xml
+Allow: /llms.txt

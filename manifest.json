@@ -1,0 +1,16 @@
+{
+  "name": "Oulun Ju-Jutsu ry - Hokutoryu",
+  "short_name": "JuJutsuOulu",
+  "description": "Itsepuolustus & Kamppailulajit Oulu | Hokutoryu Ju-Jutsu",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#ff0915",
+  "icons": [
+    {
+      "src": "assets/oulunjujutsu-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

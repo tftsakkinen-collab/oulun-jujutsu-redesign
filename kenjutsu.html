@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Oulun Ju-Jutsu ry - oulunjujutsu.com">
+  <title>Kenjutsu Oulu | Perinteinen Japanilainen Miekkailu &amp; Oulun Ju-Jutsu ry</title>
+  <meta name="description" content="Opi perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu & Hokutoryu Kenjutsu. Miekankäsittely, kata-harjoitteet, paritekniikat ja budo-etiketti Äimäkujalla. 2 ilmais kokeilua!">
+  <link rel="canonical" href="https://www.oulunjujutsu.com/kenjutsu.html">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.oulunjujutsu.com/kenjutsu.html">
+  <meta property="og:title" content="Kenjutsu Oulu | Perinteinen Japanilainen Miekkailu">
+  <meta property="og:description" content="Perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu & Hokutoryu Kenjutsu. Katana-miekankäsittely, kata-muodot ja paritekniikka.">
+  <meta property="og:image" content="https://www.oulunjujutsu.com/assets/Kenjutsu/Kenjutsu_tutustuminen-06926.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.oulunjujutsu.com/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org JSON-LD (GEO & SEO Optimization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SportsActivityLocation",
+        "@id": "https://www.oulunjujutsu.com/#dojo",
+        "name": "Oulun Ju-Jutsu ry – Kenjutsu Oulu",
+        "description": "Perinteisen japanilaisen miekkailun (Kenjutsu) harjoittelukeskus Oulussa.",
+        "url": "https://www.oulunjujutsu.com/kenjutsu.html",
+        "telephone": "+358413274967",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Äimäkuja 6 A, 90400 Oulu",
+          "addressLocality": "Oulu",
+          "postalCode": "90400",
+          "addressCountry": "FI"
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Kenjutsu Peruskurssi Oulu (Japanilainen Miekkailu)",
+        "description": "Perinteisen miekkailutaidon perusteet. Opi bokken-miekan käsittely, kamae-asennot, leikkaukset ja etiketti.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Oulun Ju-Jutsu ry",
+          "sameAs": "https://www.oulunjujutsu.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+</div>
+
+
+  <!-- Cyber Grid Background & Japanese Kanji Watermark -->
+  <div class="background-grid"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Live Social Proof Ticker -->
+  <div id="liveTicker" class="live-ticker"></div>
+
+  <!-- Header & Nav -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/oulunjujutsu-logo.png" alt="Oulun Ju-Jutsu Logo">
+        JU-JUTSU <span>OULU</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="jujutsu.html" class="nav-link nav-link-highlight">Ju-Jutsu</a></li>
+        <li><a href="junnut.html" class="nav-link nav-link-highlight">Junnu-jutsu</a></li>
+        <li><a href="kenjutsu.html" class="nav-link nav-link-highlight active">Kenjutsu</a></li>
+        <li><a href="diesel.html" class="nav-link nav-link-highlight">Diesel-jutsu</a></li>
+        <li><a href="maksut.html" class="nav-link nav-link-highlight">Hinnasto</a></li>
+        <li><a href="index.html#tekniikat" class="nav-link">Videot</a></li>
+        <li><a href="index.html#galleria" class="nav-link">Galleria</a></li>
+        <li><a href="index.html#aikataulut" class="nav-link">Harjoitusajat</a></li>
+        <li>
+          <div class="lang-switcher">
+            <a href="index.html" class="active">FI</a>
+            <span class="lang-divider">|</span>
+            <a href="index-en.html">EN</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="btn btn-primary btn-nav open-enroll-modal">
+            <i class="fa-solid fa-shield-halved"></i> Ilmainen kokeilu
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+
+  <!-- Kenjutsu Hero Section -->
+  <section class="hero" style="min-height: 82vh; padding-top: 160px;">
+    <div class="hero-bg" style="background-image: url('assets/Kenjutsu/Kenjutsu_tutustuminen-06926.jpg');"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container">
+      <div class="hero-content" style="max-width: 860px;">
+        <div class="hero-text-card">
+          <div class="badge badge-pulse" style="border-color: rgba(255, 9, 21, 0.6); background: rgba(255, 9, 21, 0.2);">
+          <i class="fa-solid fa-khanda"></i> Perinteinen Japanilainen Miekkailu • Oulu (Koden Enshin Ryu)
+        </div>
+
+        <h1 class="hero-title brand-font" style="letter-spacing: 0.02em;">
+          Kenjutsu Oulu: <span>Miekankäsittelyn taito, keskittyminen & perinteinen budo.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Kenjutsu (剣術) on perinteistä japanilaista miekkailua, jossa harjoitellaan samurai-miekan (Katana) käyttöä, leikkaustekniikoita, parikatoja sekä tarkkaa etäisyyden hallintaa. Tule kokemaan miekkailun historia ja budo-henki Äimäkujan salillamme.
+        </p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary open-enroll-modal" style="font-size: 1.05rem; padding: 16px 32px;">
+            <i class="fa-solid fa-shield-halved"></i> Varaa paikka Kenjutsu-kokeiluun
+          </button>
+          <a href="#tietoa" class="btn btn-secondary">
+            <i class="fa-solid fa-circle-info"></i> Tutustu Kenjutsuun
+          </a>
+        </div>
+
+        <!-- Google Rating & Info Badge -->
+        <div style="display: flex; align-items: center; gap: 16px; margin-top: 28px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; background: rgba(255,255,255,0.04); border-radius: var(--radius-full); border: 1px solid var(--border-glass);">
+            <i class="fa-solid fa-torii-gate" style="color: var(--brand-red);"></i>
+            <span style="color: #fff; font-size: 0.9rem; font-weight: 600;">Koden Enshin Ryu & Hokutoryu Kenjutsu</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; padding: 10px 18px; background: rgba(255,255,255,0.04); border-radius: var(--radius-full); border: 1px solid var(--border-glass);">
+            <i class="fa-solid fa-clock" style="color: var(--accent-gold);"></i>
+            <span style="color: #fff; font-size: 0.9rem; font-weight: 600;">Tiistaisin klo 19:30 & Lauantaisin klo 13:30</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mitä on Kenjutsu Section -->
+  <section id="tietoa" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fa-solid fa-khanda"></i> Miekkailutaidon Historia & Sisältö</span>
+        <h2 class="section-title">Mitä on kenjutsu-harjoittelu?</h2>
+        <p>Kenjutsu kehittää mielenhallintaa, kehon koordinaatiota, pituuden ja etäisyyden tajua (Ma-ai) sekä räjähtävää tarkkuutta.</p>
+      </div>
+
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="glass-panel" style="padding: 32px;">
+          <div style="font-size: 2rem; color: var(--brand-red); margin-bottom: 14px;"><i class="fa-solid fa-crosshairs"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">1. Miekankäsittely & asennot (Kamae)</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            Harjoittelu alkaa miekan perushallinnasta, oikeista otteista (Tenouchi), leikkauslinjoista (Suburi) ja valmiusasennosta. Opit miten miekkaa liikutetaan taloudellisesti ja tehokkaasti.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 32px;">
+          <div style="font-size: 2rem; color: #60a5fa; margin-bottom: 14px;"><i class="fa-solid fa-people-arrows"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">2. Paritekniikka & kata-harjoitteet</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            Kenjutsussa suurin osa harjoittelusta tapahtuu parin kanssa puumiekoilla (Bokken). Kata-muodot opettavat hyökkäysten väistämistä, miekan sitomista ja vastahyökkäyksiä.
+          </p>
+        </div>
+
+        <div class="glass-panel" style="padding: 32px;">
+          <div style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 14px;"><i class="fa-solid fa-yin-yang"></i></div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">3. Mielenhallinta & etiketti (Reigi)</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            Kenjutsu on vahvasti mielen laji. Dojo-etiketti, keskittyminen ja harjoituskumppanin kunnioitus luovat turvallisen ja henkisesti kehittävän ilmapiirin jokaisiin treeneihin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenjutsu Varusteet Section -->
+  <section class="section" style="background: rgba(255,255,255,0.015);">
+    <div class="container">
+      <div class="glass-panel" style="padding: 44px;">
+        <div class="section-header" style="text-align: left; margin-bottom: 36px;">
+          <span class="badge"><i class="fa-solid fa-shield-halved"></i> Harjoitusvälineet & Asu</span>
+          <h2 class="section-title" style="font-size: 2.2rem;">Mitä varusteita kenjutsussa käytetään?</h2>
+          <p>Aloittaminen on helppoa. Ensimmäisiin treeneihin et tarvitse omia varusteita!</p>
+        </div>
+
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          <div style="background: rgba(255,255,255,0.03); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+            <div style="font-size: 1.4rem; color: var(--brand-red); margin-bottom: 8px;"><i class="fa-solid fa-pen-nib"></i> <strong>Bokken (Puumiekka) & Saya</strong></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Puinen harjoitusmiekka ja muovinen tuppi (saya). Seuraltamme löytyy lainabokkenit aloittelijoille maksutta käyttöösi!</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+            <div style="font-size: 1.4rem; color: #34d399; margin-bottom: 8px;"><i class="fa-solid fa-shirt"></i> <strong>Sisäliikuntavaatteet / Gi</strong></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Ensimmäisille viikoille riittävät verryttelyhousut ja T-paita. Jatkettaessa hankitaan virallinen Gi ja perinteiset miekkailuhousut (Hakama).</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+            <div style="font-size: 1.4rem; color: #60a5fa; margin-bottom: 8px;"><i class="fa-solid fa-helmet-safety"></i> <strong>Sparrivarusteet (Fukuro Shinai)</strong></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Kontaktisparrissa käytetään pehmustettua nahkapäällysteistä fukuro shinai -miekkaa ja miekkailumaskia (1600N) suojamaan mieltä ja kehoa.</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+            <div style="font-size: 1.4rem; color: var(--accent-gold); margin-bottom: 8px;"><i class="fa-solid fa-certificate"></i> <strong>Hihamerkit & Merkinnät</strong></div>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">Viralliseen harjoituspukuun kiinnitetään Kenjutsu-, Hokutoryu-, World Federation of Jujutsu (WFJ) - sekä Oulun seuran hihamerkit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenjutsu Harjoitusajat & Paikka Oulussa -->
+  <section class="section">
+    <div class="container">
+      <div class="glass-panel" style="padding: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center; border: 1px solid rgba(255, 9, 21, 0.35); background: linear-gradient(135deg, rgba(255, 9, 21, 0.08) 0%, rgba(15, 18, 26, 0.95) 100%);">
+        <div>
+          <span class="badge" style="background: rgba(255, 9, 21, 0.2); border-color: rgba(255, 9, 21, 0.5); color: #ff4d56;">
+            <i class="fa-regular fa-clock"></i> Kenjutsu Harjoitusajat Oulussa
+          </span>
+          <h2 style="font-size: 2.2rem; color: #fff; margin: 16px 0;">Harjoittele Äimäkujan salilla</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+            Kenjutsu-harjoitukset pidetään Oulun Ju-Jutsu ry:n omalla ilmastoidulla tatamisalilla osoitteessa <strong>Äimäkuja 6 A, Oulu</strong>.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.03); padding: 14px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+              <i class="fa-solid fa-calendar-day" style="color: var(--brand-red); font-size: 1.3rem;"></i>
+              <div>
+                <strong style="color: #fff; display: block;">Tiistaisin klo 19:30 – 21:00</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Kenjutsu-tekniikka & pariharjoitteet (Kaikki tasot)</span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.03); padding: 14px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+              <i class="fa-solid fa-calendar-day" style="color: var(--accent-gold); font-size: 1.3rem;"></i>
+              <div>
+                <strong style="color: #fff; display: block;">Lauantaisin klo 13:30 – 15:00</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Kata, leikkaus & sparrivuoro (Sopimuksen mukaan)</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary open-enroll-modal">
+            <i class="fa-solid fa-shield-halved"></i> Ilmoittaudu 2x Ilmaiseen Kokeiluun
+          </button>
+        </div>
+
+        <div style="border-radius: var(--radius-md); overflow: hidden; height: 380px; border: 1px solid var(--border-glass); position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
+          <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06931.jpg" alt="Kenjutsu Katana Guard Stance Oulu" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 18px 22px; color: #fff;">
+            <div style="font-weight: 700; font-size: 1.05rem;"><i class="fa-solid fa-camera" style="color: var(--brand-red); margin-right: 8px;"></i> Kenjutsu Kamae Guard Stance</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Perinteinen miekan valmiusasento Oulun salilla</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenjutsu Visual Showcase / Gallery -->
+  <section class="section" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fa-solid fa-camera-retro"></i> Kenjutsu Kuvamateriaali</span>
+        <h2 class="section-title">Valokuvia kenjutsu-harjoituksista</h2>
+        <p>Tutustu salillamme taltioituihin aitoihin Kenjutsu-hetkiin:</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Budo – Miekkailuharjoitus salilla" data-desc="Perinteisen japanilaisen miekkailun pariharjoitus puumiekoilla (Bokken) Äimäkujan salilla.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06907.jpg" alt="Kenjutsu miekkailuharjoitus Oulu" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Kenjutsu Budo</span>
+              <h4 class="gallery-item-title">Bokken-paritekniikka</h4>
+              <p class="gallery-item-sub">Isku- ja torjuntakuviot salillamme</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Katana – Keskittyminen ja leikkaukset" data-desc="Aito perinteisen miekkailun keskittyminen ja tekniikan hiominen Hakama-puvussa.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06926.jpg" alt="Kenjutsu Katana leikkaus" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Katana & kamae</span>
+              <h4 class="gallery-item-title">Katana & leikkaustekniikka</h4>
+              <p class="gallery-item-sub">Mielen rauha ja terävä tarkkuus</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Oulu – Kamae & Valmiusasento" data-desc="Miekan valmiusasento ja etäisyyden hallinta tatamilla.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06931.jpg" alt="Kenjutsu Kamae valmiusasento" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Kenjutsu Oulu</span>
+              <h4 class="gallery-item-title">Valmiusasento & katse</h4>
+              <p class="gallery-item-sub">Koden Enshin Ryu & Hokutoryu</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu-parikatat – Väistöt & Torjunnat" data-desc="Puumiekoilla tehtävä kontrolloitu parikata harjoitussalilla.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/DSC04655.JPG" alt="Kenjutsu parikata Oulu" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Kenjutsu-parikata</span>
+              <h4 class="gallery-item-title">Väistöt & kontraus</h4>
+              <p class="gallery-item-sub">Aito kamppailuetäisyys parin kanssa</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Hakama – Perinteinen Miekkailuhame" data-desc="Budo-etiketin ja Hakama-miekkailuasun perinteet harjoittelussa.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/DSC04656.JPG" alt="Kenjutsu Hakama asu Oulu" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Miekkailuasu</span>
+              <h4 class="gallery-item-title">Hakama & budo-etiketti</h4>
+              <p class="gallery-item-sub">Perinteinen japanilainen tyyli</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Bokken – Ote & Liikkuminen" data-desc="Etäisyyden tajuta ja jalka-asennot salillamme.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/DSC04662.JPG" alt="Kenjutsu jalka-asennot Bokken" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bokken-harjoitus</span>
+              <h4 class="gallery-item-title">Jalkatyö & tasapaino</h4>
+              <p class="gallery-item-sub">Sulava liikkuminen tatamilla</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Kamae – Valmiusasento Parille" data-desc="Syventävä etäisyys- ja reaktioharjoitus puumiekoilla.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06902.jpg" alt="Kenjutsu Kamae valmiusasento Oulu" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Kamae Etäisyys</span>
+              <h4 class="gallery-item-title">Kamae & reaktioharjoitus</h4>
+              <p class="gallery-item-sub">Tarkka etäisyyden hallinta (Ma-ai)</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="kenjutsu" data-title="Kenjutsu Kata – Perinteinen Samurai-Miekkailu" data-desc="Koden Enshin Ryu miekkailumuodot ja tekniikkasarjat.">
+          <div class="gallery-img-wrapper">
+            <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06922.jpg" alt="Kenjutsu Kata miekkailusarja" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Koden Enshin Ryu</span>
+              <h4 class="gallery-item-title">Perinteinen samurai-kata</h4>
+              <p class="gallery-item-sub">Historialliset tekniikkasarjat Oulussa</p>
+              <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenjutsu UKK Section -->
+  <section id="ukk" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge"><i class="fa-solid fa-circle-question"></i> Kenjutsu UKK</span>
+        <h2 class="section-title">Usein kysytyt kysymykset kenjutsusta</h2>
+        <p>Vastaukset yleisimpiin kysymyksiin miekkailuharjoittelun aloittamisesta:</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Tarvitsenko oman miekan ennen ensimmäisiä treenejä?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Et tarvitse! Seurallamme on runsaasti lainabokkeneita (puumiekkoja) ja tuppeja (saya), joita saat käyttää täysin veloituksetta harjoitusten alussa. Oman bokkenin hankintaan saat ohjaajiltamme neuvoja.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Mitä vaatteita laitan peruskurssin treeneihin?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Tavalliset, joustavat sisäliikuntavaatteet (T-paita ja verryttelyhousut) sekä pyyhe jalkojen pesua varten riittävät erinomaisesti. Harjoittelemme paljain jaloin tatamilla. Virallinen harjoituspuku (Gi) ja Hakama-miekkailuhousut hankitaan vasta kurssin edetessä.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Sopiiko Kenjutsu aloittelijalle ilman aiempaa kamppailutaustaa?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Kyllä sopii! Kenjutsu aloitetaan täysin perusteista. Kaikki liikkeet, asennot ja miekankäsittely opetaan kädestä pitäen turvallisesti kokeneiden ohjaajien opastuksella.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Voiko Kenjutsua ja Ju-Jutsua harjoitella rinnakkain?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ehdottoomasti! Monet seuramme harrastajat treenaavat sekä Hokutoryu Ju-Jutsua että Kenjutsua. Ne tukevat toisiaan erinomaisesti opettamalla etäisyyden hallintaa, tasapainoa ja katu-toimintakykyä.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment Modal -->
+  <div id="enrollModal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" id="closeModal" aria-label="Sulje"><i class="fa-solid fa-xmark"></i></button>
+
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="badge">Ilmoittautuminen</span>
+        <h3 style="font-size: 1.8rem; margin-top: 8px;">Kenjutsu Peruskurssi Oulu</h3>
+        <p style="font-size: 0.9rem;">Täytä tiedot alle. Kahdet ensimmäiset Kenjutsu-treenit ovat ilmaiset!</p>
+      </div>
+
+      <form id="enrollForm">
+        <div class="form-group">
+          <label class="form-label" for="nameInput">Koko nimi</label>
+          <input type="text" id="nameInput" class="form-input" placeholder="Matti Meikäläinen" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="emailInput">Sähköposti</label>
+          <input type="email" id="emailInput" class="form-input" placeholder="matti@esimerkki.fi" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phoneInput">Puhelinnumero</label>
+          <input type="tel" id="phoneInput" class="form-input" placeholder="041 327 4967" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="courseSelect">Valitse harjoitusryhmä</label>
+          <select id="courseSelect" class="form-select">
+            <option value="kenjutsu" selected>Kenjutsu Peruskurssi (Japanilainen miekkailu)</option>
+            <option value="aikuiset">Aikuisten Hokutoryu Ju-Jutsu (15v+)</option>
+            <option value="junnut">Junnu Ju-Jutsu & Turvataidot (7-14v)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+          <i class="fa-solid fa-shield-halved"></i> Varaa ilmainen Kenjutsu-kokeilu
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Gallery Images -->
+  <div id="galleryLightbox" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <button id="closeLightbox" class="lightbox-close" aria-label="Sulje kuva"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lightboxImg" src="" alt="Galleriakuva" class="lightbox-img">
+      <div class="lightbox-caption">
+        <span id="lightboxTag" class="badge"></span>
+        <h3 id="lightboxTitle" style="color: #fff; margin-top: 6px;"></h3>
+        <p id="lightboxDesc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: #06080d; border-top: 1px solid var(--border-glass); padding: 80px 0 40px 0; margin-top: 100px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/oulunjujutsu-logo.png" alt="Logo">
+            JU-JUTSU <span>OULU</span>
+          </a>
+          <p style="margin-top: 16px;">Oulun Ju-Jutsu ry – Suomen johtavaa Hokutoryu Ju-Jutsua ja perinteistä Kenjutsu-miekkailukoulutusta Oulussa.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Pikalinkit</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#kurssit">Ju-Jutsu Peruskurssi</a></li>
+            <li><a href="kenjutsu.html">Kenjutsu Oulu</a></li>
+            <li><a href="index.html#vanhemmille">Junnu Ju-Jutsu</a></li>
+            <li><a href="index.html#treenikassi">Treenikassi & etiketti</a></li>
+            <li><a href="index.html#aikataulut">Harjoitusajat</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Lajiliitto & Yhteisö</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.hokutoryu.com" target="_blank" rel="noopener">Hokutoryu Ju-Jutsu Finland</a></li>
+            <li><a href="#">Kenjutsu Finland</a></li>
+            <li><a href="#">Säännöt & etiketti</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Seuraa meitä</h4>
+          <div class="social-links" style="display: flex; gap: 12px; margin-top: 12px;">
+            <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Oulun Ju-Jutsu ry • Kenjutsu Oulu. Kaikki oikeudet pidätetään.</p>
+        <p style="font-size: 0.85rem; color: var(--text-dim);">Äimäkuja 6 A, 90400 Oulu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:0413274967" class="mobile-action-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span>Soita</span>
+    </a>
+    <a href="https://maps.google.com/?q=Äimäkuja+6+A,+90400+Oulu" target="_blank" rel="noopener" class="mobile-action-btn">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Sali</span>
+    </a>
+    <a href="#" class="mobile-action-btn primary open-enroll-modal">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>Ilmainen kokeilu</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
