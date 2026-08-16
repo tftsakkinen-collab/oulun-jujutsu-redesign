@@ -503,43 +503,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navRecommendations = {
     adult: {
-      title: "Suosituksesi: Hokutoryu Ju-Jutsu Peruskurssi (Aikuiset 15v+)",
+      title: "Suosituksesi: Hokutoryu ju-jutsu peruskurssi (Aikuiset 15 v+)",
       desc: "Suomen tehokkain ja realistisin itsepuolustusjärjestelmä. Opit otteista vapautumiset, iskujen torjunnat, heitot ja hallintaotteet turvallisessa ilmapiirissä.",
-      time: "Ma 19:30–21:00, Ti 18:00–19:30 & To 19:30–21:00 (Äimäkuja 6 A)",
-      price: "110 € / kurssi (Käyvät myös ePassi, Smartum & Edenred)",
-      badge: "2 Ilmaista Kokeilukertaa!",
+      time: "Maanantaisin ja torstaisin klo 19:30–21:00 (Äimäkuja 6 A)",
+      price: "110 € / kurssi (ePassi, Smartum ja Edenred)",
+      badge: "2 ilmaista kokeilukertaa!",
       link: "jujutsu.html"
     },
     juniors: {
-      title: "Suosituksesi: Junnu Ju-Jutsu & Lasten Turvataidot (7–14v)",
+      title: "Suosituksesi: Junnu ju-jutsu ja lasten turvataidot (7–14 v)",
       desc: "Lapsille ja nuorille suunnattu hauska, motivoiva ja kehittävä kamppailuharrastus. Opetamme kehonhallintaa, itsetuntoa, kaatumistaitoja ja turvallista ryhmässä toimimista.",
       time: "Maanantaisin klo 18:30–19:30 (Äimäkuja 6 A)",
-      price: "Kausimaksu • Sisältää lisenssin & vyötutkintovalmiuden",
-      badge: "2 Ilmaista Kokeilukertaa!",
+      price: "Kausimaksu (sisältää lisenssin ja vyötutkintovalmiuden)",
+      badge: "2 ilmaista kokeilukertaa!",
       link: "junnut.html"
     },
     kenjutsu: {
-      title: "Suosituksesi: Kenjutsu (Perinteinen Miekkailu & Kuntoilu)",
+      title: "Suosituksesi: Kenjutsu (perinteinen miekkailu ja kuntoilu)",
       desc: "Japanilainen miekkailutaito ja ase-artturi. Erinomainen kehonhallinta-, keskittymis- ja kuntoilumuoto aikuisille.",
-      time: "Tiistaisin klo 19:30–21:00 & Lauantaisin klo 13:30",
+      time: "Tiistaisin klo 19:30–21:00 & lauantaisin klo 13:30",
       price: "Sama harjoitusmaksu kattaa kaikki seuran lajit!",
-      badge: "Sopii Kaikenikäisille!",
+      badge: "Sopii kaikenikäisille!",
       link: "kenjutsu.html"
     },
     advanced: {
-      title: "Suosituksesi: Hokutoryu Jatkoryhmä & Diesel-ryhmä",
+      title: "Suosituksesi: Hokutoryu jatkoryhmä ja Diesel-ryhmä",
       desc: "Sinulla on jo vähintään keltaisen vyön arvo tai aiempaa kamppailutaustaa. Tervetuloa mukaan seuran aktiiviseen jatkoryhmään ja No-Gi Diesel-treeniporukkaan!",
-      time: "Tiistaisin & Torstaisin klo 18:00–19:30 • Perjantaisin Diesel-ryhmä",
-      price: "Seuran Harjoitusmaksu (Kausi / Vuosi)",
-      badge: "Kokeneet Harrastajat",
+      time: "Tiistaisin ja torstaisin klo 18:00–19:30 (Perjantaisin Diesel-ryhmä)",
+      price: "Seuran harjoitusmaksu (kausi tai vuosi)",
+      badge: "Kokeneet harrastajat",
       link: "jujutsu.html"
     },
     diesel: {
-      title: "Suosituksesi: Hokutoryu Diesel-jutsu (Kuntojutsu)",
-      desc: "Kuntoilumielessä pyörivä ryhmä sinulle, joka haluat treenata rennommin, pitää yllä kuntoa, palata tauon/vamman jälkeen tai liikkua ilman kovia suorituspaineita.",
+      title: "Suosituksesi: Hokutoryu Diesel-kuntojutsu",
+      desc: "Kuntoilumielessä pyörivä ryhmä sinulle, joka haluat treenata rennommin, pitää yllä kuntoa, palata tauon tai vamman jälkeen tai liikkua ilman kovia suorituspaineita.",
       time: "Perjantaisin klo 18:00–20:00 (Äimäkuja 6 A)",
-      price: "110 € / 6 kk (Käyvät myös ePassi, Smartum, Edenred & Tyky)",
-      badge: "2 Ilmaista Kokeilukertaa!",
+      price: "110 € / 6 kk (ePassi, Smartum, Edenred ja Tyky)",
+      badge: "2 ilmaista kokeilukertaa!",
       link: "diesel.html"
     }
   };
@@ -557,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
           navResultContainer.innerHTML = `
             <div class="nav-result-card">
               <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
-                <span style="background:linear-gradient(135deg, var(--brand-red) 0%, #b91c1c 100%); color:#fff; font-size:0.75rem; font-weight:700; padding:5px 14px; border-radius:999px; text-transform:uppercase; letter-spacing:0.04em;">
+                <span style="background:linear-gradient(135deg, var(--brand-red) 0%, #b91c1c 100%); color:#fff; font-size:0.75rem; font-weight:700; padding:5px 14px; border-radius:999px; letter-spacing:0.04em;">
                   ${rec.badge}
                 </span>
                 <span style="color:var(--accent-gold); font-size:0.85rem; font-weight:600;">
@@ -568,16 +568,16 @@ document.addEventListener('DOMContentLoaded', () => {
               <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:16px;">${rec.desc}</p>
               <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; background:rgba(255,255,255,0.03); padding:16px; border-radius:12px; border:1px solid var(--border-glass); margin-bottom:20px;">
                 <div>
-                  <strong style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; display:block;">Harjoitusajat:</strong>
+                  <strong style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; display:block; margin-bottom:4px;">Harjoitusajat:</strong>
                   <span style="color:#fff; font-size:0.88rem;">${rec.time}</span>
                 </div>
                 <div>
-                  <strong style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; display:block;">Hinta &amp; Maksu:</strong>
+                  <strong style="color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; display:block; margin-bottom:4px;">Hinta ja maksutavat:</strong>
                   <span style="color:#fff; font-size:0.88rem;">${rec.price}</span>
                 </div>
               </div>
               <a href="${rec.link}" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
-                Lue lisää &amp; Ilmoittaudu <i class="fa-solid fa-arrow-right"></i>
+                <span>Lue lisää ja ilmoittaudu</span> <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           `;
