@@ -206,30 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Live Ticker Notifications (Simulated Oulu Registrations)
-  const tickerData = [
-    "🔴 Oululainen Ville K. varasi juuri kokeilupaikan (3 min sitten)",
-    "🔴 Laura M. ilmoittautui Aikuisten Itsepuolustukseen Oulussa",
-    "🔴 Jere H. varasi paikan syksyn peruskurssille Äimäkujalle"
-  ];
 
-  const liveTicker = document.getElementById('liveTicker');
-  let tickerIndex = 0;
-
-  function cycleTicker() {
-    if (!liveTicker) return;
-    liveTicker.textContent = tickerData[tickerIndex];
-    liveTicker.classList.add('show');
-
-    setTimeout(() => {
-      liveTicker.classList.remove('show');
-    }, 4500);
-
-    tickerIndex = (tickerIndex + 1) % tickerData.length;
-  }
-
-  setInterval(cycleTicker, 14000);
-  setTimeout(cycleTicker, 3000);
 
   // Helper Toast
   function showToast(message) {
