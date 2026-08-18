@@ -1,5 +1,5 @@
 // ==========================================================================
-// Oulun Ju-Jutsu ry - Modern Interactive Scripts 2026
+// Jujutsu Oulu Ry - Modern Interactive Scripts 2026
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Dynamic Schedule Filtering (Official Oulun Ju-Jutsu ry Schedule)
+  // 3. Dynamic Schedule Filtering (Official Jujutsu Oulu Ry Schedule)
   const scheduleData = [
     { day: 'ma', time: '18:30–19:30', laji: 'Junnu-jutsu', group: 'Kaikki vyöasteet', type: 'juniors' },
     { day: 'ma', time: '19:30–21:00', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
@@ -382,19 +382,58 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 9. Calendar Event Export Functions (.ics & Google Calendar)
-function downloadIcsFile(courseName = "Ju-Jutsu Peruskurssi") {
+function getCourseScheduleConfig(courseName) {
+  const lower = (courseName || '').toLowerCase();
+  if (lower.includes('junnu')) {
+    return {
+      summary: "Jujutsu Oulu Ry – Junnu-jutsu",
+      byDay: "MO",
+      startTime: "183000",
+      endTime: "193000",
+      dayText: "Maanantaisin klo 18:30–19:30"
+    };
+  } else if (lower.includes('kenjutsu')) {
+    return {
+      summary: "Jujutsu Oulu Ry – Kenjutsu",
+      byDay: "TU,SA",
+      startTime: "193000",
+      endTime: "210000",
+      dayText: "Tiistaisin klo 19:30 & Lauantaisin klo 13:30"
+    };
+  } else if (lower.includes('diesel')) {
+    return {
+      summary: "Jujutsu Oulu Ry – Diesel-jutsu",
+      byDay: "FR",
+      startTime: "180000",
+      endTime: "200000",
+      dayText: "Perjantaisin klo 18:00–20:00"
+    };
+  } else {
+    // Default Hokutoryu Ju-Jutsu
+    return {
+      summary: "Jujutsu Oulu Ry – Hokutoryu Ju-Jutsu",
+      byDay: "MO,TU,TH",
+      startTime: "193000",
+      endTime: "210000",
+      dayText: "Maanantaisin klo 19:30, Tiistaisin klo 18:00 & Torstaisin klo 19:30"
+    };
+  }
+}
+
+function downloadIcsFile(courseName = "Hokutoryu Ju-Jutsu") {
+  const cfg = getCourseScheduleConfig(courseName);
   const icsData = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Oulun Ju-Jutsu ry//FI",
+    "PRODID:-//Jujutsu Oulu Ry//FI",
     "CALSCALE:GREGORIAN",
     "BEGIN:VEVENT",
-    "SUMMARY:Oulun Ju-Jutsu ry – Harjoitukset (" + courseName + ")",
-    "DESCRIPTION:Tervetuloa treeneihin! Äimäkuja 6 A, 90400 Oulu. Mukaan verkkarit/t-paita ja juomapullo.",
+    "SUMMARY:" + cfg.summary,
+    "DESCRIPTION:Tervetuloa Jujutsu Oulu Ry harjoituksiin! " + cfg.dayText + " Äimäkuja 6 A, 90400 Oulu.",
     "LOCATION:Äimäkuja 6 A, 90400 Oulu, Finland",
-    "DTSTART:20260810T183000Z",
-    "DTEND:20260810T193000Z",
-    "RRULE:FREQ=WEEKLY;BYDAY=MO",
+    "DTSTART:20260817T" + cfg.startTime,
+    "DTEND:20260817T" + cfg.endTime,
+    "RRULE:FREQ=WEEKLY;BYDAY=" + cfg.byDay,
     "END:VEVENT",
     "END:VCALENDAR"
   ].join("\r\n");
@@ -402,19 +441,20 @@ function downloadIcsFile(courseName = "Ju-Jutsu Peruskurssi") {
   const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
   const link = document.createElement("a");
   link.href = window.URL.createObjectURL(blob);
-  link.setAttribute("download", "Oulun_JuJutsu_Treenit.ics");
+  link.setAttribute("download", "Jujutsu_Oulu_Harjoitukset.ics");
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
 
-function openGoogleCalendar(courseName = "Ju-Jutsu Peruskurssi") {
+function openGoogleCalendar(courseName = "Hokutoryu Ju-Jutsu") {
+  const cfg = getCourseScheduleConfig(courseName);
   const gcalUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-    "&text=" + encodeURIComponent("Oulun Ju-Jutsu ry – Harjoitukset (" + courseName + ")") +
-    "&details=" + encodeURIComponent("Tervetuloa treeneihin Äimäkujalle! Mukaan verkkorit/t-paita ja juomapullo.") +
+    "&text=" + encodeURIComponent(cfg.summary) +
+    "&details=" + encodeURIComponent("Tervetuloa treeneihin Äimäkujalle! " + cfg.dayText + ". Mukaan verkkarit/t-paita ja juomapullo.") +
     "&location=" + encodeURIComponent("Äimäkuja 6 A, 90400 Oulu") +
-    "&dates=20260810T183000Z/20260810T193000Z" +
-    "&recur=RRULE:FREQ=WEEKLY;BYDAY=MO";
+    "&dates=20260817T" + cfg.startTime + "/20260817T" + cfg.endTime +
+    "&recur=RRULE:FREQ=WEEKLY;BYDAY=" + cfg.byDay;
 
   window.open(gcalUrl, "_blank");
 }
@@ -428,17 +468,17 @@ document.addEventListener('DOMContentLoaded', () => {
     tenhunen: {
       name: "Renshi Tenhunen",
       belt: "Renshi • 5. Dan Hokutoryu Ju-Jutsu",
-      title: "Päävalmentaja, Oulun Ju-Jutsu ry • Vuosikymmenten valmennuskokemus",
+      title: "Päävalmentaja, Jujutsu Oulu Ry • Vuosikymmenten valmennuskokemus",
       qa: [
         { q: "1. Miten oma kamppailumatkasi alkoi ja mikä toi sinut tatamille?", a: "Kiinnostuin kamppailusta jo nuorena. Hokutoryu Ju-Jutsussa minuun teki vaikutuksen lajin suomalainen suoruus, realistisuus ja se, että jokainen tekniikka on testattu käytännön tilanteissa." },
         { q: "2. Mitä sanot aloittelijalle, joka pohtii uskaltaako tulla 1. treeneihin?", a: "Kaikki aloittavat samalta viivalta. Peruskurssilla opitaan perusteet turvallisesti ja rauhallisessa tahdissa. Ensimmäisiin treeneihin tarvitset vain verkkarit, juomapullon ja avoimen mielen – me huolehdimme lopusta." },
-        { q: "3. Mikä on parasta Oulun Ju-Jutsu ry:n salitunnelmassa?", a: "Kunnioitus, mahtava yhteishenki ja se, että kokeneemmat auttavat aina uusia harrastajia. Salillamme treenataan kovaa, mutta aina hymy huulilla ja toisia kunnioittaen." }
+        { q: "3. Mikä on parasta Jujutsu Oulu Ry:n salitunnelmassa?", a: "Kunnioitus, mahtava yhteishenki ja se, että kokeneemmat auttavat aina uusia harrastajia. Salillamme treenataan kovaa, mutta aina hymy huulilla ja toisia kunnioittaen." }
       ]
     },
     pekkala: {
       name: "Sensei Pekkala",
       belt: "Sensei • 3. Dan Hokutoryu Ju-Jutsu",
-      title: "Päävalmentaja, Oulun Ju-Jutsu ry • Tekniikka & Opetusohjelmat",
+      title: "Päävalmentaja, Jujutsu Oulu Ry • Tekniikka & Opetusohjelmat",
       qa: [
         { q: "1. Miksi Hokutoryu Ju-Jutsu on niin tehokas itsepuolustuslaji?", a: "Hokutoryu yhdistää pystykamppailun, heitot, lukot ja otteista vapautumiset saumattomaksi kokonaisuudeksi. Se antaa valmiudet toimia kaikissa mahdollisissa arjen uhkatilanteissa." },
         { q: "2. Pitääkö olla valmiiksi hyvissä voimissa tai notkea?", a: "Ei missään nimessä! Kunto, voima ja kehonhallinta kasvavat kohisten treenatessa. Peruskurssi on nimenomaan suunniteltu kunnon ja koordinaation kehittämiseen." },
@@ -505,9 +545,9 @@ document.addEventListener('DOMContentLoaded', () => {
     adult: {
       title: "Suosituksesi: Hokutoryu ju-jutsu peruskurssi (Aikuiset 15 v+)",
       desc: "Suomen tehokkain ja realistisin itsepuolustusjärjestelmä. Opit otteista vapautumiset, iskujen torjunnat, heitot ja hallintaotteet turvallisessa ilmapiirissä.",
-      time: "Maanantaisin ja torstaisin klo 19:30–21:00 (Äimäkuja 6 A)",
+      time: "Maanantaisin klo 19:30, tiistaisin klo 18:00 & torstaisin klo 19:30 (Äimäkuja 6 A)",
       price: "110 € / kurssi (ePassi, Smartum ja Edenred)",
-      badge: "2 ilmaista kokeilukertaa!",
+      badge: "2 viikon ilmainen kokeilu!",
       link: "jujutsu.html"
     },
     juniors: {
@@ -515,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Lapsille ja nuorille suunnattu hauska, motivoiva ja kehittävä kamppailuharrastus. Opetamme kehonhallintaa, itsetuntoa, kaatumistaitoja ja turvallista ryhmässä toimimista.",
       time: "Maanantaisin klo 18:30–19:30 (Äimäkuja 6 A)",
       price: "Kausimaksu (sisältää lisenssin ja vyötutkintovalmiuden)",
-      badge: "2 ilmaista kokeilukertaa!",
+      badge: "2 viikon ilmainen kokeilu!",
       link: "junnut.html"
     },
     kenjutsu: {
@@ -529,7 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
     advanced: {
       title: "Suosituksesi: Hokutoryu jatkoryhmä ja Diesel-ryhmä",
       desc: "Sinulla on jo vähintään keltaisen vyön arvo tai aiempaa kamppailutaustaa. Tervetuloa mukaan seuran aktiiviseen jatkoryhmään ja No-Gi Diesel-treeniporukkaan!",
-      time: "Tiistaisin ja torstaisin klo 18:00–19:30 (Perjantaisin Diesel-ryhmä)",
+      time: "Maanantaisin klo 19:30, tiistaisin klo 18:00 & torstaisin klo 19:30 (Perjantaisin Diesel-ryhmä)",
       price: "Seuran harjoitusmaksu (kausi tai vuosi)",
       badge: "Kokeneet harrastajat",
       link: "jujutsu.html"
@@ -539,7 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: "Kuntoilumielessä pyörivä ryhmä sinulle, joka haluat treenata rennommin, pitää yllä kuntoa, palata tauon tai vamman jälkeen tai liikkua ilman kovia suorituspaineita.",
       time: "Perjantaisin klo 18:00–20:00 (Äimäkuja 6 A)",
       price: "110 € / 6 kk (ePassi, Smartum, Edenred ja Tyky)",
-      badge: "2 ilmaista kokeilukertaa!",
+      badge: "2 viikon ilmainen kokeilu!",
       link: "diesel.html"
     }
   };
@@ -611,6 +651,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+
 
 
 

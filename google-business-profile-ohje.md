@@ -1,4 +1,4 @@
-# Google Business Profile (Google Maps) - Optimointiohje
+﻿# Google Business Profile (Google Maps) - Optimointiohje
 
 Tämän ohjeen avulla määritetään Oulun Ju-Jutsu ry:n Google Maps -profiili siten, että se nousee **Oulun alueella hakusanoilla "itsepuolustus Oulu" ja "itsepuolustuskurssi Oulu" hakutulosten kärkikolmikkoon (Google Maps 3-Pack)**.
 
@@ -41,3 +41,4 @@ Lisää nämä palvelut Google Business Profile -hallinnassa:
 2. Lisää verkko-osoite `https://www.oulunjujutsu.com`
 3. Syötä sitemap-osoite: `https://www.oulunjujutsu.com/sitemap.xml`
 4. Klikkaa **Pyydä indeksointia (Request Indexing)** -> Google lukee ja indeksoi uudet sivut 24 tunnin sisällä!
+

@@ -1,17 +1,33 @@
 {
-  "notice": "Ohjatut harjoitukset jatkuvat kesätauon jälkeen aikuisen osalta 3.8. alkaen ja junnioiden osalta 17.8.2026 lähtien.",
+  "notice": "Ohjatut harjoitukset jatkuvat kesätauon jälkeen aikuisten osalta 3.8. alkaen ja junioreiden osalta 17.8.2026 lähtien.",
   "noticeEn": "Guided training resumes after the summer break for adults starting Aug 3 and for juniors starting Aug 17, 2026.",
+  "scheduleImageCurrent": "assets/treeniaikataulut_ilman_peruskurssia.jpeg",
+  "scheduleImageBeginnerCourse": "assets/peruskurssin_aiheuttamat_aikataulumuutokset.jpg",
+  "beginnerCourseNotice": "Huom! Syyskuussa alkaa uusi peruskurssi (viikolla 38). Tiistain ja torstain harjoitusajat muuttuvat peruskurssin alkaessa alla olevan peruskurssiaikataulun mukaisesti!",
+  "beginnerCourseNoticeEn": "Note! A new beginner course starts in September (week 38). Tuesday and Thursday training times will update according to the beginner course schedule below!",
+  "beginnerCourseScheduleWeek38": [
+    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:00", "laji": "Hokutoryu", "group": "Peruskurssi" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "19:00–20:00", "laji": "Hokutoryu", "group": "Värivyöt" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "20:00–21:00", "laji": "Kenjutsu", "group": "Kaikki vyöasteet" },
+    { "day": "to", "dayLong": "Torstai", "time": "19:30–20:30", "laji": "Hokutoryu", "group": "Värivyöt" },
+    { "day": "to", "dayLong": "Torstai", "time": "20:30–21:30", "laji": "Hokutoryu", "group": "Peruskurssi" }
+  ],
   "weeklySchedule": [
-    { "day": "ma", "time": "18:30–19:30", "laji": "Junnu-jutsu", "group": "Kaikki vyöasteet", "type": "juniors" },
-    { "day": "ma", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "Värivyöt", "type": "hokutoryu" },
-    { "day": "ti", "time": "18:00–19:30", "laji": "Hokutoryu", "group": "Värivyöt", "type": "hokutoryu" },
-    { "day": "ti", "time": "19:30–21:00", "laji": "Kenjutsu", "group": "Kaikki vyöasteet", "type": "kenjutsu" },
-    { "day": "to", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "Värivyöt", "type": "hokutoryu" },
-    { "day": "pe", "time": "18:00–20:00", "laji": "Hokutoryu", "group": "Diesel-ryhmä (No Gi)", "type": "hokutoryu" },
-    { "day": "la", "time": "13:30–15:00", "laji": "Kenjutsu", "group": "Kaikki vyöasteet (WhatsApp)", "type": "kenjutsu" },
-    { "day": "la", "time": "16:30–18:30", "laji": "Vapaavuoro", "group": "Vapaavuoro (vain jäsenille)", "type": "vapaa" },
-    { "day": "su", "time": "15:00–16:30", "laji": "Vapaavuoro", "group": "Vapaavuoro (vain jäsenille)", "type": "vapaa" },
-    { "day": "su", "time": "18:30–20:30", "laji": "Vapaavuoro", "group": "Vapaavuoro (vain jäsenille)", "type": "vapaa" }
+    { "day": "ma", "dayLong": "Maanantai", "time": "18:30–19:30", "laji": "Junnu-jutsu", "group": "kaikki vyöasteet", "type": "juniors" },
+    { "day": "ma", "dayLong": "Maanantai", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:30", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "19:30–21:00", "laji": "Kenjutsu", "group": "kaikki vyöasteet", "type": "kenjutsu" },
+    { "day": "to", "dayLong": "Torstai", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
+    { "day": "pe", "dayLong": "Perjantai", "time": "18:00–20:00", "laji": "Hokutoryu", "group": "diesel-ryhmä", "type": "diesel" },
+    { "day": "la", "dayLong": "Lauantai", "time": "13:30–15:00", "laji": "Kenjutsu", "group": "kaikki vyöasteet", "type": "kenjutsu" },
+    { "day": "la", "dayLong": "Lauantai", "time": "16:30–18:30", "laji": "Vapaavuoro", "group": "vapaavuoro", "type": "vapaa" },
+    { "day": "su", "dayLong": "Sunnuntai", "time": "15:00–16:30", "laji": "Vapaavuoro", "group": "vapaavuoro", "type": "vapaa" },
+    { "day": "su", "dayLong": "Sunnuntai", "time": "18:30–20:30", "laji": "Vapaavuoro", "group": "vapaavuoro", "type": "vapaa" }
+  ],
+  "notes": [
+    "Perjantain harjoitukset ovat tavallisesti no gi -tyyppiset, joten niihin voi osallistua esimerkiksi t-paidalla ja shortseilla. Mukaan kannattaa ottaa myös nyrkkeilyhanskat. Lainahanskoja on saatavilla tarvittaessa.",
+    "Lauantain kenjutsuvuoro järjestetään meidän mahdollisuuksien mukaan. Saat tiedot ajankohtaisista tilanteista helpoiten liittymällä seuran WhatsApp-ryhmään.",
+    "Vapaavuoroilla ei ole ohjattua harjoitustoimintaa. Vapaavuorot on tarkoitettu ainoastaan seuran jäsenille."
   ],
   "exceptionBookings": [
     { "date": "la 5.9.2026", "dateEn": "Sat Sep 5, 2026", "time": "10:00–11:30 & 13:00–17:00", "reservedBy": "Budoseura Oulun Musokai" },

@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
 
@@ -35,3 +35,5 @@ async function capture() {
 }
 
 capture().catch(err => console.error('Puppeteer error:', err));
+
+
