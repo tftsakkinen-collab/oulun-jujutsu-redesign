@@ -1,5 +1,5 @@
 // Jujutsu Oulu Ry - Virallinen Harjoitusaikatauludata 2026
-const aikataulutData = [
+window.aikataulutData = [
   {
     day: 'ma',
     start: '18:30',
@@ -101,7 +101,8 @@ const aikataulutData = [
     location: 'Äimäkuja 6 A'
   }
 ];
+var aikataulutData = window.aikataulutData;
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = aikataulutData;
+  module.exports = window.aikataulutData;
 }

@@ -23,43 +23,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Dynamic Schedule Filtering (Official Jujutsu Oulu Ry Schedule from data/aikataulut.js)
-  const scheduleData = typeof aikataulutData !== 'undefined' ? aikataulutData : [
-    { day: 'ma', time: '18:30–19:30', laji: 'Junnu-jutsu', group: 'Kaikki vyöasteet', type: 'junnut' },
-    { day: 'ma', time: '19:30–21:00', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
-    { day: 'ti', time: '18:00–19:30', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
-    { day: 'ti', time: '19:30–21:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet', type: 'kenjutsu' },
-    { day: 'to', time: '19:30–21:00', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
-    { day: 'pe', time: '18:00–20:00', laji: 'Hokutoryu', group: 'Diesel-ryhmä (No Gi)', type: 'diesel' },
-    { day: 'la', time: '13:30–15:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet (WhatsApp)', type: 'kenjutsu' },
-    { day: 'la', time: '16:30–18:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (vain jäsenille)', type: 'vapaa' },
-    { day: 'su', time: '15:00–16:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (vain jäsenille)', type: 'vapaa' },
-    { day: 'su', time: '18:30–20:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (vain jäsenille)', type: 'vapaa' }
-  ];
+  const getScheduleData = () => {
+    if (typeof window !== 'undefined' && window.aikataulutData && window.aikataulutData.length > 0) {
+      return window.aikataulutData;
+    }
+    if (typeof aikataulutData !== 'undefined' && aikataulutData.length > 0) {
+      return aikataulutData;
+    }
+    return [
+      { day: 'ma', time: '18:30–19:30', laji: 'Junnu Ju-Jutsu', group: 'Kaikki vyöasteet (7–14v)', type: 'junnut' },
+      { day: 'ma', time: '19:30–21:00', laji: 'Hokutoryu Ju-Jutsu', group: 'Peruskurssi & Värivyöt', type: 'hokutoryu' },
+      { day: 'ti', time: '18:00–19:30', laji: 'Hokutoryu Ju-Jutsu', group: 'Peruskurssi & Värivyöt', type: 'hokutoryu' },
+      { day: 'ti', time: '19:30–21:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet', type: 'kenjutsu' },
+      { day: 'to', time: '19:30–21:00', laji: 'Hokutoryu Ju-Jutsu', group: 'Peruskurssi & Värivyöt', type: 'hokutoryu' },
+      { day: 'pe', time: '18:00–20:00', laji: 'Diesel-jutsu', group: 'Kuntoilijat & No-Gi', type: 'diesel' },
+      { day: 'la', time: '13:30–15:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet (WhatsApp)', type: 'kenjutsu' },
+      { day: 'la', time: '16:30–18:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (Jäsenille)', type: 'vapaa' },
+      { day: 'su', time: '15:00–16:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (Jäsenille)', type: 'vapaa' },
+      { day: 'su', time: '18:30–20:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (Jäsenille)', type: 'vapaa' }
+    ];
+  };
 
   const scheduleBody = document.getElementById('scheduleBody');
   const tabBtns = document.querySelectorAll('.tab-btn');
 
   function renderSchedule(filter = 'all') {
-    if (!scheduleBody) return;
-    scheduleBody.innerHTML = '';
+    const targetBody = document.getElementById('scheduleBody') || scheduleBody;
+    if (!targetBody) return;
+    targetBody.innerHTML = '';
 
+    const data = getScheduleData();
     const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
     const dayMapEn = { 'ma': 'MON', 'ti': 'TUE', 'ke': 'WED', 'to': 'THU', 'pe': 'FRI', 'la': 'SAT', 'su': 'SUN' };
-    const lajiMapEn = { 'Junnu-jutsu': 'Junior Ju-Jutsu', 'Hokutoryu': 'Hokutoryu Ju-Jutsu', 'Kenjutsu': 'Kenjutsu', 'Vapaavuoro': 'Open Practice' };
-    const groupMapEn = {
-      'Kaikki vyöasteet': 'All Belt Ranks',
-      'Värivyöt': 'Color Belts (Yellow–Black)',
-      'Diesel-ryhmä (No Gi)': 'Diesel Fitness Group (No-Gi)',
-      'Kaikki vyöasteet (WhatsApp)': 'All Belts (Confirmed via WhatsApp)',
-      'Vapaavuoro (vain jäsenille)': 'Open Practice (Members Only)'
-    };
+    const lajiMapEn = { 'Junnu-jutsu': 'Junior Ju-Jutsu', 'Junnu Ju-Jutsu': 'Junior Ju-Jutsu', 'Hokutoryu': 'Hokutoryu Ju-Jutsu', 'Hokutoryu Ju-Jutsu': 'Hokutoryu Ju-Jutsu', 'Kenjutsu': 'Kenjutsu', 'Diesel-jutsu': 'Diesel-jutsu', 'Vapaavuoro': 'Open Practice' };
 
     const filtered = filter === 'all' 
-      ? scheduleData 
-      : scheduleData.filter(item => item.type === filter);
+      ? data 
+      : data.filter(item => item.type === filter);
 
     if (filtered.length === 0) {
-      scheduleBody.innerHTML = `<tr><td colspan="4" style="text-align:center; color: var(--text-muted);">${isEn ? 'No training sessions for selected filter.' : 'Ei harjoituksia valitussa ryhmässä.'}</td></tr>`;
+      targetBody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding: 20px; color: var(--text-muted);">${isEn ? 'No training sessions for selected filter.' : 'Ei harjoituksia valitussa ryhmässä.'}</td></tr>`;
       return;
     }
 
@@ -67,25 +70,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const tr = document.createElement('tr');
       const dayDisp = isEn ? (dayMapEn[item.day] || item.day.toUpperCase()) : item.day.toUpperCase();
       const lajiDisp = isEn ? (lajiMapEn[item.laji] || item.laji) : item.laji;
-      const groupDisp = isEn ? (groupMapEn[item.group] || item.group) : item.group;
 
       tr.innerHTML = `
-        <td><strong style="text-transform: uppercase; color: #fff;">${dayDisp}</strong></td>
-        <td><span class="time-badge">${item.time}</span></td>
-        <td><span style="color:#fff; font-weight:600;">${lajiDisp}</span></td>
-        <td><span style="color:var(--text-muted);">${groupDisp}</span></td>
+        <td style="padding: 14px 12px;"><strong style="text-transform: uppercase; color: #fff; font-size: 0.95rem;">${dayDisp}</strong></td>
+        <td style="padding: 14px 12px;"><span class="time-badge" style="background: rgba(255,9,21,0.15); border: 1px solid rgba(255,9,21,0.3); color: #ff4d56; padding: 4px 10px; border-radius: 6px; font-weight: 700;">${item.time}</span></td>
+        <td style="padding: 14px 12px;"><span style="color:#fff; font-weight:600;">${lajiDisp}</span></td>
+        <td style="padding: 14px 12px;"><span style="color:#94a3b8;">${item.group}</span></td>
       `;
-      scheduleBody.appendChild(tr);
+      targetBody.appendChild(tr);
     });
   }
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderSchedule(btn.dataset.filter);
+  if (tabBtns.length > 0) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSchedule(btn.dataset.filter);
+      });
     });
-  });
+  }
 
   renderSchedule('all');
 
