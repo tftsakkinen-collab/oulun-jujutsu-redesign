@@ -367,35 +367,86 @@
       </div>
 
       <!-- Salisanasto & Dojo Etiketti -->
-      <div class="glass-panel" style="margin-top: 40px; padding: 32px;">
-        <div style="margin-bottom: 24px;">
-          <span class="badge"><i class="fa-solid fa-torii-gate"></i> Salisanasto tutuksi</span>
-          <h3 style="font-size: 1.6rem; margin-top: 6px;">Budo- & Hokutoryu-Sanasto</h3>
+      <div class="glass-panel" style="margin-top: 40px; padding: 36px 32px; border: 1px solid var(--border-glass);">
+        <div style="margin-bottom: 28px; text-align: left;">
+          <span class="badge" style="background: rgba(255, 9, 21, 0.15); border-color: var(--brand-red); color: #ff4d56;">
+            <i class="fa-solid fa-torii-gate"></i> Salisanasto tutuksi
+          </span>
+          <h3 style="font-size: 1.8rem; color: #fff; margin-top: 10px; margin-bottom: 6px;">Budo- &amp; Hokutoryu-Sanasto</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Tärkeimmät tatamilla ja harjoituksissa käytettävät käsitteet ja komennot:</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Rei (礼)</strong> — Kumarrus & Kunnioitus.
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+          <!-- 1. Rei -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Rei (礼)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Etiketti</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Kumarrus ja kunnioituksen osoitus harjoituskumppanille ja salille.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Hajime (始め)</strong> — Aloita! Ohjaajan komento.
+
+          <!-- 2. Hajime -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Hajime (始め)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Komento</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">"Aloita!" Ohjaajan komento tekniikan tai sparrin aloittamiseksi.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Yame (止め)</strong> — Seis / Pysähdy!
+
+          <!-- 3. Yame -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Yame (止め)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Komento</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">"Seis!" Ohjaajan komento harjoituksen välittömäksi pysäyttämiseksi.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Dojo (道場)</strong> — Harjoitussali (Äimäkuja 6 A).
+
+          <!-- 4. Dojo -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Dojo (道場)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Paikka</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Harjoitussali (Jujutsu Oulu Ry:n dojo Äimäkuja 6 A:ssa).</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Sensei (先生)</strong> — Opettaja / Valmentaja.
+
+          <!-- 5. Sensei -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Sensei (先生)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Arvonimi</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Opettaja / Valmentaja (kirjaimellisesti "aiemmin syntynyt").</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Ukemi (受身)</strong> — Turvallinen kaatumistekniikka.
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Tatami (畳)</strong> — Kamppailumatot salillamme.
+
+          <!-- 6. Ukemi -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Ukemi (受身)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Tekniikka</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Turvallinen kaatumistekniikka ja kehon vastaanotto heitoissa.</p>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
-            <strong style="color: var(--brand-red); font-size: 1.1rem;">Seiza (正座)</strong> — Polvi-istunta & rauhoittuminen.
+
+          <!-- 7. Tatami -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Tatami (畳)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Varuste</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Kamppailumatot salillamme. Harjoittelu tapahtuu aina paljain jaloin.</p>
+          </div>
+
+          <!-- 8. Seiza -->
+          <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-glass); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <strong style="color: var(--brand-red); font-size: 1.15rem;">Seiza (正座)</strong>
+              <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.06); padding: 2px 10px; border-radius: 99px;">Asento</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Polvi-istunta ja rauhoittuminen harjoituksen alussa ja lopussa.</p>
           </div>
         </div>
       </div>
