@@ -89,9 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSchedule(btn.dataset.filter);
       });
     });
+    renderSchedule('all');
   }
-
-  renderSchedule('all');
 
   // 4. Official Hokutoryu HQ YouTube Videos (fBs6K2HCAJ8)
   const videos = {
