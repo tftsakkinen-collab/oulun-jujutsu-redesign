@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
-  <title>Itsepuolustus & Kamppailulajit Oulu | Jujutsu Oulu Ry – Hokutoryu</title>
-  <meta name="description" content="Oulun johtava itsepuolustus- ja kamppailukeskus. Opi suojelemaan itseäsi ja läheisiäsi Hokutoryu Ju-Jutsulla Äimäkujalla. 2 viikon ilmainen kokeilu!">
+  <title>Jujutsu Oulu Ry – Itsepuolustus & Kamppailulajit Oulussa</title>
+  <meta name="description" content="Opi realistista itsepuolustusta Oulussa Äimäkujalla. Hokutoryu Ju-Jutsu, Junnu-jutsu, Kenjutsu ja Diesel-jutsu. 2 viikon ilmainen kokeilu!">
   <link rel="canonical" href="https://www.oulunjujutsu.com/">
   <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/">
   <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/index-en.html">
@@ -112,17 +112,7 @@
   </script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Hyppää sisältöön</a>
-</div>
-
-
-  <!-- Background Grid -->
-  <div class="background-grid"></div>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast"></div>
-
-
+    <a href="#main" class="skip-link">Siirry suoraan sisältöön</a>
 
   <!-- Header & Nav -->
   <header id="header" class="header">
@@ -132,7 +122,7 @@
         JUJUTSU <span>OULU RY</span>
       </a>
 
-      <!-- Header Social Links for instant visibility on Mobile & Desktop (<5s) -->
+      <!-- Header Social Links -->
       <div class="header-social-links">
         <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="header-social-icon" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="header-social-icon" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -145,14 +135,26 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="jujutsu.html" class="nav-link nav-link-highlight">Ju-Jutsu</a></li>
-        <li><a href="junnut.html" class="nav-link nav-link-highlight">Junnu-jutsu</a></li>
-        <li><a href="kenjutsu.html" class="nav-link nav-link-highlight">Kenjutsu</a></li>
-        <li><a href="diesel.html" class="nav-link nav-link-highlight">Diesel-jutsu</a></li>
-        <li><a href="maksut.html" class="nav-link nav-link-highlight">Hinnasto</a></li>
-        <li><a href="#ohjaajat" class="nav-link">Ohjaajat</a></li>
-        <li><a href="#aikataulut" class="nav-link">Ajat</a></li>
-        <li><a href="#ilmoittautuminen" class="nav-link">Ilmoittaudu</a></li>
+        <li><a href="index.html" class="nav-link">Etusivu</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link nav-link-highlight">Lajit <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="jujutsu.html">Hokutoryu Ju-Jutsu (Aikuiset)</a></li>
+            <li><a href="junnut.html">Junnu Ju-Jutsu (7–14v)</a></li>
+            <li><a href="kenjutsu.html">Kenjutsu (Miekkailu)</a></li>
+            <li><a href="diesel.html">Diesel-jutsu (Kuntojutsu)</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#aikataulut" class="nav-link">Harjoitusajat</a></li>
+        <li><a href="maksut.html" class="nav-link">Hinnasto</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Seura <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#ohjaajat">Ohjaajat</a></li>
+            <li><a href="index.html#aikataulut">Dojo &amp; Sali</a></li>
+            <li><a href="index.html#arvostelut">Kokemukset</a></li>
+          </ul>
+        </li>
         <li>
           <div class="lang-switcher">
             <a href="index.html" class="active">FI</a>
@@ -168,6 +170,8 @@
       </ul>
     </div>
   </header>
+
+  <main id="main">
 
   <!-- Hero Section -->
   <section class="hero">
@@ -865,25 +869,27 @@
           Täytä tiedot alta niin olemme yhteydessä. Ensimmäiset 2 viikkoa treenejä ovat täysin ilmaisia!
         </p>
 
+        
         <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST" style="text-align: left;">
+          <input type="hidden" name="sivu" value="index.html">
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="nameInput">Etunimi ja sukunimi *</label>
-            <input type="text" id="nameInput" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
+            <label for="index_nimi">Etunimi ja sukunimi *</label>
+            <input type="text" id="index_nimi" name="nimi" class="form-control" placeholder="Matti Meikäläinen" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="emailInput">Sähköpostiosoite *</label>
-            <input type="email" id="emailInput" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
+            <label for="index_email">Sähköpostiosoite *</label>
+            <input type="email" id="index_email" name="sahkoposti" class="form-control" placeholder="matti@esimerkki.fi" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="phoneInput">Puhelinnumero *</label>
-            <input type="tel" id="phoneInput" name="phone" class="form-control" placeholder="041 327 4967" required>
+            <label for="index_phone">Puhelinnumero *</label>
+            <input type="tel" id="index_phone" name="puhelin" class="form-control" placeholder="041 327 4967" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 20px;">
-            <label for="courseSelect">Valitse lajiryhmä *</label>
-            <select id="courseSelect" name="course" class="form-control" required>
+            <label for="index_ryhma">Valitse lajiryhmä *</label>
+            <select id="index_ryhma" name="ryhma" class="form-control" required>
               <option value="Hokutoryu Ju-Jutsu (Aikuiset 15v+)" selected>Hokutoryu Ju-Jutsu (Aikuiset 15v+)</option>
               <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Kuntojutsu)</option>
               <option value="Kenjutsu (Miekkailu)">Kenjutsu (Miekkailu)</option>
@@ -892,7 +898,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
-            <i class="fa-solid fa-paper-plane"></i> Lähetä Ilmoittautuminen (2 viikon ilmainen kokeilu)
+            <i class="fa-solid fa-paper-plane"></i> Lähetä ilmoittautuminen (2 viikon ilmainen kokeilu)
           </button>
           <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center; margin-top: 10px;">
             Tai suoraan sähköpostitse: <a href="mailto:info@oulunjujutsu.com" style="color: var(--brand-red);">info@oulunjujutsu.com</a>
@@ -902,36 +908,39 @@
     </div>
   </section>
 
+  
   <!-- Enrollment Modal Overlay -->
   <div id="enrollModal" class="modal-overlay">
     <div class="modal-content glass-panel" style="max-width: 540px; padding: 36px;">
-      <button class="modal-close" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="closeModalBtn" aria-label="Sulje ilmoittautumislomake"><i class="fa-solid fa-xmark"></i></button>
       
       <div style="text-align: center; margin-bottom: 24px;">
         <span class="badge"><i class="fa-solid fa-shield-cat"></i> 2 viikon ilmainen kokeilu</span>
-        <h3 style="font-size: 1.8rem; margin-top: 10px; color: #fff;">Ilmoittaudu Ju-Jutsuun</h3>
+        <h3 style="font-size: 1.8rem; margin-top: 10px; color: #fff;">Ilmoittaudu harjoituksiin</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted);">Tule kokeilemaan ensimmäiset 2 viikkoa täysin veloituksetta ilman sitoutumista!</p>
       </div>
 
       <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
+        <input type="hidden" name="sivu" value="index.html">
+        
         <div class="form-group" style="margin-bottom: 16px;">
-          <label for="modalFullName">Etunimi ja sukunimi *</label>
-          <input type="text" id="modalFullName" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
+          <label for="modal_index_nimi">Etunimi ja sukunimi *</label>
+          <input type="text" id="modal_index_nimi" name="nimi" class="form-control" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
-          <label for="modalEmailAddr">Sähköpostiosoite *</label>
-          <input type="email" id="modalEmailAddr" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
+          <label for="modal_index_email">Sähköpostiosoite *</label>
+          <input type="email" id="modal_index_email" name="sahkoposti" class="form-control" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
-          <label for="modalPhoneNum">Puhelinnumero *</label>
-          <input type="tel" id="modalPhoneNum" name="phone" class="form-control" placeholder="041 327 4967" required>
+          <label for="modal_index_phone">Puhelinnumero *</label>
+          <input type="tel" id="modal_index_phone" name="puhelin" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 20px;">
-          <label for="modalCourseSelect">Valitse lajiryhmä *</label>
-          <select id="modalCourseSelect" class="form-control" required>
+          <label for="modal_index_ryhma">Valitse lajiryhmä *</label>
+          <select id="modal_index_ryhma" name="ryhma" class="form-control" required>
             <option value="Hokutoryu Ju-Jutsu (Aikuiset 15v+)" selected>Hokutoryu Ju-Jutsu (Aikuiset 15v+)</option>
             <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Kuntojutsu)</option>
             <option value="Kenjutsu (Miekkailu)">Kenjutsu (Miekkailu)</option>
@@ -940,13 +949,15 @@
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
-          <i class="fa-solid fa-paper-plane"></i> Lähetä Ilmoittautuminen
+          <i class="fa-solid fa-paper-plane"></i> Lähetä ilmoittautuminen
         </button>
       </form>
     </div>
   </div>
 
-  <!-- Footer -->
+  </main>
+
+    <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-bottom: 40px;">
@@ -955,8 +966,8 @@
             <img src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
-          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
-            Jujutsu Oulu Ry on Oulussa vuodesta 1990 toiminut perinteikäs kamppailuseura (rekisteröity yhdistykseksi 11.7.1996). Suomalaisen Hokutoryu Ju-Jutsun on kehittänyt Soke Auvo Niiniketo (10. Dan) vuonna 1977. Tarjoamme opetusta aikuisten Ju-Jutsussa, Kenjutsussa ja Junnu-Jujutsussa.
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
+            Jujutsu Oulu Ry on Oulussa vuodesta 1990 toiminut perinteikäs kamppailuseura (rekisteröity yhdistykseksi 11.7.1996). Suomalaisen Hokutoryu Ju-Jutsun on kehittänyt Soke Auvo Niiniketo (10. Dan) vuonna 1977. Tarjoamme opetusta aikuisten Ju-Jutsussa, Kenjutsussa, Junnu-Jujutsussa ja Diesel-jutsussa.
           </p>
           <div class="social-links" style="margin-top: 16px;">
             <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -969,30 +980,30 @@
         <div>
           <h4 style="color: #fff; margin-bottom: 16px;">Sivusto &amp; Lajit</h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
-            <li><a href="jujutsu.html" style="color: var(--text-muted); text-decoration: none;">Hokutoryu Ju-Jutsu &amp; Vyöt</a></li>
-            <li><a href="junnut.html" style="color: var(--text-muted); text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
-            <li><a href="kenjutsu.html" style="color: var(--text-muted); text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
-            <li><a href="maksut.html" style="color: var(--text-muted); text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
-            <li><a href="itsepuolustus-oulu.html" style="color: var(--text-muted); text-decoration: none;">Itsepuolustus Oulu</a></li>
+            <li><a href="jujutsu.html" style="color: #cbd5e1; text-decoration: none;">Hokutoryu Ju-Jutsu &amp; Vyöt</a></li>
+            <li><a href="junnut.html" style="color: #cbd5e1; text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
+            <li><a href="kenjutsu.html" style="color: #cbd5e1; text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
+            <li><a href="diesel.html" style="color: #cbd5e1; text-decoration: none;">Diesel-jutsu (Kuntojutsu)</a></li>
+            <li><a href="maksut.html" style="color: #cbd5e1; text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
+            <li><a href="itsepuolustus-oulu.html" style="color: #cbd5e1; text-decoration: none;">Itsepuolustus Oulu</a></li>
           </ul>
         </div>
 
         <div>
           <h4 style="color: #fff; margin-bottom: 16px;">Harjoitussali (Dojo)</h4>
-          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">
+          <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.7;">
             <strong>Äimäkuja 6 A, 90400 Oulu</strong><br>
-            90400 Oulu<br>
             <i class="fa-solid fa-envelope" style="color: var(--brand-red); margin-right: 6px;"></i> info@oulunjujutsu.com<br>
             <i class="fa-solid fa-phone" style="color: var(--brand-red); margin-right: 6px;"></i> 041 327 4967
           </p>
         </div>
       </div>
 
-      <div class="footer-bottom" style="border-top: 1px solid var(--border-glass); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.88rem; color: var(--text-muted);">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-glass); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.88rem; color: #94a3b8;">
         <div>&copy; 2026 Jujutsu Oulu Ry. Kaikki oikeudet pidätetään.</div>
         <div style="display: flex; gap: 16px;">
-          <a href="sitemap.xml" style="color: var(--text-dim); text-decoration: none;">Sivustokartta</a>
-          <a href="index-en.html" style="color: var(--text-dim); text-decoration: none;">English Version</a>
+          <a href="sitemap.xml" style="color: #cbd5e1; text-decoration: none;">Sivustokartta</a>
+          <a href="index-en.html" style="color: #cbd5e1; text-decoration: none;">English Version</a>
         </div>
       </div>
     </div>
@@ -1016,13 +1027,14 @@
       <i class="fa-solid fa-shield-cat"></i>
       <span>Ilmainen kokeilu</span>
     </a>
-    <a href="#aikataulut" class="mobile-action-btn">
+    <a href="index.html#aikataulut" class="mobile-action-btn">
       <i class="fa-regular fa-clock"></i>
       <span>Ajat</span>
     </a>
   </div>
 
   <!-- JavaScript -->
+  <script src="data/aikataulut.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

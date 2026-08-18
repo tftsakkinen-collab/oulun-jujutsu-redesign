@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jujutsu Oulu Ry – Real-World Self-Defense & Martial Arts in Oulu</title>
-  <meta name="description" content="Official website of Jujutsu Oulu Ry. Hokutoryu Ju-Jutsu, Junior Ju-Jutsu (7-14y), Kenjutsu swordsmanship and Diesel-jutsu in Oulu. Reserve your 2-week free trial today!">
+  <title>Jujutsu Oulu Ry – Self-Defense & Martial Arts in Oulu</title>
+  <meta name="description" content="Learn practical self-defense at Äimäkuja 6 A, Oulu. Hokutoryu Ju-Jutsu, Junior Ju-Jutsu, Kenjutsu and Diesel-jutsu. Reserve your 2-week free trial!">
   <meta name="keywords" content="Jujutsu Oulu, Hokutoryu Ju-Jutsu Oulu, self-defense Oulu, martial arts Oulu, Kenjutsu Oulu, Junior Jujutsu Oulu">
   <meta name="author" content="Jujutsu Oulu Ry">
 
@@ -413,35 +413,40 @@
           Fill out the form below. Your first 2 weeks of training are completely free of charge with zero obligation!
         </p>
 
+        
         <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST" style="text-align: left;">
+          <input type="hidden" name="sivu" value="index-en.html">
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="enNameInput">Full Name *</label>
-            <input type="text" id="enNameInput" name="name" class="form-control" placeholder="John Doe" required>
+            <label for="index-en_nimi">Etunimi ja sukunimi *</label>
+            <input type="text" id="index-en_nimi" name="nimi" class="form-control" placeholder="Matti Meikäläinen" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="enEmailInput">Email Address *</label>
-            <input type="email" id="enEmailInput" name="email" class="form-control" placeholder="john@example.com" required>
+            <label for="index-en_email">Sähköpostiosoite *</label>
+            <input type="email" id="index-en_email" name="sahkoposti" class="form-control" placeholder="matti@esimerkki.fi" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
-            <label for="enPhoneInput">Phone Number *</label>
-            <input type="tel" id="enPhoneInput" name="phone" class="form-control" placeholder="+358 41 327 4967" required>
+            <label for="index-en_phone">Puhelinnumero *</label>
+            <input type="tel" id="index-en_phone" name="puhelin" class="form-control" placeholder="041 327 4967" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 20px;">
-            <label for="enCourseSelect">Select Discipline *</label>
-            <select id="enCourseSelect" name="course" class="form-control" required>
-              <option value="Hokutoryu Ju-Jutsu (Adults 15v+)" selected>Hokutoryu Ju-Jutsu (Adults 15v+)</option>
-              <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Fitness)</option>
-              <option value="Kenjutsu (Swordsmanship)">Kenjutsu (Swordsmanship)</option>
-              <option value="Junior Ju-Jutsu (7-14v)">Junior Ju-Jutsu (7-14v)</option>
+            <label for="index-en_ryhma">Valitse lajiryhmä *</label>
+            <select id="index-en_ryhma" name="ryhma" class="form-control" required>
+              <option value="Hokutoryu Ju-Jutsu (Aikuiset 15v+)" selected>Hokutoryu Ju-Jutsu (Aikuiset 15v+)</option>
+              <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Kuntojutsu)</option>
+              <option value="Kenjutsu (Miekkailu)">Kenjutsu (Miekkailu)</option>
+              <option value="Junnu Ju-Jutsu (7-14v)">Junnu Ju-Jutsu (7-14v)</option>
             </select>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
-            <i class="fa-solid fa-paper-plane"></i> Submit Registration (2-Week Free Trial)
+            <i class="fa-solid fa-paper-plane"></i> Lähetä ilmoittautuminen (2 viikon ilmainen kokeilu)
           </button>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center; margin-top: 10px;">
+            Tai suoraan sähköpostitse: <a href="mailto:info@oulunjujutsu.com" style="color: var(--brand-red);">info@oulunjujutsu.com</a>
+          </div>
         </form>
       </div>
     </div>
@@ -460,17 +465,17 @@
       <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="mEnName">Full Name *</label>
-          <input type="text" id="mEnName" name="name" class="form-control" placeholder="John Doe" required>
+          <input type="text" id="mEnName" name="nimi" class="form-control" placeholder="John Doe" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="mEnEmail">Email Address *</label>
-          <input type="email" id="mEnEmail" name="email" class="form-control" placeholder="john@example.com" required>
+          <input type="email" id="mEnEmail" name="sahkoposti" class="form-control" placeholder="john@example.com" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="mEnPhone">Phone Number *</label>
-          <input type="tel" id="mEnPhone" name="phone" class="form-control" placeholder="+358 41 327 4967" required>
+          <input type="tel" id="mEnPhone" name="puhelin" class="form-control" placeholder="+358 41 327 4967" required>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
@@ -525,6 +530,7 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="data/aikataulut.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

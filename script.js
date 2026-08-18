@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Dynamic Schedule Filtering (Official Jujutsu Oulu Ry Schedule)
-  const scheduleData = [
-    { day: 'ma', time: '18:30–19:30', laji: 'Junnu-jutsu', group: 'Kaikki vyöasteet', type: 'juniors' },
+  // 3. Dynamic Schedule Filtering (Official Jujutsu Oulu Ry Schedule from data/aikataulut.js)
+  const scheduleData = typeof aikataulutData !== 'undefined' ? aikataulutData : [
+    { day: 'ma', time: '18:30–19:30', laji: 'Junnu-jutsu', group: 'Kaikki vyöasteet', type: 'junnut' },
     { day: 'ma', time: '19:30–21:00', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
     { day: 'ti', time: '18:00–19:30', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
     { day: 'ti', time: '19:30–21:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet', type: 'kenjutsu' },
     { day: 'to', time: '19:30–21:00', laji: 'Hokutoryu', group: 'Värivyöt', type: 'hokutoryu' },
-    { day: 'pe', time: '18:00–20:00', laji: 'Hokutoryu', group: 'Diesel-ryhmä (No Gi)', type: 'hokutoryu' },
+    { day: 'pe', time: '18:00–20:00', laji: 'Hokutoryu', group: 'Diesel-ryhmä (No Gi)', type: 'diesel' },
     { day: 'la', time: '13:30–15:00', laji: 'Kenjutsu', group: 'Kaikki vyöasteet (WhatsApp)', type: 'kenjutsu' },
     { day: 'la', time: '16:30–18:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (vain jäsenille)', type: 'vapaa' },
     { day: 'su', time: '15:00–16:30', laji: 'Vapaavuoro', group: 'Vapaavuoro (vain jäsenille)', type: 'vapaa' },
@@ -198,35 +198,44 @@ document.addEventListener('DOMContentLoaded', () => {
       const phoneInput = form.querySelector('[name="phone"], #phoneNum, #phoneInput, #phone, #phoneInputDieselCard');
       const courseInput = form.querySelector('[name="course"], #courseSelect, #course');
 
+      const nameInput = form.querySelector('[name="nimi"], #nameInput, #fullName, #modalFullName');
+      const emailInput = form.querySelector('[name="sahkoposti"], #emailInput, #emailAddr, #modalEmailAddr');
+      
       const nameVal = nameInput ? nameInput.value : 'treenari';
       const emailVal = emailInput ? emailInput.value : '';
-      const courseVal = courseInput ? courseInput.value : 'Hokutoryu Ju-Jutsu';
 
-      const action = form.getAttribute('action') || 'https://formspree.io/f/xvovbqqr';
-      if (action && action.startsWith('http')) {
-        try {
-          const formData = new FormData(form);
-          if (!formData.get('name') && nameVal) formData.append('name', nameVal);
-          if (!formData.get('email') && emailVal) formData.append('email', emailVal);
-          
-          await fetch(action, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          });
-        } catch (err) {
-          console.warn('Form submission network notice:', err);
-        }
+      const action = form.getAttribute('action');
+      if (!action || !action.startsWith('http')) {
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        showToast(isEn ? 'Form action missing. Please contact us directly by phone: +358 41 327 4967.' : 'Ilmoittautumisvirhe: lomakkeen osoite puuttuu. Voit ilmoittautua puhelimitse: 041 327 4967.');
+        return;
       }
 
-      if (modalOverlay) modalOverlay.classList.remove('active');
-      form.reset();
-      
-      const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
-      if (isEn) {
-        showToast(`Thank you for registering, ${nameVal}! 🥋 We will email you shortly (${emailVal || 'at your email'}). Welcome to training!`);
-      } else {
-        showToast(`Kiitos ilmoittautumisesta, ${nameVal}! 🥋 Olemme sinuun pian yhteydessä sähköpostitse (${emailVal || 'antamaasi osoitteeseen'}). Tervetuloa treeneihin!`);
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!res.ok) {
+          throw new Error('Formspree returned status ' + res.status);
+        }
+
+        if (modalOverlay) modalOverlay.classList.remove('active');
+        form.reset();
+        
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        if (isEn) {
+          showToast(`Thank you for registering, ${nameVal}! 🥋 We will email you shortly (${emailVal || 'at your email'}). Welcome to training!`);
+        } else {
+          showToast(`Kiitos ilmoittautumisesta, ${nameVal}! 🥋 Olemme sinuun pian yhteydessä sähköpostitse (${emailVal || 'antamaasi osoitteeseen'}). Tervetuloa treeneihin!`);
+        }
+      } catch (err) {
+        console.error('Form submission error:', err);
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        showToast(isEn ? 'Network error sending registration. Please call us at +358 41 327 4967 or email info@oulunjujutsu.com.' : 'Lähetys epäonnistui verkkovirheen vuoksi. Voit ilmoittautua puhelimitse: 041 327 4967 tai sähköpostitse: info@oulunjujutsu.com.');
       }
     });
   });

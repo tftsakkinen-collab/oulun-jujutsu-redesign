@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
-  <title>Kenjutsu Oulu | Perinteinen Japanilainen Miekkailu &amp; Jujutsu Oulu Ry</title>
-  <meta name="description" content="Opi perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu & Hokutoryu Kenjutsu. Miekankäsittely, kata-harjoitteet, paritekniikat ja budo-etiketti Äimäkujalla. 2 viikon ilmainen kokeilu!">
+  <title>Kenjutsu Oulu – Perinteinen Samurai-Miekkailutaito</title>
+  <meta name="description" content="Perinteinen japanilainen miekkailutaito Oulussa. Keskittymiskykyä, kehonhallintaa ja miekkatekniikkaa puumiekoilla (Bokken). Tule kokeilemaan!">
   <link rel="canonical" href="https://www.oulunjujutsu.com/kenjutsu.html">
 
   <!-- Open Graph / Social Media -->
@@ -66,6 +66,9 @@
 
 
   <!-- Header & Nav -->
+    <a href="#main" class="skip-link">Siirry suoraan sisältöön</a>
+
+  <!-- Header & Nav -->
   <header id="header" class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
@@ -73,7 +76,7 @@
         JUJUTSU <span>OULU RY</span>
       </a>
 
-            <!-- Header Social Links for instant visibility (<5s) -->
+      <!-- Header Social Links -->
       <div class="header-social-links">
         <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="header-social-icon" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="header-social-icon" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -86,14 +89,26 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="jujutsu.html" class="nav-link nav-link-highlight">Ju-Jutsu</a></li>
-        <li><a href="junnut.html" class="nav-link nav-link-highlight">Junnu-jutsu</a></li>
-        <li><a href="kenjutsu.html" class="nav-link nav-link-highlight active">Kenjutsu</a></li>
-        <li><a href="diesel.html" class="nav-link nav-link-highlight">Diesel-jutsu</a></li>
-        <li><a href="maksut.html" class="nav-link nav-link-highlight">Hinnasto</a></li>
-        <li><a href="index.html#tekniikat" class="nav-link">Videot</a></li>
-        <li><a href="index.html#galleria" class="nav-link">Galleria</a></li>
+        <li><a href="index.html" class="nav-link">Etusivu</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link nav-link-highlight">Lajit <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="jujutsu.html">Hokutoryu Ju-Jutsu (Aikuiset)</a></li>
+            <li><a href="junnut.html">Junnu Ju-Jutsu (7–14v)</a></li>
+            <li><a href="kenjutsu.html">Kenjutsu (Miekkailu)</a></li>
+            <li><a href="diesel.html">Diesel-jutsu (Kuntojutsu)</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#aikataulut" class="nav-link">Harjoitusajat</a></li>
+        <li><a href="maksut.html" class="nav-link">Hinnasto</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link">Seura <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#ohjaajat">Ohjaajat</a></li>
+            <li><a href="index.html#aikataulut">Dojo &amp; Sali</a></li>
+            <li><a href="index.html#arvostelut">Kokemukset</a></li>
+          </ul>
+        </li>
         <li>
           <div class="lang-switcher">
             <a href="index.html" class="active">FI</a>
@@ -109,6 +124,10 @@
       </ul>
     </div>
   </header>
+
+  <main id="main">
+
+  <div class="container"><nav class="breadcrumb"><a href="index.html">Etusivu</a> <span class="separator">&gt;</span> <a href="#">Lajit</a> <span class="separator">&gt;</span> <span>Kenjutsu (Miekkailu)</span></nav></div>
 </div>
 
 
@@ -503,6 +522,8 @@
     </div>
   </div>
 
+  </main>
+
   <!-- Footer -->
   <footer class="footer" style="background: #06080d; border-top: 1px solid var(--border-glass); padding: 80px 0 40px 0; margin-top: 100px;">
     <div class="container">
@@ -576,6 +597,7 @@
     <a href="https://www.tiktok.com/@jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
   </div>
 
+  <script src="data/aikataulut.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
