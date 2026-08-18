@@ -43,22 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!scheduleBody) return;
     scheduleBody.innerHTML = '';
 
+    const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+    const dayMapEn = { 'ma': 'MON', 'ti': 'TUE', 'ke': 'WED', 'to': 'THU', 'pe': 'FRI', 'la': 'SAT', 'su': 'SUN' };
+    const lajiMapEn = { 'Junnu-jutsu': 'Junior Ju-Jutsu', 'Hokutoryu': 'Hokutoryu Ju-Jutsu', 'Kenjutsu': 'Kenjutsu', 'Vapaavuoro': 'Open Practice' };
+    const groupMapEn = {
+      'Kaikki vyöasteet': 'All Belt Ranks',
+      'Värivyöt': 'Color Belts (Yellow–Black)',
+      'Diesel-ryhmä (No Gi)': 'Diesel Fitness Group (No-Gi)',
+      'Kaikki vyöasteet (WhatsApp)': 'All Belts (Confirmed via WhatsApp)',
+      'Vapaavuoro (vain jäsenille)': 'Open Practice (Members Only)'
+    };
+
     const filtered = filter === 'all' 
       ? scheduleData 
       : scheduleData.filter(item => item.type === filter);
 
     if (filtered.length === 0) {
-      scheduleBody.innerHTML = `<tr><td colspan="4" style="text-align:center; color: var(--text-muted);">Ei harjoituksia valitussa ryhmässä.</td></tr>`;
+      scheduleBody.innerHTML = `<tr><td colspan="4" style="text-align:center; color: var(--text-muted);">${isEn ? 'No training sessions for selected filter.' : 'Ei harjoituksia valitussa ryhmässä.'}</td></tr>`;
       return;
     }
 
     filtered.forEach(item => {
       const tr = document.createElement('tr');
+      const dayDisp = isEn ? (dayMapEn[item.day] || item.day.toUpperCase()) : item.day.toUpperCase();
+      const lajiDisp = isEn ? (lajiMapEn[item.laji] || item.laji) : item.laji;
+      const groupDisp = isEn ? (groupMapEn[item.group] || item.group) : item.group;
+
       tr.innerHTML = `
-        <td><strong style="text-transform: uppercase; color: #fff;">${item.day}</strong></td>
+        <td><strong style="text-transform: uppercase; color: #fff;">${dayDisp}</strong></td>
         <td><span class="time-badge">${item.time}</span></td>
-        <td><span style="color:#fff; font-weight:600;">${item.laji}</span></td>
-        <td><span style="color:var(--text-muted);">${item.group}</span></td>
+        <td><span style="color:#fff; font-weight:600;">${lajiDisp}</span></td>
+        <td><span style="color:var(--text-muted);">${groupDisp}</span></td>
       `;
       scheduleBody.appendChild(tr);
     });
@@ -172,39 +187,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (enrollForm) {
-    enrollForm.addEventListener('submit', async (e) => {
+  // Generic Form Submission Handler for all enrollment forms on the website
+  const allForms = document.querySelectorAll('form');
+  allForms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const nameEl = document.getElementById('nameInput') || document.getElementById('fullName');
-      const emailEl = document.getElementById('emailInput') || document.getElementById('email');
-      const phoneEl = document.getElementById('phoneInput') || document.getElementById('phone');
-      const courseEl = document.getElementById('courseSelect') || document.getElementById('course');
       
-      const nameVal = nameEl ? nameEl.value : 'harrastaja';
-      const emailVal = emailEl ? emailEl.value : '';
-      const phoneVal = phoneEl ? phoneEl.value : '';
-      const courseVal = courseEl ? courseEl.value : 'Itsepuolustus & Hokutoryu Ju-Jutsu';
+      const nameInput = form.querySelector('[name="name"], #fullName, #nameInput, #modalFullName, #nameInputDieselCard');
+      const emailInput = form.querySelector('[name="email"], #emailAddr, #emailInput, #email, #modalEmailAddr, #emailInputDieselCard');
+      const phoneInput = form.querySelector('[name="phone"], #phoneNum, #phoneInput, #phone, #phoneInputDieselCard');
+      const courseInput = form.querySelector('[name="course"], #courseSelect, #course');
 
-      const action = enrollForm.getAttribute('action');
+      const nameVal = nameInput ? nameInput.value : 'treenari';
+      const emailVal = emailInput ? emailInput.value : '';
+      const courseVal = courseInput ? courseInput.value : 'Hokutoryu Ju-Jutsu';
+
+      const action = form.getAttribute('action') || 'https://formspree.io/f/xvovbqqr';
       if (action && action.startsWith('http')) {
         try {
-          const formData = new FormData(enrollForm);
+          const formData = new FormData(form);
+          if (!formData.get('name') && nameVal) formData.append('name', nameVal);
+          if (!formData.get('email') && emailVal) formData.append('email', emailVal);
+          
           await fetch(action, {
             method: 'POST',
             body: formData,
             headers: { 'Accept': 'application/json' }
           });
         } catch (err) {
-          console.warn('Form submission endpoint error, fallback to UI notification:', err);
+          console.warn('Form submission network notice:', err);
         }
       }
 
       if (modalOverlay) modalOverlay.classList.remove('active');
-      enrollForm.reset();
+      form.reset();
       
-      showToast(`Kiitos ilmoittautumisesta, ${nameVal}! 🥋 Olemme sinuun pian yhteydessä sähköpostitse (${emailVal || 'antamaasi osoitteeseen'}). Tervetuloa treeneihin!`);
+      const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+      if (isEn) {
+        showToast(`Thank you for registering, ${nameVal}! 🥋 We will email you shortly (${emailVal || 'at your email'}). Welcome to training!`);
+      } else {
+        showToast(`Kiitos ilmoittautumisesta, ${nameVal}! 🥋 Olemme sinuun pian yhteydessä sähköpostitse (${emailVal || 'antamaasi osoitteeseen'}). Tervetuloa treeneihin!`);
+      }
     });
-  }
+  });
 
 
 

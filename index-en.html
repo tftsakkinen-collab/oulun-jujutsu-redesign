@@ -1555,7 +1555,7 @@
           </div>
         </div>
 
-        <form class="quick-enroll-form" style="display: flex; flex-direction: column; gap: 16px; background: rgba(11,11,11,0.6); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+        <form class="quick-enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST" style="display: flex; flex-direction: column; gap: 16px; background: rgba(11,11,11,0.6); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
           <div class="form-group">
             <label>Full Name *</label>
             <input type="text" name="name" required placeholder="e.g. John Smith" class="form-control">
@@ -1754,20 +1754,20 @@
         <p style="font-size: 0.9rem;">Fill in your details below. Your first 2 weeks are completely free!</p>
       </div>
 
-      <form id="enrollForm">
+      <form id="enrollForm" class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group">
           <label class="form-label" for="nameInput">Full Name</label>
-          <input type="text" id="nameInput" class="form-input" placeholder="John Doe" required>
+          <input type="text" id="nameInput" name="name" class="form-input" placeholder="John Doe" required>
         </div>
 
         <div class="form-group">
           <label class="form-label" for="emailInput">Email Address</label>
-          <input type="email" id="emailInput" class="form-input" placeholder="john@example.com" required>
+          <input type="email" id="emailInput" name="email" class="form-input" placeholder="john@example.com" required>
         </div>
 
         <div class="form-group">
           <label class="form-label" for="phoneInput">Phone Number</label>
-          <input type="tel" id="phoneInput" class="form-input" placeholder="+358 41 327 4967" required>
+          <input type="tel" id="phoneInput" name="phone" class="form-input" placeholder="+358 41 327 4967" required>
         </div>
 
         <div class="form-group">

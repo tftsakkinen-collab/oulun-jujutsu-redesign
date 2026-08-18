@@ -3121,7 +3121,90 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   border: 2px solid #fff;
 }
 
+/* ==========================================================================
+   Responsive, Typography & Accessibility Fixes 2026
+   ========================================================================== */
 
+/* Prevent horizontal scroll from background-grid */
+.background-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
 
+/* Optimal line length (50-75ch) & font sizing for body text */
+p, .hero-subtitle, .instructor-bio, .section-header p, .faq-answer p {
+  max-width: 70ch;
+  line-height: 1.65;
+  font-size: 1rem;
+}
 
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background: var(--brand-red);
+  color: #fff;
+  padding: 10px 18px;
+  z-index: 99999;
+  transition: top 0.2s ease;
+  font-weight: 700;
+  border-radius: 0 0 8px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
 
+/* Laptop & Desktop Nav Breakpoint Adjustment (1100px - 1365px) */
+@media (min-width: 1100px) and (max-width: 1365px) {
+  .header-container {
+    padding: 0 16px !important;
+  }
+  .nav-list {
+    gap: 10px !important;
+  }
+  .nav-link {
+    font-size: 0.85rem !important;
+  }
+  .btn-nav {
+    padding: 8px 12px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Mobile Button & Overflow Wrap (320px - 600px) */
+@media (max-width: 600px) {
+  .btn, button.btn, a.btn {
+    white-space: normal !important;
+    word-break: break-word;
+    text-align: center;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  .technique-box, .youtube-panel, .glass-panel, .fee-simulator-box, iframe, .dark-map-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Small Screens (320px) Overflow Protection */
+@media (max-width: 350px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+  .btn {
+    font-size: 0.85rem !important;
+    padding: 10px 14px !important;
+  }
+  .section-title, h1, h2 {
+    font-size: 1.5rem !important;
+  }
+}

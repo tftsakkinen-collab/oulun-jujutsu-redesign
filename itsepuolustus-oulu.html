@@ -235,9 +235,25 @@
             <span class="badge" style="background: rgba(52,211,153,0.15); border-color: rgba(52,211,153,0.4); color: #34d399;"><i class="fa-solid fa-venus"></i> Naisten itsepuolustus &amp; turvataidot</span>
             <h2 style="font-size: 2.2rem; color: #fff; margin: 12px 0;">Itsepuolustusta kaikenkokoisille</h2>
             <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">
-              Ju-Jutsu on ihanteellinen itsepuolustusmuoto naisille, sillä tekniikat hyödyntävät vipuvoimaa ja vastustajan omaa liike-energiaa. Et tarvitse aiempaa urheilutaustaa tai suurta voimaa – opit tehokkaat otteista vapautumiset turvallisesti.
+              Ju-Jutsu on ihanteellinen itsepuolustusmuoto naisille ja kaikenikäisille harrastajille, sillä tekniikat hyödyntävät vipuvoimaa ja vastustajan omaa liike-energiaa. Et tarvitse aiempaa urheilutaustaa tai suurta voimaa – opit tehokkaat otteista vapautumiset turvallisesti.
             </p>
             <button class="btn btn-primary open-enroll-modal">
+              <i class="fa-solid fa-shield-cat"></i> Tule kokeilemaan 2 viikoksi ilmaiseksi
+            </button>
+          </div>
+
+          <!-- Deep-dive Legal & Practical Section -->
+          <div style="background: rgba(0,0,0,0.3); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+            <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 12px;"><i class="fa-solid fa-scale-balanced" style="color: var(--accent-gold); margin-right: 8px;"></i> Hätävarjelu &amp; Suomen Lainsäädäntö</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px;">
+              Hokutoryu Ju-Jutsussa opetettava itsepuolustus noudattaa täsmällisesti Suomen rikoslain säännöksiä hätävarjelusta ja sen rajoista. Opetamme tunnistamaan oikean puolustustason:
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; color: var(--text-dim);">
+              <li><i class="fa-solid fa-check" style="color: var(--brand-red); margin-right: 8px;"></i> Ennaltaehkäisy &amp; sanallinen de-eskalaatio</li>
+              <li><i class="fa-solid fa-check" style="color: var(--brand-red); margin-right: 8px;"></i> Suhteellisuusperiaate (puolustusteon mitoitus)</li>
+              <li><i class="fa-solid fa-check" style="color: var(--brand-red); margin-right: 8px;"></i> Turvallinen hallinta ilman tarpeetonta vahingoittamista</li>
+            </ul>
+          </div>
               <i class="fa-solid fa-shield-cat"></i> Tule kokeilemaan 2 viikoksi ilmaiseksi
             </button>
           </div>
@@ -260,20 +276,20 @@
         <p style="font-size: 0.9rem; color: var(--text-muted);">Tule kokeilemaan ensimmäiset 2 viikkoa täysin veloituksetta ilman sitoutumista!</p>
       </div>
 
-      <form class="enroll-form">
+      <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="fullName">Etunimi ja Sukunimi *</label>
-          <input type="text" id="fullName" class="form-control" placeholder="Matti Meikäläinen" required>
+          <input type="text" id="fullName" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="emailAddr">Sähköpostiosoite *</label>
-          <input type="email" id="emailAddr" class="form-control" placeholder="matti@esimerkki.fi" required>
+          <input type="email" id="emailAddr" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="phoneNum">Puhelinnumero *</label>
-          <input type="tel" id="phoneNum" class="form-control" placeholder="041 327 4967" required>
+          <input type="tel" id="phoneNum" name="phone" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 20px;">

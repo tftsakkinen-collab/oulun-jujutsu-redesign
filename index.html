@@ -112,6 +112,7 @@
   </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Hyppää sisältöön</a>
 </div>
 
 
@@ -848,25 +849,25 @@
           Täytä tiedot alta niin olemme yhteydessä. Ensimmäiset 2 viikkoa treenejä ovat täysin ilmaisia!
         </p>
 
-        <form class="enroll-form" style="text-align: left;">
+        <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST" style="text-align: left;">
           <div class="form-group" style="margin-bottom: 14px;">
             <label for="nameInput">Etunimi ja Sukunimi *</label>
-            <input type="text" id="nameInput" class="form-control" placeholder="Matti Meikäläinen" required>
+            <input type="text" id="nameInput" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
             <label for="emailInput">Sähköpostiosoite *</label>
-            <input type="email" id="emailInput" class="form-control" placeholder="matti@esimerkki.fi" required>
+            <input type="email" id="emailInput" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 14px;">
             <label for="phoneInput">Puhelinnumero *</label>
-            <input type="tel" id="phoneInput" class="form-control" placeholder="041 327 4967" required>
+            <input type="tel" id="phoneInput" name="phone" class="form-control" placeholder="041 327 4967" required>
           </div>
 
           <div class="form-group" style="margin-bottom: 20px;">
             <label for="courseSelect">Valitse Lajiryhmä *</label>
-            <select id="courseSelect" class="form-control" required>
+            <select id="courseSelect" name="course" class="form-control" required>
               <option value="Hokutoryu Ju-Jutsu (Aikuiset 15v+)" selected>Hokutoryu Ju-Jutsu (Aikuiset 15v+)</option>
               <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Kuntojutsu)</option>
               <option value="Kenjutsu (Miekkailu)">Kenjutsu (Miekkailu)</option>
@@ -877,6 +878,9 @@
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
             <i class="fa-solid fa-paper-plane"></i> Lähetä Ilmoittautuminen (2 viikon ilmainen kokeilu)
           </button>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center; margin-top: 10px;">
+            Tai suoraan sähköpostitse: <a href="mailto:info@oulunjujutsu.com" style="color: var(--brand-red);">info@oulunjujutsu.com</a>
+          </div>
         </form>
       </div>
     </div>
@@ -893,20 +897,20 @@
         <p style="font-size: 0.9rem; color: var(--text-muted);">Tule kokeilemaan ensimmäiset 2 viikkoa täysin veloituksetta ilman sitoutumista!</p>
       </div>
 
-      <form class="enroll-form">
+      <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalFullName">Etunimi ja Sukunimi *</label>
-          <input type="text" id="modalFullName" class="form-control" placeholder="Matti Meikäläinen" required>
+          <input type="text" id="modalFullName" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalEmailAddr">Sähköpostiosoite *</label>
-          <input type="email" id="modalEmailAddr" class="form-control" placeholder="matti@esimerkki.fi" required>
+          <input type="email" id="modalEmailAddr" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalPhoneNum">Puhelinnumero *</label>
-          <input type="tel" id="modalPhoneNum" class="form-control" placeholder="041 327 4967" required>
+          <input type="tel" id="modalPhoneNum" name="phone" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 20px;">

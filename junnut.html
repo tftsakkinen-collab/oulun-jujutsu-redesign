@@ -477,20 +477,20 @@
         <p style="font-size: 0.9rem; color: var(--text-muted);">Tule kokeilemaan ensimmäiset 2 viikkoa täysin veloituksetta ilman sitoutumista!</p>
       </div>
 
-      <form id="enrollForm" class="enroll-form">
+      <form id="enrollForm" class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group">
           <label for="fullName">Lapsen Etunimi ja Sukunimi *</label>
-          <input type="text" id="fullName" class="form-control" placeholder="Lapsen nimi" required>
+          <input type="text" id="fullName" name="name" class="form-control" placeholder="Lapsen nimi" required>
         </div>
 
         <div class="form-group">
           <label for="emailAddr">Vanhemman Sähköpostiosoite *</label>
-          <input type="email" id="emailAddr" class="form-control" placeholder="vanhempi@esimerkki.fi" required>
+          <input type="email" id="emailAddr" name="email" class="form-control" placeholder="vanhempi@esimerkki.fi" required>
         </div>
 
         <div class="form-group">
           <label for="phoneNum">Vanhemman Puhelinnumero *</label>
-          <input type="tel" id="phoneNum" class="form-control" placeholder="041 327 4967" required>
+          <input type="tel" id="phoneNum" name="phone" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group">

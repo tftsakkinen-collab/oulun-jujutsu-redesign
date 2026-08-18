@@ -215,20 +215,20 @@
             <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;"><i class="fa-solid fa-paper-plane" style="color: var(--accent-gold); margin-right: 8px;"></i> Ilmoittaudu treeneihin</h4>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Varaa ilmainen kokeilupaikkasi perjantaille:</p>
 
-            <form class="enroll-form">
+            <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
               <div class="form-group" style="margin-bottom: 14px;">
                 <label for="nameInputDieselCard" style="display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px;">Nimi *</label>
-                <input type="text" id="nameInputDieselCard" class="form-control" placeholder="Etunimi ja Sukunimi" required>
+                <input type="text" id="nameInputDieselCard" name="name" class="form-control" placeholder="Etunimi ja Sukunimi" required>
               </div>
 
               <div class="form-group" style="margin-bottom: 14px;">
                 <label for="emailInputDieselCard" style="display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px;">Sähköposti *</label>
-                <input type="email" id="emailInputDieselCard" class="form-control" placeholder="sähköposti@osoite.fi" required>
+                <input type="email" id="emailInputDieselCard" name="email" class="form-control" placeholder="sähköposti@osoite.fi" required>
               </div>
 
               <div class="form-group" style="margin-bottom: 14px;">
                 <label for="phoneInputDieselCard" style="display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px;">Puhelinnumero *</label>
-                <input type="tel" id="phoneInputDieselCard" class="form-control" placeholder="041 327 4967" required>
+                <input type="tel" id="phoneInputDieselCard" name="phone" class="form-control" placeholder="041 327 4967" required>
               </div>
 
               <input type="hidden" name="laji" value="Hokutoryu Diesel-jutsu">
@@ -309,20 +309,20 @@
         <p style="font-size: 0.9rem; color: var(--text-muted);">Tule kokeilemaan ensimmäiset 2 viikkoa täysin veloituksetta ilman sitoutumista!</p>
       </div>
 
-      <form class="enroll-form">
+      <form class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalFullNameDiesel">Etunimi ja Sukunimi *</label>
-          <input type="text" id="modalFullNameDiesel" class="form-control" placeholder="Matti Meikäläinen" required>
+          <input type="text" id="modalFullNameDiesel" name="name" class="form-control" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalEmailAddrDiesel">Sähköpostiosoite *</label>
-          <input type="email" id="modalEmailAddrDiesel" class="form-control" placeholder="matti@esimerkki.fi" required>
+          <input type="email" id="modalEmailAddrDiesel" name="email" class="form-control" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modalPhoneNumDiesel">Puhelinnumero *</label>
-          <input type="tel" id="modalPhoneNumDiesel" class="form-control" placeholder="041 327 4967" required>
+          <input type="tel" id="modalPhoneNumDiesel" name="phone" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 20px;">

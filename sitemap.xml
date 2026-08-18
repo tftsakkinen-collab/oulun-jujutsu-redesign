@@ -47,9 +47,25 @@
   <!-- Kenjutsu Oulu Sivu -->
   <url>
     <loc>https://www.oulunjujutsu.com/kenjutsu.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+
+  <!-- Hokutoryu Diesel-Jutsu Sivu -->
+  <url>
+    <loc>https://www.oulunjujutsu.com/diesel.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Hinnasto & Maksutavat Sivu -->
+  <url>
+    <loc>https://www.oulunjujutsu.com/maksut.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
 </urlset>
