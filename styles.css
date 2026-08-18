@@ -411,10 +411,10 @@ p {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
-  align-items: flex-end;
-  padding: 340px 0 80px 0;
+  align-items: center;
+  padding: 120px 0 60px 0;
   overflow: hidden;
 }
 
