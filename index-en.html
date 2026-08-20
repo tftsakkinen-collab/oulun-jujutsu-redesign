@@ -545,5 +545,86 @@
   <span>Kysy koutsilta</span>
 </div>
 
+
+<!-- Kysy koutsilta - Telegram-modal & Floating Button -->
+<div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
+  <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 32px; max-width: 480px; width: 100%; position: relative; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+    <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer;">&times;</button>
+    
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <div style="background: #00AEEF; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem;">
+        <i class="fa-solid fa-user-ninja"></i>
+      </div>
+      <div>
+        <h3 style="margin: 0; font-size: 1.25rem; color: #fff;">Kysy koutsilta</h3>
+        <p style="margin: 0; font-size: 0.85rem; color: #94a3b8;">Saat vastauksen suoraan koutsin puhelimeen</p>
+      </div>
+    </div>
+    
+    <form id="instructor-form" onsubmit="submitInstructorQuestion(event)">
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px;">Nimesi *</label>
+        <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 0.95rem;">
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
+        <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 0.95rem;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px;">Kysymyksesi koutsille *</label>
+        <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 0.95rem; resize: vertical;"></textarea>
+      </div>
+
+      <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: 8px; border: none; background: #00AEEF; color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
+      </button>
+    </form>
+
+    <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
+      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
+      <h4 style="margin: 0 0 8px 0; color: #fff;">Kiitos kysymyksestä!</h4>
+      <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openInstructorModal() {
+  var m = document.getElementById('kysy-koutsilta-modal');
+  if (m) { m.style.display = 'flex'; }
+}
+function closeInstructorModal() {
+  var m = document.getElementById('kysy-koutsilta-modal');
+  if (m) { m.style.display = 'none'; }
+}
+async function submitInstructorQuestion(e) {
+  e.preventDefault();
+  const name = document.getElementById('inst-name').value;
+  const contact = document.getElementById('inst-contact').value;
+  const question = document.getElementById('inst-question').value;
+  const btn = document.getElementById('inst-submit-btn');
+  
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Lähetetään...';
+
+  try {
+    const res = await fetch('/api/ask-instructor', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, contact, question })
+    });
+    
+    document.getElementById('instructor-form').style.display = 'none';
+    document.getElementById('inst-success-msg').style.display = 'block';
+  } catch (err) {
+    alert('Viestin lähetyksessä tapahtui virhe. Yritä uudelleen!');
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille';
+  }
+}
+</script>
+
 </body>
 </html>
