@@ -609,8 +609,14 @@
 </div>
 
 
+
 <!-- Kysy koutsilta - Telegram-modal & Floating Button -->
-<div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
+<div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 99999; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: #fff; padding: 14px 22px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+  <i class="fa-solid fa-comments" style="font-size: 1.2rem; color: #fff;"></i>
+  <span>Kysy koutsilta</span>
+</div>
+
+<div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
   <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 32px; max-width: 480px; width: 100%; position: relative; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
     <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer;">&times;</button>
     
@@ -691,7 +697,3 @@ async function submitInstructorQuestion(e) {
 
 </body>
 </html>
-
-
-
-
