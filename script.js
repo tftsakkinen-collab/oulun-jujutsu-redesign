@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Auto-close menu when clicking links inside nav
-    navLinks.querySelectorAll('a, button').forEach(link => {
+    // Auto-close menu when clicking nav links
+    navLinks.querySelectorAll('.nav-link, .btn-nav').forEach(link => {
       link.addEventListener('click', () => {
         closeMenu();
       });
@@ -235,13 +235,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const nameInput = form.querySelector('[name="name"], #fullName, #nameInput, #modalFullName, #nameInputDieselCard');
-      const emailInput = form.querySelector('[name="email"], #emailAddr, #emailInput, #email, #modalEmailAddr, #emailInputDieselCard');
-      const phoneInput = form.querySelector('[name="phone"], #phoneNum, #phoneInput, #phone, #phoneInputDieselCard');
-      const courseInput = form.querySelector('[name="course"], #courseSelect, #course');
-
-      const nameInput = form.querySelector('[name="nimi"], #nameInput, #fullName, #modalFullName');
-      const emailInput = form.querySelector('[name="sahkoposti"], #emailInput, #emailAddr, #modalEmailAddr');
+      const nameInput = form.querySelector('[name="name"], [name="nimi"], #fullName, #nameInput, #modalFullName, #nameInputDieselCard');
+      const emailInput = form.querySelector('[name="email"], [name="sahkoposti"], #emailAddr, #emailInput, #email, #modalEmailAddr, #emailInputDieselCard');
+      const phoneInput = form.querySelector('[name="phone"], [name="puhelin"], #phoneNum, #phoneInput, #phone, #phoneInputDieselCard');
+      const courseInput = form.querySelector('[name="course"], [name="kurssi"], #courseSelect, #course');
       
       const nameVal = nameInput ? nameInput.value : 'treenari';
       const emailVal = emailInput ? emailInput.value : '';
