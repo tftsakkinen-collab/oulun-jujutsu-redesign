@@ -3,21 +3,23 @@
   "noticeEn": "Guided training resumes after the summer break for adults starting Aug 3 and for juniors starting Aug 17, 2026.",
   "scheduleImageCurrent": "assets/treeniaikataulut_ilman_peruskurssia.jpeg",
   "scheduleImageBeginnerCourse": "assets/peruskurssin_aiheuttamat_aikataulumuutokset.jpg",
-  "beginnerCourseNotice": "Huom! Syyskuussa alkaa uusi peruskurssi (viikolla 38). Tiistain ja torstain harjoitusajat muuttuvat peruskurssin alkaessa alla olevan peruskurssiaikataulun mukaisesti!",
-  "beginnerCourseNoticeEn": "Note! A new beginner course starts in September (week 38). Tuesday and Thursday training times will update according to the beginner course schedule below!",
+  "beginnerCourseNotice": "Syksyn Ju-Jutsun peruskurssi alkaa tiistaina 15.9.2026! Treeniajat: Tiistaisin 18:00–19:00 ja Torstaisin 20:30–21:30.",
+  "beginnerCourseNoticeEn": "Autumn Ju-Jutsu beginner course starts Tuesday Sep 15, 2026! Training times: Tue 18:00–19:00 and Thu 20:30–21:30.",
   "beginnerCourseScheduleWeek38": [
-    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:00", "laji": "Hokutoryu", "group": "Peruskurssi" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:00", "laji": "Hokutoryu", "group": "Peruskurssi (Alkaa 15.9.)" },
     { "day": "ti", "dayLong": "Tiistai", "time": "19:00–20:00", "laji": "Hokutoryu", "group": "Värivyöt" },
     { "day": "ti", "dayLong": "Tiistai", "time": "20:00–21:00", "laji": "Kenjutsu", "group": "Kaikki vyöasteet" },
     { "day": "to", "dayLong": "Torstai", "time": "19:30–20:30", "laji": "Hokutoryu", "group": "Värivyöt" },
-    { "day": "to", "dayLong": "Torstai", "time": "20:30–21:30", "laji": "Hokutoryu", "group": "Peruskurssi" }
+    { "day": "to", "dayLong": "Torstai", "time": "20:30–21:30", "laji": "Hokutoryu", "group": "Peruskurssi (Alkaa 15.9.)" }
   ],
   "weeklySchedule": [
     { "day": "ma", "dayLong": "Maanantai", "time": "18:30–19:30", "laji": "Junnu-jutsu", "group": "kaikki vyöasteet", "type": "juniors" },
     { "day": "ma", "dayLong": "Maanantai", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
-    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:30", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
-    { "day": "ti", "dayLong": "Tiistai", "time": "19:30–21:00", "laji": "Kenjutsu", "group": "kaikki vyöasteet", "type": "kenjutsu" },
-    { "day": "to", "dayLong": "Torstai", "time": "19:30–21:00", "laji": "Hokutoryu", "group": "värivyöt", "type": "hokutoryu" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "18:00–19:00", "laji": "Hokutoryu", "group": "peruskurssi (15.9.+)", "type": "hokutoryu" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "19:00–20:00", "laji": "Hokutoryu", "group": "värivyöt (15.9.+)", "type": "hokutoryu" },
+    { "day": "ti", "dayLong": "Tiistai", "time": "20:00–21:00", "laji": "Kenjutsu", "group": "kaikki vyöasteet (15.9.+)", "type": "kenjutsu" },
+    { "day": "to", "dayLong": "Torstai", "time": "19:30–20:30", "laji": "Hokutoryu", "group": "värivyöt (15.9.+)", "type": "hokutoryu" },
+    { "day": "to", "dayLong": "Torstai", "time": "20:30–21:30", "laji": "Hokutoryu", "group": "peruskurssi (15.9.+)", "type": "hokutoryu" },
     { "day": "pe", "dayLong": "Perjantai", "time": "18:00–20:00", "laji": "Hokutoryu", "group": "diesel-ryhmä", "type": "diesel" },
     { "day": "la", "dayLong": "Lauantai", "time": "13:30–15:00", "laji": "Kenjutsu", "group": "kaikki vyöasteet", "type": "kenjutsu" },
     { "day": "la", "dayLong": "Lauantai", "time": "16:30–18:30", "laji": "Vapaavuoro", "group": "vapaavuoro", "type": "vapaa" },
@@ -30,6 +32,7 @@
     "Vapaavuoroilla ei ole ohjattua harjoitustoimintaa. Vapaavuorot on tarkoitettu ainoastaan seuran jäsenille."
   ],
   "exceptionBookings": [
+    { "date": "ti–to 22.–24.9.2026", "dateEn": "Tue–Thu Sep 22–24, 2026", "time": "Treeniajat", "reservedBy": "SporttiAppro 2026 (Hokutoryu ti & to max 30 hlö, Kenjutsu ti max 10 hlö)" },
     { "date": "la 5.9.2026", "dateEn": "Sat Sep 5, 2026", "time": "10:00–11:30 & 13:00–17:00", "reservedBy": "Budoseura Oulun Musokai" },
     { "date": "la 26.9.2026", "dateEn": "Sat Sep 26, 2026", "time": "Koko päivä / Full Day", "reservedBy": "Budoseura Oulun Musokai" },
     { "date": "su 27.9.2026", "dateEn": "Sun Sep 27, 2026", "time": "Koko päivä / Full Day", "reservedBy": "Budoseura Oulun Musokai" },
