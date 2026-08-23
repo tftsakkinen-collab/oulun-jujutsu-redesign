@@ -1893,9 +1893,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
    transform-origin values verified with a Playwright grid-overlay test so the
    face lands centered in the circle with full edge-to-edge coverage (no gaps). */
 .coach-avatar-img-sami {
-  object-position: 57.5% 32% !important;
-  transform-origin: 57.5% 32% !important;
-  transform: scale(1.45) !important;
+  object-position: 62% 42% !important;
+  transform-origin: 62% 42% !important;
+  transform: scale(1.35) !important;
 }
 
 /* Janne Säkkinen — face sits high & right of center in the source photo */
