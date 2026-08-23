@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="coach-profile-card">
             <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border-glass);">
               <div style="width: 84px; min-width: 84px; height: 84px; border-radius: 50%; background: linear-gradient(135deg, var(--brand-red), var(--accent-gold)); padding: 3px;">
-                <img src="${key === 'tenhunen' ? 'assets/Jujutsu/Hokutoryu-06886_renshi.jpg' : 'assets/Jujutsu/Hokutoryu-06675_pekkala.jpg'}" alt="${coach.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                <img src="${key === 'tenhunen' ? 'assets/Jujutsu/Hokutoryu-06886_renshi.jpg' : 'assets/Jujutsu/sensei-sami.webp'}" alt="${coach.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
               </div>
               <div>
                 <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
