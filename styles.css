@@ -1866,9 +1866,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .instructor-img-pekkala {
-  object-position: 28% 38%;
-  transform: scale(2.2);
-  transform-origin: 28% 38%;
+  object-position: 50% 25% !important;
+  transform: scale(1.15) !important;
+  transform-origin: 50% 25% !important;
 }
 
 /* Coach/Ohjaaja avatar circles (jujutsu.html #senseit, junnut.html #junnujen-ohjaajat).
