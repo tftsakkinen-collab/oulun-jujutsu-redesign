@@ -100,7 +100,7 @@
   <header id="header" class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <img src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
+        <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
         JUJUTSU <span>OULU RY</span>
       </a>
 
@@ -276,7 +276,7 @@
             </button>
           </div>
           <div style="border-radius: var(--radius-md); overflow: hidden; height: 320px; border: 1px solid var(--border-glass);">
-            <img src="assets/Jujutsu/DSC02862.jpg" alt="Naisten itsepuolustus Oulu rannelukko" style="width: 100%; height: 100%; object-fit: cover;">
+            <img loading="lazy" decoding="async" src="assets/Jujutsu/DSC02862.jpg" alt="Naisten itsepuolustus Oulu rannelukko" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -340,7 +340,7 @@
       <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-bottom: 40px;">
         <div>
           <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
-            <img src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
+            <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
           <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.6;">
@@ -419,8 +419,8 @@
     
   </div>
 
-  <script src="data/aikataulut.js"></script>
-  <script src="script.js"></script>
+  <script src="data/aikataulut.js" defer></script>
+  <script src="script.js" defer></script>
 
 <!-- Floating Kysy koutsilta Button -->
 <div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: #fff; padding: 14px 22px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">

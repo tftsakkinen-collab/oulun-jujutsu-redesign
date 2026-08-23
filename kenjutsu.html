@@ -71,7 +71,7 @@
   <header id="header" class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <img src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
+        <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
         JUJUTSU <span>OULU RY</span>
       </a>
 
@@ -279,7 +279,7 @@
         </div>
 
         <div style="border-radius: var(--radius-md); overflow: hidden; height: 380px; border: 1px solid var(--border-glass); position: relative; box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
-          <img src="assets/Kenjutsu/Kenjutsu_tutustuminen-06931.jpg" alt="Kenjutsu Katana Guard Stance Oulu" style="width: 100%; height: 100%; object-fit: cover;">
+          <img loading="lazy" decoding="async" src="assets/Kenjutsu/Kenjutsu_tutustuminen-06931.jpg" alt="Kenjutsu Katana Guard Stance Oulu" style="width: 100%; height: 100%; object-fit: cover;">
           <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); padding: 18px 22px; color: #fff;">
             <div style="font-weight: 700; font-size: 1.05rem;"><i class="fa-solid fa-camera" style="color: var(--brand-red); margin-right: 8px;"></i> Kenjutsu Kamae Guard Stance</div>
             <div style="font-size: 0.85rem; color: var(--text-muted);">Perinteinen miekan valmiusasento Oulun salilla</div>
@@ -498,7 +498,7 @@
   <div id="galleryLightbox" class="lightbox-overlay">
     <div class="lightbox-content">
       <button id="closeLightbox" class="lightbox-close" aria-label="Sulje kuva"><i class="fa-solid fa-xmark"></i></button>
-      <img id="lightboxImg" class="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Galleriakuva suurennettuna">
+      <img loading="lazy" decoding="async" id="lightboxImg" class="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Galleriakuva suurennettuna">
       <div class="lightbox-caption">
         <span id="lightboxTag" class="badge"></span>
         <h3 id="lightboxTitle" style="color: #fff; margin-top: 6px;"></h3>
@@ -515,7 +515,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <img src="assets/oulunjujutsu-logo.png" alt="Logo">
+            <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
           <p style="margin-top: 16px;">Jujutsu Oulu Ry – Suomen johtavaa Hokutoryu Ju-Jutsua ja perinteistä Kenjutsu-miekkailukoulutusta Oulussa.</p>
@@ -582,8 +582,8 @@
     
   </div>
 
-  <script src="data/aikataulut.js"></script>
-  <script src="script.js"></script>
+  <script src="data/aikataulut.js" defer></script>
+  <script src="script.js" defer></script>
 
 <!-- Floating Kysy koutsilta Button -->
 <div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: #fff; padding: 14px 22px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
