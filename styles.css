@@ -7,26 +7,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  /* Alkuperäiset & Päivitetyt Brändivärit */
-  --brand-red: #ff0915;
-  --brand-red-hover: #e50914;
-  --brand-red-glow: rgba(255, 9, 21, 0.45);
+  /* 4 Vakioväriä (2 Pääväriä, 2 Sivuväriä) */
+  --brand-red: #ff2d38;             /* Pääväri 1: Brändipunainen */
+  --brand-red-hover: #e50914;       /* Punaisen hover-sävy */
+  --brand-red-glow: rgba(255, 45, 56, 0.45);
   
-  --bg-black: #0b0b0b;
+  --bg-black: #0b0b0b;              /* Pääväri 2: Syvä Musta */
   --bg-card: rgba(18, 22, 30, 0.85);
   --bg-card-hover: rgba(28, 36, 50, 0.95);
   --bg-glass: rgba(15, 18, 26, 0.75);
 
   --border-glass: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(255, 9, 21, 0.6);
+  --border-active: rgba(255, 45, 56, 0.6);
 
-  --accent-gold: #f59e0b;
+  --accent-gold: #f59e0b;           /* Sivuväri 1: Tehostekulta */
   --accent-belt: #6c3600;
-  --accent-blue: #0664ff;
 
-  --text-main: #ffffff;
-  --text-muted: #a0aec0;
-  --text-dim: #64748b;
+  --text-main: #ffffff;             /* Päätekstiväri: Valkoinen */
+  --text-muted: #94a3b8;            /* Sivuväri 2: Muted Slate Neutraali */
+  --text-dim: #94a3b8;
 
   /* Yhtenäistetty Typografia (Open Sans Kaikkialla) */
   --font-brand-display: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -223,13 +222,13 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-red) 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, var(--brand-red) 0%, #e50914 100%);
   color: #ffffff;
   box-shadow: 0 0 25px var(--brand-red-glow);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #ff2a35 0%, var(--brand-red-hover) 100%);
+  background: linear-gradient(135deg, #ff2d38 0%, var(--brand-red-hover) 100%);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 35px rgba(255, 9, 21, 0.75);
 }
@@ -258,7 +257,7 @@ p {
   border-radius: var(--radius-full);
   background: rgba(255, 9, 21, 0.12);
   border: 1px solid rgba(255, 9, 21, 0.35);
-  color: #ff4d56;
+  color: #ff2d38;
   letter-spacing: 0.03em;
   box-shadow: 0 0 15px rgba(255, 9, 21, 0.2);
 }
@@ -507,20 +506,23 @@ p {
   background: none;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: var(--brand-red);
-  filter: none;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95));
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.98), 0 0 22px rgba(255, 45, 56, 0.45);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 0;
-  color: #e2e8f0;
+  color: #f8fafc !important;
   line-height: 1.65;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-  background: transparent;
-  backdrop-filter: none;
-  padding: 0;
-  border-left: none;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.98), 0 0 24px rgba(0, 0, 0, 0.95) !important;
+  background: rgba(11, 11, 11, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 16px 26px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   max-width: 100%;
   text-align: center;
 }
@@ -903,7 +905,7 @@ p {
 .modal-container {
   width: 100%;
   max-width: 580px;
-  background: #0f172a;
+  background: #0b0b0b;
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   padding: 44px;
@@ -1017,7 +1019,7 @@ p {
 
 /* Footer Styles */
 .footer {
-  background: #05070c;
+  background: #0b0b0b;
   border-top: 1px solid var(--border-glass);
   padding: 80px 0 40px 0;
   margin-top: 100px;
@@ -1131,7 +1133,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #cbd5e1;
+  color: #94a3b8;
   font-size: 0.88rem;
   text-decoration: none;
   transition: var(--transition-fast);
@@ -1470,7 +1472,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 
   .mobile-action-btn.primary {
     flex: 2;
-    background: linear-gradient(135deg, var(--brand-red) 0%, #b91c1c 100%);
+    background: linear-gradient(135deg, var(--brand-red) 0%, #e50914 100%);
     border: none;
     color: #ffffff;
     font-size: 0.85rem;
@@ -1558,7 +1560,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .yt-card:hover .yt-play-icon {
-  background: #ff0000;
+  background: #ff2d38;
   transform: translate(-50%, -50%) scale(1.15);
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
 }
@@ -1879,9 +1881,8 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .instructor-img-pekkala {
-  object-position: 40% 18% !important;
-  transform-origin: 40% 18% !important;
-  transform: scale(1.4) !important;
+  object-position: center center !important;
+  transform: none !important;
 }
 
 /* Coach/Ohjaaja avatar circles (jujutsu.html #senseit, junnut.html #junnujen-ohjaajat).
@@ -1902,13 +1903,10 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   display: block;
 }
 
-/* Sensei Sami Pekkala — face sits high & centered in the source photo.
-   transform-origin values verified with a Playwright grid-overlay test so the
-   face lands centered in the circle with full edge-to-edge coverage (no gaps). */
+/* Sensei Sami Pekkala — new centered headshot */
 .coach-avatar-img-sami {
-  object-position: 50% 68% !important;
-  transform-origin: 50% 68% !important;
-  transform: scale(1.3) !important;
+  object-position: center center !important;
+  transform: none !important;
 }
 
 /* Janne Säkkinen — face sits high & right of center in the source photo */
@@ -1918,11 +1916,10 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   transform: scale(1.65) !important;
 }
 
-/* Joni Rossi — face centered in green circle */
+/* Joni Rossi — new centered headshot */
 .coach-avatar-img-rossi {
-  object-position: 48% 22% !important;
-  transform-origin: 48% 22% !important;
-  transform: scale(1.4) !important;
+  object-position: center center !important;
+  transform: none !important;
 }
 
 .dan-badge {
@@ -2064,7 +2061,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .btn-ical {
-  background: #1e293b;
+  background: #0b0b0b;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -2076,13 +2073,13 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .btn-gcal {
-  background: #0284c7;
+  background: #f59e0b;
   color: #fff;
-  border: 1px solid #38bdf8;
+  border: 1px solid rgba(245, 158, 11, 0.4);
 }
 
 .btn-gcal:hover {
-  background: #0369a1;
+  background: #f59e0b;
   color: #fff;
 }
 
@@ -2384,7 +2381,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .benefit-badge {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
-  color: #e2e8f0;
+  color: #94a3b8;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 4px 10px;
@@ -2552,7 +2549,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .lead-pass-btn:hover {
-  background: #e0000a;
+  background: #e50914;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255, 9, 21, 0.4);
 }
@@ -2612,7 +2609,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   bottom: 0;
   left: 28px;
   width: 3px;
-  background: linear-gradient(to bottom, var(--brand-red), var(--brand-blue));
+  background: linear-gradient(to bottom, var(--brand-red), var(--accent-gold));
 }
 
 .lineage-node {
@@ -2626,7 +2623,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #0f172a;
+  background: #0b0b0b;
   border: 3px solid var(--brand-red);
   color: #fff;
   display: flex;
@@ -2639,9 +2636,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .lineage-node.master .lineage-badge {
-  border-color: #facc15;
-  box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
-  color: #facc15;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  color: var(--accent-gold);
 }
 
 .lineage-content {
@@ -2667,7 +2664,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .comp-matrix-table th {
-  background: #0f172a;
+  background: #0b0b0b;
   color: #fff;
   font-family: var(--font-heading);
 }
@@ -2682,7 +2679,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .comp-cross {
-  color: #ef4444;
+  color: #ff2d38;
   font-size: 1.1rem;
 }
 
@@ -2872,6 +2869,8 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
     padding-bottom: 8px;
     margin-bottom: 4px;
   }
+}
+
 /* Instructors Q&A Interview Section Styles */
 .instructor-qa-wrapper {
   margin-top: 20px;
@@ -3006,7 +3005,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .nav-option-btn.active span {
-  color: #cbd5e1 !important;
+  color: #94a3b8 !important;
 }
 
 .nav-option-btn i {
@@ -3068,7 +3067,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   gap: 8px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 8px 18px;
@@ -3269,7 +3268,7 @@ header ul, header ol, header li,
   .nav-link {
     font-size: 0.88rem !important;
     font-weight: 600 !important;
-    color: #cbd5e1 !important;
+    color: #94a3b8 !important;
     text-decoration: none !important;
     padding: 6px 12px !important;
     border-radius: 8px !important;
@@ -3373,7 +3372,7 @@ header ul, header ol, header li,
     padding: 13px 20px !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
-    color: #f1f5f9 !important;
+    color: var(--text-main) !important;
     text-decoration: none !important;
     border-radius: 12px !important;
     background: rgba(255, 255, 255, 0.03) !important;
@@ -3403,7 +3402,7 @@ header ul, header ol, header li,
   }
 
   .lang-switcher a {
-    color: #cbd5e1 !important;
+    color: #94a3b8 !important;
     text-decoration: none !important;
     padding: 4px 8px !important;
   }
@@ -3474,7 +3473,7 @@ img {
   width: 76px !important;
   height: 76px !important;
   margin: 0 auto 12px auto !important;
-  background: #0d1117 !important;
+  background: #0b0b0b !important;
 }
 
 .coach-avatar-mask img, .instructor-img {
@@ -3498,7 +3497,7 @@ img {
 }
 
 .hero-overlay {
-  background: linear-gradient(to bottom, rgba(11,11,11,0.55) 0%, rgba(11,11,11,0.62) 40%, rgba(11,11,11,0.96) 100%) !important;
+  background: linear-gradient(to bottom, rgba(11,11,11,0.65) 0%, rgba(11,11,11,0.78) 45%, rgba(11,11,11,0.98) 100%) !important;
 }
 
 @media (max-width: 768px) {
