@@ -3414,3 +3414,104 @@ header ul, header ol, header li,
     margin-top: 6px !important;
   }
 }
+
+
+/* ==========================================================================
+   P1 ENHANCEMENTS: IMAGE CROPPING, HERO CONTRAST, COACH AVATARS & FOOTER
+   ========================================================================== */
+
+/* P1-1: Image aspect ratios & focal points */
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .card-img-wrapper {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+/* P1-2: Coach avatar mask containment */
+.coach-avatar-mask {
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  width: 76px !important;
+  height: 76px !important;
+  margin: 0 auto 12px auto !important;
+  background: #0d1117 !important;
+}
+
+.coach-avatar-mask img, .instructor-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 25% !important;
+  display: block !important;
+}
+
+/* P1-3 & P1-4 & P1-5: Hero overlay scrim, H1 clamp & svh height */
+.hero {
+  min-height: 75vh;
+  min-height: 75svh;
+}
+
+@supports not (height: 1svh) {
+  .hero {
+    min-height: 75vh;
+  }
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(11,11,11,0.55) 0%, rgba(11,11,11,0.62) 40%, rgba(11,11,11,0.96) 100%) !important;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(to bottom, rgba(11,11,11,0.68) 0%, rgba(11,11,11,0.85) 50%, rgba(11,11,11,0.98) 100%) !important;
+  }
+  .hero-bg {
+    background-position: 62% center !important;
+  }
+}
+
+h1, .hero-title {
+  font-size: clamp(2rem, 7vw, 3.5rem) !important;
+  line-height: 1.12 !important;
+  text-wrap: balance;
+}
+
+/* P1-7: Footer grid vertical alignment */
+.footer-grid {
+  align-content: start !important;
+  align-items: start !important;
+}
+
+/* P1-6: Wrap hover zoom transitions for touch devices */
+@media (hover: none) or (pointer: coarse) {
+  .hero:hover .hero-bg,
+  .yt-card:hover .yt-thumb-img,
+  .gallery-item:hover img,
+  .course-card:hover .card-img-wrapper img {
+    transform: none !important;
+  }
+}
