@@ -1866,9 +1866,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .instructor-img-pekkala {
-  object-position: 50% 25% !important;
-  transform: scale(1.15) !important;
-  transform-origin: 50% 25% !important;
+  object-position: 39% 30% !important;
+  transform-origin: 39% 30% !important;
+  transform: scale(1.35) !important;
 }
 
 /* Coach/Ohjaaja avatar circles (jujutsu.html #senseit, junnut.html #junnujen-ohjaajat).
@@ -1903,11 +1903,11 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   transform: scale(1.8);
 }
 
-/* Joni Rossi — face sits high & further right of center in the source photo */
+/* Joni Rossi — face sits at X: 62.5%, Y: 27.25% in rossi.webp */
 .coach-avatar-img-rossi {
-  object-position: 25% 18% !important;
-  transform-origin: 25% 18% !important;
-  transform: scale(1.6) !important;
+  object-position: 62.5% 27% !important;
+  transform-origin: 62.5% 27% !important;
+  transform: scale(1.65) !important;
 }
 
 .dan-badge {
