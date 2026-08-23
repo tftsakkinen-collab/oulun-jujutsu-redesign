@@ -1866,9 +1866,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .instructor-img-pekkala {
-  object-position: 39% 30% !important;
-  transform-origin: 39% 30% !important;
-  transform: scale(1.35) !important;
+  object-position: 40% 18% !important;
+  transform-origin: 40% 18% !important;
+  transform: scale(1.4) !important;
 }
 
 /* Coach/Ohjaaja avatar circles (jujutsu.html #senseit, junnut.html #junnujen-ohjaajat).
@@ -1899,15 +1899,16 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 
 /* Janne Säkkinen — face sits high & right of center in the source photo */
 .coach-avatar-img-sakkinen {
-  transform-origin: 73.61% -8.5%;
-  transform: scale(1.8);
+  object-position: 73% 0% !important;
+  transform-origin: 73% 0% !important;
+  transform: scale(1.65) !important;
 }
 
-/* Joni Rossi — face sits at X: 62.5%, Y: 27.25% in rossi.webp */
+/* Joni Rossi — face centered in green circle */
 .coach-avatar-img-rossi {
-  object-position: 62.5% 27% !important;
-  transform-origin: 62.5% 27% !important;
-  transform: scale(1.65) !important;
+  object-position: 48% 22% !important;
+  transform-origin: 48% 22% !important;
+  transform: scale(1.4) !important;
 }
 
 .dan-badge {
