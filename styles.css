@@ -156,8 +156,19 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
+}
+
+.cards-grid > .glass-panel > div > div:first-child {
+  width: 100% !important;
+  display: block;
+}
+
+.cards-grid > .glass-panel > div > div:first-child img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 .glass-panel::before {
@@ -1644,20 +1655,22 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .gallery-img-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 68%;
-  overflow: hidden;
+  position: relative !important;
+  width: 100% !important;
+  padding-top: 133.33% !important;
+  aspect-ratio: 3 / 4 !important;
+  overflow: hidden !important;
 }
 
 .gallery-img-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  transition: transform 0.5s ease !important;
 }
 
 .gallery-item:hover {
