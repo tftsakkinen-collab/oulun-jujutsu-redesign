@@ -3515,3 +3515,46 @@ h1, .hero-title {
     transform: none !important;
   }
 }
+
+
+/* ==========================================================================
+   P3 ENHANCEMENTS: ACCESSIBILITY, FORMS & MOTION
+   ========================================================================== */
+
+/* P3-1: iOS Safari form auto-zoom prevention */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* P3-4: Keyboard Focus Styles */
+:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
+}
+
+/* P3-5: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* P3-6: Touch target minimum sizes */
+.social-icon, .header-social-icon, .floating-social-icon, .menu-toggle, .btn-nav {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* P3-8: Fallback for devices without backdrop-filter */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-panel, .hero-text-card, .header, .mobile-bottom-bar, .modal-container {
+    background: rgba(11, 11, 11, 0.96) !important;
+  }
+}

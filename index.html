@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
+  <link rel="canonical" href="https://www.oulunjujutsu.com/index.html">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jujutsu Oulu Ry – Itsepuolustus &amp; Kamppailulajit Oulussa</title>
@@ -86,7 +87,7 @@
         JUJUTSU <span>OULU RY</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko">
+      <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko" aria-controls="navLinks" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
 
@@ -460,17 +461,17 @@
             
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_nimi" style="display: block; margin-bottom: 6px; color: #fff; font-weight: 600;">Etunimi ja sukunimi *</label>
-              <input type="text" id="index_nimi" name="nimi" class="form-control" placeholder="Matti Meikäläinen" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
+              <input type="text" id="index_nimi" name="nimi" autocomplete="name" class="form-control" placeholder="Matti Meikäläinen" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_email" style="display: block; margin-bottom: 6px; color: #fff; font-weight: 600;">Sähköpostiosoite *</label>
-              <input type="email" id="index_email" name="sahkoposti" class="form-control" placeholder="matti@esimerkki.fi" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
+              <input type="email" id="index_email" name="sahkoposti" autocomplete="email" inputmode="email" class="form-control" placeholder="matti@esimerkki.fi" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_phone" style="display: block; margin-bottom: 6px; color: #fff; font-weight: 600;">Puhelinnumero *</label>
-              <input type="tel" id="index_phone" name="puhelin" class="form-control" placeholder="041 327 4967" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
+              <input type="tel" id="index_phone" name="puhelin" autocomplete="tel" inputmode="tel" class="form-control" placeholder="041 327 4967" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: #fff;">
             </div>
 
             <div class="form-group" style="margin-bottom: 24px;">
@@ -554,17 +555,17 @@
         
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modal_index_nimi">Etunimi ja sukunimi *</label>
-          <input type="text" id="modal_index_nimi" name="nimi" class="form-control" placeholder="Matti Meikäläinen" required>
+          <input type="text" id="modal_index_nimi" name="nimi" autocomplete="name" class="form-control" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modal_index_email">Sähköpostiosoite *</label>
-          <input type="email" id="modal_index_email" name="sahkoposti" class="form-control" placeholder="matti@esimerkki.fi" required>
+          <input type="email" id="modal_index_email" name="sahkoposti" autocomplete="email" inputmode="email" class="form-control" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 16px;">
           <label for="modal_index_phone">Puhelinnumero *</label>
-          <input type="tel" id="modal_index_phone" name="puhelin" class="form-control" placeholder="041 327 4967" required>
+          <input type="tel" id="modal_index_phone" name="puhelin" autocomplete="tel" inputmode="tel" class="form-control" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group" style="margin-bottom: 20px;">
@@ -634,7 +635,7 @@
       </div>
     </div>
     
-    <form id="instructor-form" onsubmit="submitInstructorQuestion(event)">
+    <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
       <div style="margin-bottom: 16px;">
         <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px;">Nimesi *</label>
         <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 0.95rem;">

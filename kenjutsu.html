@@ -75,7 +75,7 @@
         JUJUTSU <span>OULU RY</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko">
+      <button class="menu-toggle" id="menuToggle" aria-label="Avaa valikko" aria-controls="navLinks" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
 
@@ -613,7 +613,7 @@
       </div>
     </div>
     
-    <form id="instructor-form" onsubmit="submitInstructorQuestion(event)">
+    <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
       <div style="margin-bottom: 16px;">
         <label style="display: block; font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px;">Nimesi *</label>
         <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #fff; font-size: 0.95rem;">
