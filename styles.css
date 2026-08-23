@@ -1905,8 +1905,9 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 
 /* Joni Rossi — face sits high & further right of center in the source photo */
 .coach-avatar-img-rossi {
-  transform-origin: 98.67% -9.18%;
-  transform: scale(2.1);
+  object-position: 50% 20% !important;
+  transform-origin: 50% 20% !important;
+  transform: scale(1.35) !important;
 }
 
 .dan-badge {
