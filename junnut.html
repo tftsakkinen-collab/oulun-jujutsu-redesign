@@ -276,56 +276,270 @@
     </div>
   </section>
 
-  <!-- Junnujen Ohjaajat – Valmentajaesittelyt -->
-  <section id="junnujen-ohjaajat" class="section" style="background: linear-gradient(180deg, rgba(11,11,11,0.95) 0%, rgba(18,22,30,0.98) 100%); padding: 60px 0;">
+  <!-- Junnujen Ohjaajat & Q&A – Valmentajaesittelyt -->
+  <section id="junnujen-ohjaajat" class="section" style="background: linear-gradient(180deg, rgba(11,11,11,0.95) 0%, rgba(18,22,30,0.98) 100%); padding: 70px 0;">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 36px;">
+      <div class="section-header" style="text-align: center; margin-bottom: 44px;">
         <span class="badge" style="background: rgba(255, 9, 21, 0.2); border-color: rgba(255, 9, 21, 0.5); color: #ff4d56;">
-          <i class="fa-solid fa-user-ninja"></i> Junnu Ju-Jutsu Ohjaajat
+          <i class="fa-solid fa-user-ninja"></i> Junnu Ju-Jutsu Ohjaajatiimi &amp; Q&amp;A
         </span>
-        <h2 class="section-title" style="font-size: 2.2rem; margin-top: 8px;">Junnujen ohjaajatiimi</h2>
-        <p>Kokenut ja turvallinen ohjaajatiimi huolehtii, että jokainen lapsi saa onnistumisen kokemuksia.</p>
+        <h2 class="section-title" style="font-size: 2.3rem; margin-top: 8px;">Tutustu junnujen ohjaajiin</h2>
+        <p style="max-width: 720px; margin: 0 auto; color: var(--text-muted);">
+          Kokenut, turvallinen ja innostava ohjaajatiimimme takaa, että jokainen lapsi saa yksilöllistä kannustusta ja onnistumisen kokemuksia.
+        </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px;">
+      <!-- Instructor Bio & Q&A Cards Container -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
 
-        <!-- Matti Maikkola (ei valokuvaa vielä - seuran logo/initiaalit avatar) -->
-        <div class="glass-panel" style="padding: 24px 16px; border: 1px solid rgba(245, 158, 11, 0.4); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--brand-red), #f59e0b); padding: 2px; margin-bottom: 14px;">
-            <div style="width: 100%; height: 100%; border-radius: 50%; background: #000; display: flex; align-items: center; justify-content: center;">
-              <span style="font-family: var(--font-heading, inherit); font-weight: 800; font-size: 1.4rem; color: #f59e0b; letter-spacing: 0.05em;">MM</span>
+        <!-- 1. Matti Maikkola -->
+        <div class="glass-panel" style="padding: 28px; border: 1px solid rgba(245, 158, 11, 0.4); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid #f59e0b; flex-shrink: 0; box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);">
+                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-maikkola.jpg" alt="Matti Maikkola - Junnujen päävetäjä" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="font-size: 1.35rem; color: #fff; margin: 0 0 6px 0; font-weight: 700;">Matti Maikkola</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.5); color: #f59e0b; font-size: 0.75rem;">
+                    Junnujen päävetäjä
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.75rem;">
+                    4. Dan Hokutoryu
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.75rem;">
+                    2. Dan Kenjutsu
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 20px;">
+              Matti vastaa Oulun Ju-jutsuklubin junnutoiminnan laadusta ja pedagogiikasta. Pitkän kamppailulajitaustansa ansiosta Matti luo harjoituksiin innostavan, selkeän ja kannustavan ilmapiirin, jossa jokainen lapsi kehittyy omassa tahdissaan.
+            </p>
+
+            <div style="margin-bottom: 20px;">
+              <a href="assets/ohjaajaesittely_matti_maikkola.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 16px; border-radius: 8px; width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-file-pdf" style="color: #f59e0b;"></i> Lataa virallinen ohjaajaesittely (PDF)
+              </a>
+            </div>
+
+            <!-- Q&A Section -->
+            <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 16px; border: 1px solid var(--border-glass);">
+              <h4 style="font-size: 0.95rem; color: #f59e0b; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+              </h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #f59e0b; margin-right: 6px;"></i> Mitä junnuharjoituksissa painotetaan?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Painotamme kehonhallintaa, ukemeita (turvallista kaatumista), toisten kunnioittamista ja iloista tekemistä ilman kiusaamista.
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #f59e0b; margin-right: 6px;"></i> Miten uusi lapsi toivotetaan tervetulleeksi?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Jokainen otetaan lämpimästi vastaan omana itsenään. Harjoittelemme kaikkia perustekniikoita vaiheittain ja kannustavasti.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 8px 0; font-weight: 700;">Matti Maikkola</h3>
-          <span class="badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.5); color: #f59e0b; font-size: 0.8rem;">
-            Junnujen päävetäjä
-          </span>
         </div>
 
-        <!-- Janne Säkkinen -->
-        <div class="glass-panel" style="padding: 24px 16px; border: 1px solid var(--border-glass); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #60a5fa, #3b82f6); padding: 2px; margin-bottom: 14px;">
-            <div class="coach-avatar-mask">
-              <img loading="lazy" decoding="async" src="assets/Juniorit/sakkinen_head.png" alt="Janne Säkkinen, Junnujen ohjaaja" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <!-- 2. Janne Säkkinen -->
+        <div class="glass-panel" style="padding: 28px; border: 1px solid rgba(96, 165, 250, 0.4); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid #60a5fa; flex-shrink: 0; box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);">
+                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-janne.jpg" alt="Janne Säkkinen - Junnujen ohjaaja" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="font-size: 1.35rem; color: #fff; margin: 0 0 6px 0; font-weight: 700;">Janne Säkkinen</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="badge" style="background: rgba(96, 165, 250, 0.2); border-color: rgba(96, 165, 250, 0.5); color: #60a5fa; font-size: 0.75rem;">
+                    Junnujen ohjaaja
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.75rem;">
+                    3. Dan Hokutoryu
+                  </span>
+                  <span class="badge" style="background: rgba(52, 211, 153, 0.15); border-color: rgba(52, 211, 153, 0.4); color: #34d399; font-size: 0.75rem;">
+                    OMT-Fysioterapeutti
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 20px;">
+              Laillistettu OMT-fysioterapeutti ja kokenut ju-jutsuka Janne tuottaa valmennukseen vahvan fysioterapeuttisen ja motorisen kehityksen asiantuntemuksen, jotta harjoittelu on aina nivelystävällistä ja turvallista.
+            </p>
+
+            <div style="margin-bottom: 20px;">
+              <a href="assets/ohjaajaesittely_sakkinen.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 16px; border-radius: 8px; width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-file-pdf" style="color: #60a5fa;"></i> Lataa virallinen ohjaajaesittely (PDF)
+              </a>
+            </div>
+
+            <!-- Q&A Section -->
+            <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 16px; border: 1px solid var(--border-glass);">
+              <h4 style="font-size: 0.95rem; color: #60a5fa; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+              </h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #60a5fa; margin-right: 6px;"></i> Miten fysioterapia-tausta näkyy harjoituksissa?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Varmistamme, että liikeradat kehittävät lapsen tasapainoa ja nivelten terveyttä turvallisesti ilman ylikuormitusta.
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #60a5fa; margin-right: 6px;"></i> Voiko kuka tahansa lapsi aloittaa lajin?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Ehdottomasti! Aiempaa urheilutaustaa ei tarvita, vaan jokainen lapsi oppii tekniikat vaiheittain omaan tahtiinsa.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 8px 0; font-weight: 700;">Janne Säkkinen</h3>
-          <span class="badge" style="background: rgba(96, 165, 250, 0.15); border-color: rgba(96, 165, 250, 0.4); color: #60a5fa; font-size: 0.8rem;">
-            Junnujen ohjaaja
-          </span>
         </div>
 
-        <!-- Joni Rossi -->
-        <div class="glass-panel" style="padding: 24px 16px; border: 1px solid var(--border-glass); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #34d399, #10b981); padding: 2px; margin-bottom: 14px;">
-            <div class="coach-avatar-mask">
-              <img loading="lazy" decoding="async" src="assets/Juniorit/rossi_taustalla.jpeg" alt="Joni Rossi, Junnujen ohjaaja" class="coach-avatar-img coach-avatar-img-rossi" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        <!-- 3. Anne -->
+        <div class="glass-panel" style="padding: 28px; border: 1px solid rgba(251, 113, 133, 0.4); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid #fb7185; flex-shrink: 0; box-shadow: 0 0 20px rgba(251, 113, 133, 0.3);">
+                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-anne.jpg" alt="Anne - Junnujen ohjaaja" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="font-size: 1.35rem; color: #fff; margin: 0 0 6px 0; font-weight: 700;">Anne</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="badge" style="background: rgba(251, 113, 133, 0.2); border-color: rgba(251, 113, 133, 0.5); color: #fb7185; font-size: 0.75rem;">
+                    Junnujen ohjaaja
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.75rem;">
+                    Viestintä &amp; Some
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 20px;">
+              Anne pitää huolta harjoitusten energisestä ryhmähengestä sekä seuran aktiivisesta vanhempainviestinnästä. Anne varmistaa, että jokaisella harrastajalla ja perheellä on selkeä ja tervetullut olo seurassamme.
+            </p>
+
+            <!-- Q&A Section -->
+            <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 16px; border: 1px solid var(--border-glass); margin-top: auto;">
+              <h4 style="font-size: 0.95rem; color: #fb7185; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+              </h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #fb7185; margin-right: 6px;"></i> Mikä on parasta junnuju-jutsussa?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Nähdä lasten kasvu, itsetunnon kehittyminen ja se aito onnistumisen riemu tatamilla!
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #fb7185; margin-right: 6px;"></i> Miten vanhemmat pysyvät ajan tasalla?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Viestimme aktiivisesti harjoitusajoista, tapahtumista ja vyökokeista vanhempien kanavissa ja sosiaalisessa mediassa.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h3 style="font-size: 1.15rem; color: #fff; margin: 0 0 8px 0; font-weight: 700;">Joni Rossi</h3>
-          <span class="badge" style="background: rgba(52, 211, 153, 0.15); border-color: rgba(52, 211, 153, 0.4); color: #34d399; font-size: 0.8rem;">
-            Junnujen ohjaaja
-          </span>
+        </div>
+
+        <!-- 4. Jaska / Aska -->
+        <div class="glass-panel" style="padding: 28px; border: 1px solid rgba(52, 211, 153, 0.4); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid #34d399; flex-shrink: 0; box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);">
+                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-jaska.jpg" alt="Jaska - Junnujen ohjaaja" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <h3 style="font-size: 1.35rem; color: #fff; margin: 0 0 6px 0; font-weight: 700;">Jaska / Aska</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="badge" style="background: rgba(52, 211, 153, 0.2); border-color: rgba(52, 211, 153, 0.5); color: #34d399; font-size: 0.75rem;">
+                    Junnujen ohjaaja
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.75rem;">
+                    Aktiivivalmentaja
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 20px;">
+              Innostava ja pitkän linjan tekniikkaohjaaja, joka pitää huolen jokaisen juniorin turvallisuudesta, suoritustekniikasta ja iloisesta meiningistä tatamilla.
+            </p>
+
+            <!-- Q&A Section -->
+            <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 16px; border: 1px solid var(--border-glass); margin-top: auto;">
+              <h4 style="font-size: 0.95rem; color: #34d399; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+              </h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #34d399; margin-right: 6px;"></i> Kuinka turvallista junnuju-jutsu on?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Harjoittelemme valvotusti pehmeällä tatamilla. Kaikki otteet ja pudotukset opetetaan vaiheittain turvallisuus edellä.
+                  </div>
+                </div>
+
+                <div>
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                    <i class="fa-solid fa-circle-question" style="color: #34d399; margin-right: 6px;"></i> Mitä varusteita kokeiluun tarvitaan?
+                  </div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5; padding-left: 20px;">
+                    Sopivat tavalliset sisäliikuntavaatteet (t-paita ja verkkarit). Harjoittelemme paljain jaloin tatamilla.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Renshi Sami Pekkala -->
+        <div class="glass-panel" style="padding: 28px; border: 1px solid rgba(255, 45, 56, 0.4); display: flex; flex-direction: column; justify-content: space-between; grid-column: 1 / -1;">
+          <div style="display: flex; flex-direction: row; align-items: center; gap: 24px; flex-wrap: wrap;">
+            <div style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 3px solid var(--brand-red); flex-shrink: 0; box-shadow: 0 0 24px rgba(255, 45, 56, 0.4);">
+              <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-renshi2.jpg" alt="Renshi Sami Pekkala - Seuran pääopettaja 6. dan" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="flex: 1; min-width: 260px;">
+              <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px;">
+                <h3 style="font-size: 1.4rem; color: #fff; margin: 0; font-weight: 700;">Renshi Sami Pekkala</h3>
+                <span class="badge" style="background: rgba(255, 45, 56, 0.2); border-color: var(--brand-red); color: #ff4d56; font-size: 0.8rem;">
+                  Seuran pääopettaja • 6. Dan Hokutoryu Ju-Jutsu
+                </span>
+              </div>
+              <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin: 0;">
+                Oulun Ju-jutsuklubin tekninen johtaja ja 6. dan black belt. Renshi vastaa seuran valmennuslinjasta, vyökoevaatimuksista ja tukee junnu- sekä aikuisohjaajia perinteisen Hokutoryu-ju-jutsun korkean laadun ylläpitämisessä.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
