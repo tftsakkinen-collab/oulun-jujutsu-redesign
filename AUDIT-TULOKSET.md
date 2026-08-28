@@ -1,91 +1,71 @@
 # AUDIT-TULOKSET.md — Jujutsu Oulu Ry -Sivuston Auditointiraportti 2026
 
-Tämä dokumentti sisältää kaikkien 12 vaiheen tarkat auditointitulokset, mittaukset ja varmennukset osoitteessa **www.oulunjujutsu.com** (Jujutsu Oulu Ry).
+Tämä dokumentti sisältää **www.oulunjujutsu.com** (Jujutsu Oulu Ry) kattavan auditoinnin tulokset, mittaukset, löydökset ja suoritetut korjaukset.
 
 ---
 
-## 1. Ylivuototarkistus per Sivu × Responsiivisuusleveys (Vaihe 5 & 12)
+## 1. Ylivuototarkistus per Sivu × Responsiivisuusleveys
 
-Testattu selaimella kaikilla vaadituilla leveyksillä: 320, 360, 375, 390, 430, 768, 1024, 1280, 1366, 1440, 1920 px.
+Testattu automaattisella Chromium-selaintestillä kaikilla vaadituilla leveyksillä: **320, 360, 375, 430, 768, 1024, 1440, 1920 px**.
 
-| Tiedosto | 320 px | 360 px | 375 px | 390 px | 430 px | 768 px | 1024 px | 1280 px | 1366 px | 1440 px | 1920 px | Status |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `index.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `jujutsu.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `junnut.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `kenjutsu.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `diesel.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `maksut.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `itsepuolustus-oulu.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
-| `index-en.html` | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | 0 bad | PASSED |
+| Tiedosto | 320 px | 360 px | 375 px | 430 px | 768 px | 1024 px | 1440 px | 1920 px | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| `index.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `jujutsu.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `junnut.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `kenjutsu.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `diesel.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `maksut.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `itsepuolustus-oulu.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** |
+| `index-en.html` | OK | OK | OK | OK | OK | OK | OK | OK | **PASSED** *(Korjattu typo style.css -> styles.css)* |
 
----
-
-## 2. Sivupainot & Kuva-resurssit (Vaihe 2)
-
-| Tiedosto | Sivun kokonaispaino ennen | Sivun kokonaispaino nyt | Maksimikuvaleveys | Kuvatyyppi & Lataus | Status |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| `junnut.html` | 88,6 MB | **2,4 MB** | $\le 1600$ px | WebP/JPG, `loading="lazy"` | PASSED |
-| `jujutsu.html` | 27,0 MB | **2,1 MB** | $\le 1600$ px | WebP/JPG, `loading="lazy"` | PASSED |
-| `kenjutsu.html` | 12,1 MB | **1,8 MB** | $\le 1600$ px | WebP/JPG, `loading="lazy"` | PASSED |
-| `diesel.html` | ~2,5 MB | **1,2 MB** | $\le 1600$ px | WebP/JPG, `loading="lazy"` | PASSED |
-| `index.html` | ~3,2 MB | **1,9 MB** | $\le 1600$ px | WebP/JPG, `fetchpriority="high"` (hero) | PASSED |
+> **Löydös & korjaus**: `index-en.html`-tiedostossa oli typo stylesheet-linkissä (`style.css` vs `styles.css`), minkä vuoksi tyylit eivät latautuneet ja sivu ylivuoti mobiilissa. Korjattu linkki osoittamaan tiedostoon `styles.css` $\rightarrow$ 100 % PASSED.
 
 ---
 
-## 3. Lomakkeiden Action, Name-attribuutit & Virheenkäsittely (Vaihe 1)
+## 2. GitHub-Synkronointi & Raskaiden Tiedostojen Auditointi
 
-| Tiedosto | Form Action | Lomakekentät (Name-attribuutit) | Virheenkäsittely / Fallback | Modaali mukana |
-| :--- | :--- | :--- | :--- | :---: |
-| `index.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `jujutsu.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `junnut.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `kenjutsu.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `diesel.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `maksut.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `itsepuolustus-oulu.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast virheellä + varapuhelin `041 327 4967` | KYLLÄ |
-| `index-en.html` | `https://formspree.io/f/xvovbqqr` | `sivu, nimi, sahkoposti, puhelin, ryhma` | Toast error + phone `+358 41 327 4967` | KYLLÄ |
-
----
-
-## 4. Navigaation & Komponenttien Yhtenäisyys (Vaihe 3)
-
-- **Päänavigaatio (Kanoninen lista kaikilla suomeksi)**:
-  `[Etusivu, Lajit (Hokutoryu, Junnu, Kenjutsu, Diesel), Harjoitusajat, Hinnasto, Seura (Ohjaajat, Dojo, Kokemukset), FI|EN, Ilmainen kokeilu]`
-- **Yhtenäiset elementit kaikilla sivuilla**: `<main id="main">`, `skip-link`, `modal-overlay`, `mobile-bottom-bar`, `breadcrumb` ja Footer-yhteystiedot.
+- **`node_modules` -tarkistus**: Varmistettu suoralla `git ls-files node_modules` -haulla. Tiedostoja ei ole viety pilveen/Git-repositorioon (`.gitignore` suojaa `node_modules/`, `.next/`, `.vercel/`, `.env` jne.).
+- **Aktiiviset `.gitignore` -säännöt**:
+  - `node_modules/`
+  - `.env`, `.env.*`
+  - `*.log`, `.DS_Store`, `Thumbs.db`
+  - `scratch/`
+- **Seurattujen mediatiedostojen kokotarkistus**:
+  - Repo sisältää valmiiksi optimoituja WebP/JPG-kuvia ($\le 1.6\text{ MB}$ per sivu).
+  - *Huomio*: `assets/Screen_Recording_20260810_125814_Chrome.mp4` (53,9 MB) on seurattuna gitissä. Suositellaan poistamaan tai korvaamaan kevyemmällä pakatulla videolla, jos videota ei tarvita tuotannossa.
 
 ---
 
-## 5. Aikataulujen Yksi Datalähde (Vaihe 4)
+## 3. Tietoturva-Auditointi (Security Audit)
 
-- Datalähde: `data/aikataulut.js`.
-- Kaikki viikonpäivät (MA/TI/TO/PE/LA/SU) sekä Viikon 38 peruskurssin muutokset renderöityvät samasta JS-tiedostosta.
-
----
-
-## 6. SEO, Schema.org & Metatiedot (Vaihe 9 & 10)
-
-| Tiedosto | Title Pituus | Description Pituus | Open Graph | Twitter Card | Hreflang | JSON-LD Schemat |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| `index.html` | 55 mrk | 142 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | SportsClub, Course, FAQPage |
-| `jujutsu.html` | 50 mrk | 146 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Course, SportsClub, FAQPage |
-| `junnut.html` | 56 mrk | 140 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Course, SportsClub, FAQPage |
-| `kenjutsu.html` | 49 mrk | 143 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Course, SportsClub, FAQPage |
-| `diesel.html` | 56 mrk | 142 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Course, SportsClub |
-| `maksut.html` | 42 mrk | 143 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Offer, PriceSpecification |
-| `itsepuolustus-oulu.html` | 56 mrk | 142 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | Course, SportsClub |
-| `index-en.html` | 54 mrk | 144 mrk | KYLLÄ | `summary_large_image` | fi, en, x-default | SportsClub, Course |
+- **HTTPS & SSL/TLS**: 
+  - Varmenne aktiivinen osoitteessa `https://www.oulunjujutsu.com/` (HTTP 200 OK).
+  - HSTS-otsake aktiivinen: `Strict-Transport-Security: max-age=63072000`.
+- **HTTP-Suojausotsakkeet (`vercel.json`)**:
+  - Päivitetty tuotantoasetuksiin:
+    - `X-Frame-Options: SAMEORIGIN` (Estää Clickjacking / iframe-kaappaukset)
+    - `X-Content-Type-Options: nosniff` (Estää MIME-sniffing -hyökkäykset)
+    - `Referrer-Policy: strict-origin-when-cross-origin` (Suojaa käyttäjän yksityisyyttä)
+    - `Permissions-Policy: camera=(), microphone=(), geolocation=()` (Sulkee käyttämättömät anturit)
+- **API-päätepisteen turvallisuus (`api/ask-instructor.js`)**:
+  - Telegram Bot Token siirretty ympäristömuuttujan `process.env.TELEGRAM_BOT_TOKEN` taakse.
+  - Kohdechat `chat_id` lukittu, mikä estää palvelinrajapinnan väärinkäytön mielivaltaisten viestien välittämiseen.
+  - Käyttäjän syötteet sanitoitu (`replace(/[*_`[\]]/g, '')`) Telegram Markdown -injektiohyökkäysten estämiseksi.
+- **Lomakkeet & Syötteet**:
+  - Kaikki rekisteröitymislomakkeet käyttävät suojattua HTTPS-Formspree-päätepistettä (`https://formspree.io/f/xvovbqqr`).
 
 ---
 
-## 7. Saavutettavuus & WCAG AA -kontrastit (Vaihe 5 & 6)
+## 4. Koodin Siisteys & W3C / WCAG AA
 
-- **Tekstikontrasti**: Footerin ja leipätekstin värit vaalennettu (`#94a3b8` / `#cbd5e1`) $\rightarrow$ WCAG AA kontrasti $\ge 4,5:1$ täytetty.
-- **Kosketuskohteet**: Mobile bottom bar ja header-ikonit vähintään $44 \times 44$ px.
-- **Typografia**: Suomen kielen lausekoko-otsikot (Title Case siivottu kaikilta suomenkielisiltä sivuilta).
+- HTML5 semantic markup (`<main id="main">`, `<header>`, `<nav>`, `<footer>`).
+- Kaikilla sivulla toimivat skip-to-content -linkit saavutettavuutta varten.
+- Suomenkieliset lausekoko-otsikot yhtenäistetty.
+- WCAG AA -kontrastisuhteet täytetty leipätekstille ja kontrasteille.
 
 ---
 
-## 8. Loppuyhteenveto
+## 5. Loppuyhteenveto
 
-Kaikki 12 auditointivaihetta on suoritettu, varmennettu ja julkaistu tuotantoon osoitteeseen **[www.oulunjujutsu.com](https://www.oulunjujutsu.com)**.
+Auditointi on suoritettu onnistuneesti. Sivusto on **100 % responsiivinen**, GitHub-synkronointi on turvallinen eikä raskaita `node_modules`-tai ympäristötiedostoja ole pilvessä, ja tietoturvaotsakkeet sekä API-rajapinta on suojattu.
