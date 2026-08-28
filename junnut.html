@@ -289,70 +289,109 @@
         </p>
       </div>
 
-      <!-- Instructor Bio & Q&A Cards Container (2-Column Premium Layout) -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; align-items: stretch;">
+      <!-- Instructor Bio & Q&A Cards Container (2-Column Split Premium Layout) -->
+      <div style="display: flex; flex-direction: column; gap: 40px;">
 
         <!-- 1. Matti Maikkola -->
-        <div class="glass-panel" style="padding: 32px; border: 1px solid rgba(245, 158, 11, 0.4); display: flex; flex-direction: column; justify-content: space-between; background: rgba(18, 24, 38, 0.85); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); border-radius: 20px;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-              <div style="width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 4px solid #f59e0b; flex-shrink: 0; box-shadow: 0 0 28px rgba(245, 158, 11, 0.35);">
-                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-maikkola.jpg" alt="Matti Maikkola - Junnujen päävetäjä" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <div>
-                <h3 style="font-size: 1.5rem; color: #fff; margin: 0 0 8px 0; font-weight: 700;">Matti Maikkola</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  <span class="badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.6); color: #f59e0b; font-size: 0.8rem; padding: 4px 10px;">
-                    Junnujen päävetäjä
+        <div class="instructor-split-card" style="border-color: rgba(245, 158, 11, 0.35);">
+          <!-- Left Column: Large Portrait -->
+          <div class="instructor-portrait-col">
+            <div class="instructor-portrait-wrapper" style="border-color: rgba(245, 158, 11, 0.4); box-shadow: 0 12px 35px rgba(245, 158, 11, 0.2);">
+              <img loading="eager" decoding="async" src="assets/jujutsu-potretti-maikkola.jpg" alt="Matti Maikkola - Junnujen päävetäjä" class="instructor-portrait-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Info & PDF Q&A -->
+          <div class="instructor-info-col">
+            <div>
+              <div class="instructor-header">
+                <h3 class="instructor-name">Matti Maikkola</h3>
+                <div class="badge-row">
+                  <span class="badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.6); color: #f59e0b;">
+                    <i class="fa-solid fa-star"></i> Junnujen päävetäjä
                   </span>
-                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.8rem; padding: 4px 10px;">
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1;">
                     Senpai (1. kyu)
                   </span>
                 </div>
+                <p class="instructor-intro">
+                  Senpai Matti Maikkola vastaa Oulun Ju-Jutsu Ry:n junnutoiminnan laadusta ja pedagogiikasta. Yli 18 vuoden kamppailukokemuksella Matti luo harjoituksiin selkeän, kannustavan ja turvallisen ilmapiirin, jossa jokainen lapsi pääsee kehittymään omassa tahdissaan.
+                </p>
+                <div style="margin-bottom: 16px;">
+                  <a href="assets/ohjaajaesittely_matti_maikkola.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.88rem; padding: 8px 16px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-file-pdf" style="color: #f59e0b;"></i> Avaa alkuperäinen PDF-esittely
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <p style="font-size: 0.98rem; color: #cbd5e1; line-height: 1.65; margin-bottom: 24px;">
-              Senpai Matti Maikkola vastaa Oulun Ju-jutsuklubin junnutoiminnan laadusta ja pedagogiikasta. Pitkän kamppailulajitaustansa ansiosta Matti luo harjoituksiin innostavan, selkeän ja kannustavan ilmapiirin, jossa jokainen lapsi kehittyy omassa tahdissaan.
-            </p>
+              <!-- Q&A Section -->
+              <div class="instructor-qa-box" style="border-color: rgba(245, 158, 11, 0.25);">
+                <h4 class="qa-box-title" style="color: #f59e0b;">
+                  <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A (Viralliset esittelyvastaukset)
+                </h4>
 
-            <div style="margin-bottom: 24px;">
-              <a href="assets/ohjaajaesittely_matti_maikkola.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px; border-radius: 10px; width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-file-pdf" style="color: #f59e0b; font-size: 1.1rem;"></i> Lataa virallinen ohjaajaesittely (PDF)
-              </a>
-            </div>
+                <div class="qa-list">
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 1. Kuinka monta vuotta olet treenannut / valmentanut Hokutoryu Ju-Jutsua?
+                    </div>
+                    <div class="qa-a">
+                      1993–1995... 2006–2011... 2015–2026... 2+5+11 = 18 vuotta, jos arvioin sinne päinkään oikein.
+                    </div>
+                  </div>
 
-            <!-- Q&A Section -->
-            <div style="background: rgba(0,0,0,0.4); border-radius: 14px; padding: 20px; border: 1px solid rgba(245, 158, 11, 0.25);">
-              <h4 style="font-size: 1.05rem; color: #f59e0b; margin-bottom: 16px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
-              </h4>
-              
-              <div style="display: flex; flex-direction: column; gap: 14px;">
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #f59e0b; margin-right: 8px;"></i> Mitä junnuharjoituksissa painotetaan?
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 2. Miten oma kamppailumatkasi alkoi ja mikä sytytti kipinän tatamille?
+                    </div>
+                    <div class="qa-a">
+                      Joskus 10-vuotiaana taisin aloittaa karaten. 13-vuotiaana menin sitten nyrkkeilyyn ja 18-vuotiaana aloitin ju-jutsun. Välillä armeija katkaisi harrastuksen ja olinkin tauolla pitkään. Toinen tauko tuli, kun halusin oppia pystykomppailussa kovemmaksi ja kävin kolme vuotta potkunyrkkeilyssä.
+                    </div>
                   </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Painotamme kehonhallintaa, ukemeita (turvallista kaatumista), toisten kunnioittamista ja iloista tekemistä ilman kiusaamista.
-                  </div>
-                </div>
 
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #f59e0b; margin-right: 8px;"></i> Miten uusi lapsi toivotetaan tervetulleeksi?
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 3. Mikä tekee suomalaisesta Hokutoryu Ju-Jutsusta niin tehokkaan ja ainutlaatuisen?
+                    </div>
+                    <div class="qa-a">
+                      Siinä on otettu tehokkaimmat tekniikat muista lajeista. On selvää nyrkkeilijöiden olevan parhaita lyömään, joten tehdään mekin samoin, kun harjoitellaan lyöntejä. Samoin on myös heittojen kanssa, eli ne kopioidaan judosta. Lisäksi on vielä paljon lukkoja ja kuristuksia sekä asetekniikoita, joten koko kattaus on aika monipuolinen.
+                    </div>
                   </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Jokainen otetaan lämpimästi vastaan omana itsenään. Harjoittelemme kaikkia perustekniikoita vaiheittain ja kannustavasti.
-                  </div>
-                </div>
 
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #f59e0b; margin-right: 8px;"></i> Kuinka turvallista junnuju-jutsu on?
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 4. Mitä sanoisit henkilölle, joka jännittää: "Uskallanko tulla 1. treeneihin Äimäkujalle?"
+                    </div>
+                    <div class="qa-a">
+                      Rohkeasti mukaan vain. Me ollaan kaikki vähän erikoisia, niin ei sieltä kukaan erotu ja treenaaminen alkaa ihan sieltä pohjalta. Ei tarvitse jännittää jaksaako tai mitään.
+                    </div>
                   </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Harjoittelemme aina valvotusti pehmeällä tatamilla. Kaikki tekniikat ja pudotukset opetetaan turvallisuus edellä.
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 5. Pitääkö olla valmiiksi hyvässä kunnossa tai notkea pärjätäkseen?
+                    </div>
+                    <div class="qa-a">
+                      Ei tarvitse, kun peruskurssilla luodaan se kunto, joka kantaa eteenpäin. Erityisen notkeita meistä ei kovin montaa löydy muutenkaan.
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 6. Mikä on parasta valmentamisessa ja Oulun Ju-Jutsu ry:n ilmapiirissä?
+                    </div>
+                    <div class="qa-a">
+                      Nähdä se into ja rohkeus tehdä myös virheitä ensin, kun niiden kautta me opitaan. Ei kukaan ole seppä syntyessään, vaan kehittyminen vie kaikilta sen oman aikansa. Kehitystä voi tietenkin kiihdyttää yrittämällä aina sen parhaansa.
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #f59e0b;"></i> 7. Yksi tärkein periaate tai vinkki uutta harrastusta aloittavalle:
+                    </div>
+                    <div class="qa-a">
+                      Periksi ei saa antaa ja jokainen treeni on tärkeä. Kärsivällisyys on hyväksi ihan kaikessa tässä elämässä ja se antaa myöhemmin meille sen palkinnon. On myös tärkeää nauttia matkasta, joten ei muuta kuin mukaan ja matkaan.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -361,72 +400,222 @@
         </div>
 
         <!-- 2. Janne Säkkinen -->
-        <div class="glass-panel" style="padding: 32px; border: 1px solid rgba(96, 165, 250, 0.4); display: flex; flex-direction: column; justify-content: space-between; background: rgba(18, 24, 38, 0.85); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); border-radius: 20px;">
-          <div>
-            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-              <div style="width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 4px solid #60a5fa; flex-shrink: 0; box-shadow: 0 0 28px rgba(96, 165, 250, 0.35);">
-                <img loading="lazy" decoding="async" src="assets/jujutsu-potretti-janne.jpg" alt="Janne Säkkinen - Junnujen ohjaaja &amp; Somevastaava" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <div>
-                <h3 style="font-size: 1.5rem; color: #fff; margin: 0 0 8px 0; font-weight: 700;">Janne Säkkinen</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                  <span class="badge" style="background: rgba(96, 165, 250, 0.2); border-color: rgba(96, 165, 250, 0.6); color: #60a5fa; font-size: 0.8rem; padding: 4px 10px;">
-                    Junnujen ohjaaja
+        <div class="instructor-split-card" style="border-color: rgba(96, 165, 250, 0.35);">
+          <!-- Left Column: Large Portrait -->
+          <div class="instructor-portrait-col">
+            <div class="instructor-portrait-wrapper" style="border-color: rgba(96, 165, 250, 0.4); box-shadow: 0 12px 35px rgba(96, 165, 250, 0.2);">
+              <img loading="eager" decoding="async" src="assets/jujutsu-potretti-janne.jpg" alt="Janne Säkkinen - Junnujen ohjaaja" class="instructor-portrait-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Info & PDF Q&A -->
+          <div class="instructor-info-col">
+            <div>
+              <div class="instructor-header">
+                <h3 class="instructor-name">Janne Säkkinen</h3>
+                <div class="badge-row">
+                  <span class="badge" style="background: rgba(96, 165, 250, 0.2); border-color: rgba(96, 165, 250, 0.6); color: #60a5fa;">
+                    <i class="fa-solid fa-user-shield"></i> Junnujen ohjaaja
                   </span>
-                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1; font-size: 0.8rem; padding: 4px 10px;">
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1;">
                     Senpai (1. kyu)
                   </span>
-                  <span class="badge" style="background: rgba(52, 211, 153, 0.15); border-color: rgba(52, 211, 153, 0.4); color: #34d399; font-size: 0.8rem; padding: 4px 10px;">
-                    OMT-Fysioterapeutti
+                  <span class="badge" style="background: rgba(52, 211, 153, 0.15); border-color: rgba(52, 211, 153, 0.4); color: #34d399;">
+                    <i class="fa-solid fa-user-doctor"></i> OMT-Fysioterapeutti
                   </span>
-                  <span class="badge" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #c084fc; font-size: 0.8rem; padding: 4px 10px;">
-                    Somevastaava
+                  <span class="badge" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #c084fc;">
+                    <i class="fa-solid fa-share-nodes"></i> Somevastaava
                   </span>
+                </div>
+                <p class="instructor-intro">
+                  Laillistettu OMT-fysioterapeutti, seuran somevastaava ja Senpai Janne Säkkinen tuo valmennukseen vahvan fysioterapeuttisen ja motorisen kehityksen asiantuntemuksen, jotta harjoittelu on aina nivelystävällistä, turvallista ja monipuolista.
+                </p>
+                <div style="margin-bottom: 16px;">
+                  <a href="assets/ohjaajaesittely_sakkinen.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.88rem; padding: 8px 16px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-file-pdf" style="color: #60a5fa;"></i> Avaa alkuperäinen PDF-esittely
+                  </a>
+                </div>
+              </div>
+
+              <!-- Q&A Section -->
+              <div class="instructor-qa-box" style="border-color: rgba(96, 165, 250, 0.25);">
+                <h4 class="qa-box-title" style="color: #60a5fa;">
+                  <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A (Viralliset esittelyvastaukset)
+                </h4>
+
+                <div class="qa-list">
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 1. Kuinka monta vuotta olet treenannut / valmentanut Hokutoryu Ju-Jutsua?
+                    </div>
+                    <div class="qa-a">
+                      Peruskurssin suoritin 2013 ja tämän jälkeen treenailin vuoteen 2014 saakka kohtalaisen aktiivisesti, kunnes puulaakifutiksen loukkaantumiset pistivät hommat tatamilla jäihin. 2023 sain koulukaverini Rossin Jonin puhuttua treeneihin mukaan ja sen jälkeen aktiivinen treenaus on pysynyt arjessa matkassa. Junnujen treenejä on alettu vetämään alkuvuonna 2026 ja se on ollut mielettömän hauskaa! Lasten oppimisen ilo on ollut ihana nähdä tatamilla ja mielettömän ylpeitä saa olla meidän sukupuolijakaumasta – tyttöjä on välillä treeneissä enemmän mitä poikia!
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 2. Miten oma kamppailumatkasi alkoi ja mikä sytytti kipinän tatamille?
+                    </div>
+                    <div class="qa-a">
+                      Lapsuuden kylässä ainoa kamppailulaji oli Taekwondo ja tämä oli kyllä mielettömän mukava harrastus. Brasilialaisen jujutsun peruskurssi on tullut koettua pariin otteeseen vuosien varrella, mutta Hokutoryun puolelle tuli siirryttyä kun selvittelin Oulun kamppailuseuratarjontaa ja sille tielle tuli jäätyä.
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 3. Mikä tekee suomalaisesta Hokutoryu Ju-Jutsusta niin tehokkaan ja ainutlaatuisen?
+                    </div>
+                    <div class="qa-a">
+                      Soke Auvo Niinikedon käden jälki kyllä näkyy ja tuntuu meidän lajissa. Mielestäni perinteinen budo-tyyppinen laji on todella hyvä koulu nuorelle ja miksei aikuisellekin. Ohjaajan kunnioitus, salietiketti ja treeniympäristö pitää huolen siitä, että harjoittelukaveria kunnioitetaan. Kaikki ylimääräinen on riisuttu pois, joten toistojen kautta oppii asioita parhaiten.
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 4. Mitä sanoisit henkilölle, joka miettii ja jännittää: "Uskallanko tulla 1. treeneihin Äimäkujalle?"
+                    </div>
+                    <div class="qa-a">
+                      Ainahan ne uudet asiat jännittää, mutta selkä seinää vasten ja kokeilemaan – treenin jälkeinen hyvä fiilis on totista totta joka treenin jälkeen ja se koukuttaa! Vyöjärjestelmä on rakennettu niin, että vaatimustaso kasvaa vyöarvon noustessa ja kun tasovaatimukset ovat tasapuoliset kaikilla, tietää aina mitä on tulossa.
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 5. Pitääkö olla valmiiksi hyvässä kunnossa tai notkea pärjätäkseen?
+                    </div>
+                    <div class="qa-a">
+                      Vastaanottotyössä joskus sanon, että "jämäkän rakenteen kanssa pärjää aina, löysän kanssa ei niinkään". Itse olen TODELLA jäykkä, mutta harjoittelun yhteydessä liikkuvuusharjoittelua tulee sen verran paljon, että jalka tarvittaessa nousee kiertopotkulla oman pään korkeudelle. Jokainen tekee kuntonsa mukaan ja se riittää!
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 6. Mikä on parasta valmentamisessa ja Oulun Ju-Jutsu ry:n ilmapiirissä?
+                    </div>
+                    <div class="qa-a">
+                      Uusia ideoita pääsee toteuttamaan matalalla kynnyksellä. Pienen seuran etu on se, että treenikaverit tuntevat toisensa ja pukukopissa saattaa olla hyvinkin lennokasta keskustelua ennen ja jälkeen treenien. Tästä syystä treeneihin on aina mukava mennä!
+                    </div>
+                  </div>
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #60a5fa;"></i> 7. Yksi tärkein periaate tai vinkki uutta harrastusta aloittavalle:
+                    </div>
+                    <div class="qa-a">
+                      Jos perus liikkumisen taidot osaa, niin loput VARMASTI opetetaan tatamilla! Tämä on mielettömän mukava harrastus ja kun treenikaverit tulevat tutuksi, yhdessä tekeminen on mielekästä ja monipuolista.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <p style="font-size: 0.98rem; color: #cbd5e1; line-height: 1.65; margin-bottom: 24px;">
-              Laillistettu OMT-fysioterapeutti, seuran somevastaava ja Senpai Janne Säkkinen tuottaa valmennukseen vahvan fysioterapeuttisen ja motorisen kehityksen asiantuntemuksen, jotta harjoittelu on aina nivelystävällistä ja turvallista.
-            </p>
-
-            <div style="margin-bottom: 24px;">
-              <a href="assets/ohjaajaesittely_sakkinen.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 18px; border-radius: 10px; width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-file-pdf" style="color: #60a5fa; font-size: 1.1rem;"></i> Lataa virallinen ohjaajaesittely (PDF)
-              </a>
+        <!-- 3. Jaska Aska -->
+        <div class="instructor-split-card" style="border-color: rgba(52, 211, 153, 0.35);">
+          <!-- Left Column: Large Portrait -->
+          <div class="instructor-portrait-col">
+            <div class="instructor-portrait-wrapper" style="border-color: rgba(52, 211, 153, 0.4); box-shadow: 0 12px 35px rgba(52, 211, 153, 0.2);">
+              <img loading="eager" decoding="async" src="assets/jujutsu-potretti-jaska.jpg" alt="Jaska Aska - Junnujen ohjaaja" class="instructor-portrait-img">
             </div>
+          </div>
 
-            <!-- Q&A Section -->
-            <div style="background: rgba(0,0,0,0.4); border-radius: 14px; padding: 20px; border: 1px solid rgba(96, 165, 250, 0.25);">
-              <h4 style="font-size: 1.05rem; color: #60a5fa; margin-bottom: 16px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
-              </h4>
-              
-              <div style="display: flex; flex-direction: column; gap: 14px;">
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #60a5fa; margin-right: 8px;"></i> Miten fysioterapia-tausta näkyy harjoituksissa?
+          <!-- Right Column: Info & Q&A -->
+          <div class="instructor-info-col">
+            <div>
+              <div class="instructor-header">
+                <h3 class="instructor-name">Jaska Aska</h3>
+                <div class="badge-row">
+                  <span class="badge" style="background: rgba(52, 211, 153, 0.2); border-color: rgba(52, 211, 153, 0.6); color: #34d399;">
+                    <i class="fa-solid fa-user-ninja"></i> Junnujen ohjaaja
+                  </span>
+                  <span class="badge" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); color: #cbd5e1;">
+                    Senpai
+                  </span>
+                </div>
+                <p class="instructor-intro">
+                  Jaska Aska ohjaa junioriharjoituksissa turvallista tekniikkaa ja kehittää lasten kehonhallintaa sekä motoriikkaa positiivisella ja motivoivalla otteella.
+                </p>
+              </div>
+
+              <!-- Q&A Section -->
+              <div class="instructor-qa-box" style="border-color: rgba(52, 211, 153, 0.25);">
+                <h4 class="qa-box-title" style="color: #34d399;">
+                  <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+                </h4>
+
+                <div class="qa-list">
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #34d399;"></i> 1. Mitä junnuharjoituksissa painotetaan?
+                    </div>
+                    <div class="qa-a">
+                      Painotamme kehonhallintaa, turvallista ukemi-kaatumistekniikkaa, toisten kunnioittamista ja iloista tatamitunnelmaa.
+                    </div>
                   </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Varmistamme, että liikeradat kehittävät lapsen tasapainoa ja nivelten terveyttä turvallisesti ilman ylikuormitusta.
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #34d399;"></i> 2. Kuka voi aloittaa junnuju-jutsun?
+                    </div>
+                    <div class="qa-a">
+                      Kaikki 7–14-vuotiaat lapset ja nuoret ovat tervetulleita. Aiempaa urheilutaustaa ei vaadita, vaan kaikki opitaan yhdessä perusteista alkaen!
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #60a5fa; margin-right: 8px;"></i> Voiko kuka tahansa lapsi aloittaa lajin?
-                  </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Ehdottomasti! Aiempaa urheilutaustaa ei tarvita, vaan jokainen lapsi oppii tekniikat vaiheittain omaan tahtiinsa.
-                  </div>
+        <!-- 4. Joni Rossi -->
+        <div class="instructor-split-card" style="border-color: rgba(168, 85, 247, 0.35);">
+          <!-- Left Column: Large Portrait -->
+          <div class="instructor-portrait-col">
+            <div class="instructor-portrait-wrapper" style="border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 12px 35px rgba(168, 85, 247, 0.2);">
+              <img loading="eager" decoding="async" src="assets/Juniorit/rossi_taustalla.jpeg" alt="Joni Rossi - Junnujen ohjaaja" class="instructor-portrait-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Info & Q&A -->
+          <div class="instructor-info-col">
+            <div>
+              <div class="instructor-header">
+                <h3 class="instructor-name">Joni Rossi</h3>
+                <div class="badge-row">
+                  <span class="badge" style="background: rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.6); color: #c084fc;">
+                    <i class="fa-solid fa-child-reaching"></i> Junnujen ohjaaja
+                  </span>
                 </div>
+                <p class="instructor-intro">
+                  Joni Rossi tuo junioritreeneihin innostavan ja energisen otteen. Joni innostaa lapsia yrittämään parhaansa ja löytämään onnistumisen elämyksiä jokaisessa harjoituksessa.
+                </p>
+              </div>
 
-                <div>
-                  <div style="font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                    <i class="fa-solid fa-circle-question" style="color: #60a5fa; margin-right: 8px;"></i> Mitä varusteita kokeiluun tarvitaan?
+              <!-- Q&A Section -->
+              <div class="instructor-qa-box" style="border-color: rgba(168, 85, 247, 0.25);">
+                <h4 class="qa-box-title" style="color: #c084fc;">
+                  <i class="fa-solid fa-comments"></i> Ohjaajan Q&amp;A
+                </h4>
+
+                <div class="qa-list">
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #c084fc;"></i> 1. Mikä on parasta junnuvalmennuksessa?
+                    </div>
+                    <div class="qa-a">
+                      Nähdä lasten innostus ja se aito ilo, kun uusi opittu tekniikka tai kaatuminen onnistuu tatamilla.
+                    </div>
                   </div>
-                  <div style="font-size: 0.88rem; color: #94a3b8; line-height: 1.55; padding-left: 24px;">
-                    Sopivat tavalliset sisäliikuntavaatteet (t-paita ja verkkarit). Harjoittelemme paljain jaloin tatamilla.
+
+                  <div class="qa-item-card">
+                    <div class="qa-q">
+                      <i class="fa-solid fa-circle-question" style="color: #c084fc;"></i> 2. Mitä varusteita aloittelija tarvitsee mukaan?
+                    </div>
+                    <div class="qa-a">
+                      Kokeiluun riittävät tavalliset sisäliikuntavaatteet (t-paita ja verkkarit) sekä juomapullo. Harjoittelemme aina paljain jaloin.
+                    </div>
                   </div>
                 </div>
               </div>
