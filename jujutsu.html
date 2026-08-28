@@ -8,11 +8,11 @@
   <meta name="description" content="Suomen johtava itsepuolustusjärjestelmä aikuille ja nuorille (15v+) Oulussa. Otteista vapautumiset, lyönnit, heitot ja lukot. Varaa ilmainen kokeilu!">
   <meta name="keywords" content="Jujutsu Oulu Ry, Hokutoryu Ju-Jutsu, itsepuolustus Oulu, kamppailulajit Oulu, kamppailusali Äimäkuja 6 A, Auvo Niiniketo">
 
-  <link rel="canonical" href="https://www.oulunjujutsu.com/jujutsu.html">
+  <link rel="canonical" href="https://www.oulunjujutsu.com/jujutsu">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.oulunjujutsu.com/jujutsu.html">
+  <meta property="og:url" content="https://www.oulunjujutsu.com/jujutsu">
   <meta property="og:title" content="Hokutoryu Jujutsu Oulu Ry – Aikuisten Itsepuolustus & Budo">
   <meta property="og:description" content="Kansainvälisesti arvostettu suomalainen itsepuolustusjärjestelmä. Tule kokemaan realistinen kamppailuharjoittelu Jujutsu Oulu Ryssa.">
   <meta property="og:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
@@ -33,28 +33,45 @@
 
   <!-- Schema.org JSON-LD (SEO & GEO Optimization) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Course",
-        "name": "Hokutoryu Ju-Jutsu -peruskurssi & Jatkokurssit Oulussa",
-        "description": "Suomalainen itsepuolustusjärjestelmä. Otteista irrottautumiset, lyönnit, potkut, heitot, rannelukot ja mattohallinta Äimäkujalla.",
-        "provider": {
-          "@type": "SportsActivityLocation",
-          "name": "Jujutsu Oulu Ry",
-          "url": "https://www.oulunjujutsu.com"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://www.oulunjujutsu.com/"
         },
-        "offers": {
-          "@type": "Offer",
-          "price": "110.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock"
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hokutoryu Ju-Jutsu",
+          "item": "https://www.oulunjujutsu.com/jujutsu"
         }
+      ]
+    },
+    {
+      "@type": "Course",
+      "name": "Hokutoryu Ju-Jutsu -peruskurssi & Jatkokurssit Oulussa",
+      "description": "Suomalainen itsepuolustusjärjestelmä. Otteista irrottautumiset, lyönnit, potkut, heitot, rannelukot ja mattohallinta Äimäkujalla.",
+      "provider": {
+        "@type": "SportsActivityLocation",
+        "name": "Jujutsu Oulu Ry",
+        "url": "https://www.oulunjujutsu.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "110.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -72,7 +89,7 @@
   <!-- Header & Nav -->
   <header id="header" class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
         JUJUTSU <span>OULU RY</span>
       </a>
@@ -82,17 +99,17 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Etusivu</a></li>
-        <li><a href="jujutsu.html" class="nav-link">Hokutoryu</a></li>
-        <li><a href="junnut.html" class="nav-link">Junnut</a></li>
-        <li><a href="kenjutsu.html" class="nav-link">Kenjutsu</a></li>
-        <li><a href="diesel.html" class="nav-link">Diesel-jutsu</a></li>
-        <li><a href="maksut.html" class="nav-link">Hinnasto</a></li>
+        <li><a href="/" class="nav-link">Etusivu</a></li>
+        <li><a href="/jujutsu" class="nav-link">Hokutoryu</a></li>
+        <li><a href="/junnut" class="nav-link">Junnut</a></li>
+        <li><a href="/kenjutsu" class="nav-link">Kenjutsu</a></li>
+        <li><a href="/diesel" class="nav-link">Diesel-jutsu</a></li>
+        <li><a href="/maksut" class="nav-link">Hinnasto</a></li>
         <li>
           <div class="lang-switcher">
-            <a href="index.html" class="active">FI</a>
+            <a href="/" class="active">FI</a>
             <span class="lang-divider">|</span>
-            <a href="index-en.html">EN</a>
+            <a href="/en">EN</a>
           </div>
         </li>
         <li>
@@ -106,7 +123,7 @@
 
   <main id="main">
 
-  <div class="container"><nav class="breadcrumb"><a href="index.html">Etusivu</a> <span class="separator">&gt;</span> <a href="#">Lajit</a> <span class="separator">&gt;</span> <span>Hokutoryu Ju-Jutsu</span></nav></div>
+  <div class="container"><nav class="breadcrumb"><a href="/">Etusivu</a> <span class="separator">&gt;</span> <a href="#">Lajit</a> <span class="separator">&gt;</span> <span>Hokutoryu Ju-Jutsu</span></nav></div>
 </div>
 
 
@@ -258,37 +275,37 @@
       <div class="belt-roadmap-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 36px;">
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid #facc15;">
           <span style="background: #facc15; color: #000; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">5. KYU</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">5. kyu keltainen vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">5. kyu keltainen vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Peruskurssin päättökoe. Perustorjunnat, vapautumiset, lyönnit ja heitot.</p>
         </div>
 
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid #fb923c;">
           <span style="background: #fb923c; color: #000; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">4. KYU</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">4. kyu oranssi vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">4. kyu oranssi vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Syventävät jatkovapautumiset, kaadot ja mattokamppailu.</p>
         </div>
 
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid #4ade80;">
           <span style="background: #4ade80; color: #000; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">3. KYU</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">3. kyu vihreä vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">3. kyu vihreä vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Aseettomat torjunnat, vaativammat lukot ja pystysparri.</p>
         </div>
 
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid #2563eb;">
           <span style="background: #2563eb; color: #fff; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">2. KYU</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">2. kyu sininen vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">2. kyu sininen vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Edistynyt taktinen itsepuolustus, aseriisunnat ja heittosarjat.</p>
         </div>
 
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid #78350f;">
           <span style="background: #78350f; color: #fff; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">1. KYU</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">1. kyu ruskea vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">1. kyu ruskea vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Mestaritason tekniikka, hyökkäysten hallinta ja valmennusosaaminen.</p>
         </div>
 
         <div class="glass-panel" style="padding: 20px; border-left: 4px solid var(--brand-red);">
           <span style="background: var(--brand-red); color: #fff; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">1. DAN+</span>
-          <h4 style="font-size: 1.15rem; margin: 8px 0 4px 0;">1. Dan+ Musta vyö</h4>
+          <h3 style="font-size: 1.15rem; margin: 8px 0 4px 0;">1. Dan+ Musta vyö</h4>
           <p style="font-size: 0.85rem; color: #94a3b8;">Mestaritaso ja valmentajuus Hokutoryu Ju-Jutsussa.</p>
         </div>
       </div>
@@ -347,100 +364,6 @@
       </div>
     </div>
   </section>
-          </div>
-          <span class="belt-time">~1 vuosi</span>
-        </div>
-
-        <div class="belt-step">
-          <div class="belt-badge belt-green"></div>
-          <div class="belt-info">
-            <h4>3. kyu – vihreä vyö (edistynyt taso)</h4>
-            <p>Aseettomat ja aseriisunnat, monipuoliset mattohallinnat sekä taktinen soveltaminen itsepuolustustilanteissa.</p>
-          </div>
-          <span class="belt-time">~2 vuotta</span>
-        </div>
-
-        <div class="belt-step">
-          <div class="belt-badge belt-blue"></div>
-          <div class="belt-info">
-            <h4>2. kyu – sininen vyö (korkea edistynyt taso)</h4>
-            <p>Monipuolinen aseriisunta, taktinen itsepuolustus useampaa hyökkääjää vastaan ja vaativa heittotekniikka.</p>
-          </div>
-          <span class="belt-time">~3 vuotta</span>
-        </div>
-
-        <div class="belt-step">
-          <div class="belt-badge belt-brown"></div>
-          <div class="belt-info">
-            <h4>1. kyu – ruskea vyö (mestaritaso ennen mustaa)</h4>
-            <p>Täydellinen tekninen hallinta, yhdistelmäsarjat, nopeus ja dojo-valmennuskokemus ennen dan-koetta.</p>
-          </div>
-          <span class="belt-time">~4–5 vuotta</span>
-        </div>
-
-        <div class="belt-step">
-          <div class="belt-badge belt-black"></div>
-          <div class="belt-info">
-            <h4>1. Dan+ – Musta vyö (Opettaja &amp; Mestaritaso)</h4>
-            <p>Seuramme kokeneet Dan-arvoiset valmentajat (Renshi Tenhunen 5. dan, Sensei Pekkala 3. dan, Visa Tapio 3. dan, Kari Suorsa 2. dan, Essi Rytkönen 1. dan) ohjaavat harjoituksia. Jokainen harjoittelee turvallisesti oman tasonsa mukaan.</p>
-          </div>
-          <span class="belt-time">Musta vyö</span>
-        </div>
-      </div>
-
-      <!-- Viralliset vyökoevaatimukset PDF-lataukset (aikuiset) -->
-      <div class="belt-pdf-section" style="margin-top: 36px;">
-        <div class="belt-pdf-header">
-          <div>
-            <span class="badge" style="background: rgba(255, 9, 21, 0.15); border-color: var(--brand-red);"><i class="fa-solid fa-file-pdf"></i> Viralliset PDF-oppaat (2025–2026)</span>
-            <h3 style="font-size: 1.4rem; color: #fff; margin-top: 6px; font-family: var(--font-heading);">Lataa vyökoevaatimukset ja tekniikat (aikuiset)</h3>
-          </div>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Hokutoryu Ju-Jutsu Finland viralliset vaatimukset</span>
-        </div>
-
-        <div class="belt-pdf-grid">
-          <a href="assets/Vyökoetekniikat/5kyu_keltainen_2025.pdf" target="_blank" rel="noopener" class="belt-pdf-card">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div class="pdf-details">
-              <span class="pdf-title">5. kyu keltainen vyö</span>
-              <span class="pdf-sub">Lataa PDF (Peruskurssi)</span>
-            </div>
-          </a>
-
-          <a href="assets/Vyökoetekniikat/4kyu_oranssi_2025.pdf" target="_blank" rel="noopener" class="belt-pdf-card">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div class="pdf-details">
-              <span class="pdf-title">4. kyu oranssi vyö</span>
-              <span class="pdf-sub">Lataa PDF (Jatkotaso)</span>
-            </div>
-          </a>
-
-          <a href="assets/Vyökoetekniikat/3kyu_vihrea_2025.pdf" target="_blank" rel="noopener" class="belt-pdf-card">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div class="pdf-details">
-              <span class="pdf-title">3. kyu vihreä vyö</span>
-              <span class="pdf-sub">Lataa PDF (Edistynyt)</span>
-            </div>
-          </a>
-
-          <a href="assets/Vyökoetekniikat/2kyu_sininen_2025.pdf" target="_blank" rel="noopener" class="belt-pdf-card">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div class="pdf-details">
-              <span class="pdf-title">2. kyu sininen vyö</span>
-              <span class="pdf-sub">Lataa PDF (Valmennus)</span>
-            </div>
-          </a>
-
-          <a href="assets/Vyökoetekniikat/1kyu_ruskea_2025.pdf" target="_blank" rel="noopener" class="belt-pdf-card">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div class="pdf-details">
-              <span class="pdf-title">1. kyu ruskea vyö</span>
-              <span class="pdf-sub">Lataa PDF (1. kyu ruskea)</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- Senseit & Renshit – Valmentajien Esittelyt & Kysymys-Vastaus Osio -->
@@ -723,7 +646,7 @@
     <div class="container">
       <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-bottom: 40px;">
         <div>
-          <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+          <a href="/" class="logo" style="margin-bottom: 16px; display: inline-flex;">
             <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
@@ -739,19 +662,19 @@
         </div>
 
         <div>
-          <h4 style="color: #fff; margin-bottom: 16px;">Sivusto &amp; Lajit</h4>
+          <h3 style="color: #fff; margin-bottom: 16px;">Sivusto &amp; Lajit</h3>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
-            <li><a href="jujutsu.html" style="color: #cbd5e1; text-decoration: none;">Hokutoryu Ju-Jutsu &amp; Vyöt</a></li>
-            <li><a href="junnut.html" style="color: #cbd5e1; text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
-            <li><a href="kenjutsu.html" style="color: #cbd5e1; text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
-            <li><a href="diesel.html" style="color: #cbd5e1; text-decoration: none;">Diesel-jutsu (Kuntojutsu)</a></li>
-            <li><a href="maksut.html" style="color: #cbd5e1; text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
-            <li><a href="itsepuolustus-oulu.html" style="color: #cbd5e1; text-decoration: none;">Itsepuolustus Oulu</a></li>
+            <li><a href="/jujutsu" style="color: #cbd5e1; text-decoration: none;">Hokutoryu Ju-Jutsu &amp; Vyöt</a></li>
+            <li><a href="/junnut" style="color: #cbd5e1; text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
+            <li><a href="/kenjutsu" style="color: #cbd5e1; text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
+            <li><a href="/diesel" style="color: #cbd5e1; text-decoration: none;">Diesel-jutsu (Kuntojutsu)</a></li>
+            <li><a href="/maksut" style="color: #cbd5e1; text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
+            <li><a href="/itsepuolustus-oulu" style="color: #cbd5e1; text-decoration: none;">Itsepuolustus Oulu</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #fff; margin-bottom: 16px;">Harjoitussali (Dojo)</h4>
+          <h3 style="color: #fff; margin-bottom: 16px;">Harjoitussali (Dojo)</h3>
           <p style="font-size: 0.9rem; color: #94a3b8; line-height: 1.7;">
             <strong>Äimäkuja 6 A, 90400 Oulu</strong><br>
             <i class="fa-solid fa-envelope" style="color: var(--brand-red); margin-right: 6px;"></i> info@oulunjujutsu.com<br>
@@ -764,7 +687,7 @@
         <div>&copy; 2026 Jujutsu Oulu Ry. Kaikki oikeudet pidätetään.</div>
         <div style="display: flex; gap: 16px;">
           <a href="sitemap.xml" style="color: #cbd5e1; text-decoration: none;">Sivustokartta</a>
-          <a href="index-en.html" style="color: #cbd5e1; text-decoration: none;">English Version</a>
+          <a href="/en" style="color: #cbd5e1; text-decoration: none;">English Version</a>
         </div>
       </div>
     </div>

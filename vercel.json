@@ -1,4 +1,44 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/en",
+      "destination": "/index-en.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index-en(.html)?",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/hinnasto(.html)?",
+      "destination": "/maksut",
+      "permanent": true
+    },
+    {
+      "source": "/peruskurssi(.html)?",
+      "destination": "/jujutsu",
+      "permanent": true
+    },
+    {
+      "source": "/juniorit(.html)?",
+      "destination": "/junnut",
+      "permanent": true
+    },
+    {
+      "source": "/itsepuolustus(.html)?",
+      "destination": "/itsepuolustus-oulu",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

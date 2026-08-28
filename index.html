@@ -117,41 +117,46 @@
   <main id="main">
 
     <!-- 1. Hero Section -->
-    <section class="hero" style="min-height: auto; padding-top: 110px; padding-bottom: 50px;">
-      <div class="hero-bg" style="background-image: url('assets/oulunjujutsu-www-hero2.webp');"></div>
-      <div class="hero-overlay"></div>
-      
+    <section class="hero-section">
       <div class="container">
-        <div class="hero-content" style="max-width: 820px;">
-          
+        <!-- Bright, clear Hero image banner without dark overlay -->
+        <div class="hero-image-wrapper">
+          <img src="assets/oulunjujutsu-www-hero2.webp" alt="Oulun Ju-jutsuklubi harjoitukset" class="hero-main-img" fetchpriority="high">
+        </div>
 
-          <h1 class="hero-title brand-font" style="font-size: 2.8rem; line-height: 1.2;">
-            Realistista itsepuolustusta ja <span>kamppailutaitoa Oulussa.</span>
-          </h1>
+        <!-- Hero content placed below hero image -->
+        <div class="hero-content-below">
+          <!-- Unified Card for H1 & Subtitle Ingress -->
+          <div class="hero-text-card">
+            <h1 class="hero-title brand-font">
+              Realistista itsepuolustusta ja <span>kamppailutaitoa Oulussa.</span>
+            </h1>
 
-          <p class="hero-subtitle" style="margin: 18px 0 28px 0; font-size: 1.1rem;">
-            Jujutsu Oulu Ry tarjoaa yli 30 vuoden kokemuksella huipputason opetusta aikuisten Ju-Jutsussa, Kenjutsussa, Junnu-jutsussa ja Diesel-jutsussa. Tule kokeilemaan ensimmäiset 2 viikkoa veloituksetta!
-          </p>
+            <p class="hero-subtitle">
+              Jujutsu Oulu Ry tarjoaa yli 30 vuoden kokemuksella huipputason opetusta aikuisten Ju-Jutsussa, Kenjutsussa, Junnu-jutsussa ja Diesel-jutsussa. Tule kokeilemaan ensimmäiset 2 viikkoa veloituksetta!
+            </p>
+          </div>
 
-          <div class="hero-actions" style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
             <button class="btn btn-primary open-enroll-modal">
               <i class="fa-solid fa-shield-halved"></i> Varaa 2 viikon ilmainen kokeilu
             </button>
             <a href="#lajit" class="btn btn-secondary">
               <i class="fa-solid fa-compass"></i> Tutustu lajeihin
             </a>
-          
-          <!-- Social Links Strip (Visible immediately) -->
-          <div class="hero-social-strip" style="margin-top: 24px; display: inline-flex; align-items: center; gap: 14px; padding: 8px 18px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-glass); border-radius: 99px;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #94a3b8;">Seuraa meitä somessa:</span>
-            <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            
           </div>
 
-          <!-- Trust Bar -->
-          <div class="trust-badges-bar" style="margin-top: 32px; justify-content: flex-start;">
+          <!-- Social Links Strip -->
+          <div class="hero-social-strip">
+            <span class="hero-social-label">Seuraa meitä somessa:</span>
+            <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" title="Facebook" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" title="Instagram" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" title="YouTube" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="trust-badges-bar">
             <span class="trust-badge-pill"><i class="fa-solid fa-star"></i> Google 4,6 / 5 (38 arvostelua)</span>
             <span class="trust-badge-pill"><i class="fa-solid fa-shield-cat"></i> 2 viikon ilmainen kokeilu</span>
             <span class="trust-badge-pill"><i class="fa-solid fa-credit-card"></i> ePassi, Smartum, Edenred</span>

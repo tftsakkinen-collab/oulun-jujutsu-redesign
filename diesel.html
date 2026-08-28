@@ -6,9 +6,9 @@
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
   <title>Diesel-jutsu Oulu – Rento Kuntojutsu & No-Gi Harjoittelu</title>
   <meta name="description" content="Ju-jutsu kuntoilijoille ilman suorituspaineita. Sopii paluuseen tauon jälkeen, kuntoiluun ja keveämpään treeniin No-Gi -varustuksella.">
-  <link rel="canonical" href="https://www.oulunjujutsu.com/diesel.html">
-  <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/diesel.html">
-  <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/index-en.html">
+  <link rel="canonical" href="https://www.oulunjujutsu.com/diesel">
+  <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/diesel">
+  <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en">
   
   <link rel="icon" href="https://www.oulunjujutsu.com/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
@@ -16,34 +16,49 @@
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Diesel-jutsu Oulu (Kuntojutsu)",
-    "description": "Kuntoilumielessä pyörivä Hokutoryu ju-jutsun harjoitusryhmä ilman kovia suorituspaineita Äimäkujalla.",
-    "provider": {
-      "@type": "SportsActivityLocation",
-      "name": "Jujutsu Oulu Ry",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Äimäkuja 6 A",
-        "addressLocality": "Oulu",
-        "postalCode": "90400",
-        "addressCountry": "FI"
-      }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://www.oulunjujutsu.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Diesel-jutsu",
+          "item": "https://www.oulunjujutsu.com/diesel"
+        }
+      ]
     },
-    "offers": {
-      "@type": "Offer",
-      "price": "110.00",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
+    {
+      "@type": "Course",
+      "name": "Diesel-jutsu Oulu – Kuntoju-jutsu & No-Gi Kamppailu",
+      "description": "Kuntoilijoille ja aiemmin harjoitelleille suunnattu rento No-Gi Ju-Jutsu -ryhmä Oulussa Äimäkujalla.",
+      "provider": {
+        "@type": "SportsActivityLocation",
+        "name": "Jujutsu Oulu Ry",
+        "url": "https://www.oulunjujutsu.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "110.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.oulunjujutsu.com/diesel.html">
+  <meta property="og:url" content="https://www.oulunjujutsu.com/diesel">
   <meta property="og:title" content="Diesel-jutsu Oulu – Rento Kuntojutsu & No-Gi Harjoittelu">
   <meta property="og:description" content="Ju-jutsu kuntoilijoille ilman suorituspaineita. Sopii paluuseen tauon jälkeen, kuntoiluun ja keveämpään treeniin No-Gi -varustuksella.">
   <meta property="og:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
@@ -52,15 +67,15 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://www.oulunjujutsu.com/diesel.html">
+  <meta name="twitter:url" content="https://www.oulunjujutsu.com/diesel">
   <meta name="twitter:title" content="Diesel-jutsu Oulu – Rento Kuntojutsu & No-Gi Harjoittelu">
   <meta name="twitter:description" content="Ju-jutsu kuntoilijoille ilman suorituspaineita. Sopii paluuseen tauon jälkeen, kuntoiluun ja keveämpään treeniin No-Gi -varustuksella.">
   <meta name="twitter:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
 
   <!-- Hreflang Tags -->
-  <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/diesel.html">
-  <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/index-en.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.oulunjujutsu.com/index.html">
+  <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/diesel">
+  <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en">
+  <link rel="alternate" hreflang="x-default" href="https://www.oulunjujutsu.com/diesel">
 </head>
 <body>
 
@@ -73,7 +88,7 @@
   <!-- Header & Nav -->
   <header id="header" class="header">
     <div class="container nav-container">
-      <a href="index.html" class="logo">
+      <a href="/" class="logo">
         <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
         JUJUTSU <span>OULU RY</span>
       </a>
@@ -83,17 +98,17 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="nav-link">Etusivu</a></li>
-        <li><a href="jujutsu.html" class="nav-link">Hokutoryu</a></li>
-        <li><a href="junnut.html" class="nav-link">Junnut</a></li>
-        <li><a href="kenjutsu.html" class="nav-link">Kenjutsu</a></li>
-        <li><a href="diesel.html" class="nav-link">Diesel-jutsu</a></li>
-        <li><a href="maksut.html" class="nav-link">Hinnasto</a></li>
+        <li><a href="/" class="nav-link">Etusivu</a></li>
+        <li><a href="/jujutsu" class="nav-link">Hokutoryu</a></li>
+        <li><a href="/junnut" class="nav-link">Junnut</a></li>
+        <li><a href="/kenjutsu" class="nav-link">Kenjutsu</a></li>
+        <li><a href="/diesel" class="nav-link">Diesel-jutsu</a></li>
+        <li><a href="/maksut" class="nav-link">Hinnasto</a></li>
         <li>
           <div class="lang-switcher">
-            <a href="index.html" class="active">FI</a>
+            <a href="/" class="active">FI</a>
             <span class="lang-divider">|</span>
-            <a href="index-en.html">EN</a>
+            <a href="/en">EN</a>
           </div>
         </li>
         <li>
@@ -107,7 +122,7 @@
 
   <main id="main">
 
-  <div class="container"><nav class="breadcrumb"><a href="index.html">Etusivu</a> <span class="separator">&gt;</span> <a href="#">Lajit</a> <span class="separator">&gt;</span> <span>Diesel-jutsu (Kuntojutsu)</span></nav></div>
+  <div class="container"><nav class="breadcrumb"><a href="/">Etusivu</a> <span class="separator">&gt;</span> <a href="#">Lajit</a> <span class="separator">&gt;</span> <span>Diesel-jutsu (Kuntojutsu)</span></nav></div>
 
   <!-- Hero Section -->
   <section class="hero" style="padding-top: 110px; padding-bottom: 50px; min-height: auto; position: relative; overflow: hidden;">
@@ -165,7 +180,7 @@
                   <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(225, 48, 108, 0.9); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px; box-shadow: 0 0 25px rgba(225, 48, 108, 0.6);">
                     <i class="fa-solid fa-play" style="margin-left: 4px;"></i>
                   </div>
-                  <h4 style="color: #fff; font-size: 1.1rem; margin: 0; font-weight: 700;">Katso perjantain Diesel-jutsu -videoklippi</h4>
+                  <h3 style="color: #fff; font-size: 1.1rem; margin: 0; font-weight: 700;">Katso perjantain Diesel-jutsu -videoklippi</h3>
                   <p style="color: #cbd5e1; font-size: 0.85rem; margin-top: 4px;">Klikkaa katsoaksesi video Instagramissa &rarr;</p>
                 </div>
               </div>
@@ -314,7 +329,7 @@
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-bottom: 40px;">
         <div>
-          <a href="index.html" class="logo" style="margin-bottom: 16px; display: inline-flex;">
+          <a href="/" class="logo" style="margin-bottom: 16px; display: inline-flex;">
             <img fetchpriority="high" src="assets/oulunjujutsu-logo.png" alt="Jujutsu Oulu Ry Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
@@ -324,18 +339,18 @@
         </div>
 
         <div>
-          <h4 style="color: #fff; margin-bottom: 16px;">Lajit &amp; Ryhmät</h4>
+          <h3 style="color: #fff; margin-bottom: 16px;">Lajit &amp; Ryhmät</h3>
           <ul style="list-style: none; padding: 0; line-height: 2; font-size: 0.9rem;">
-            <li><a href="jujutsu.html" style="color: var(--text-muted); text-decoration: none;">Hokutoryu Ju-Jutsu</a></li>
-            <li><a href="junnut.html" style="color: var(--text-muted); text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
-            <li><a href="kenjutsu.html" style="color: var(--text-muted); text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
-            <li><a href="diesel.html" style="color: var(--text-muted); text-decoration: none;">Diesel-jutsu</a></li>
-            <li><a href="maksut.html" style="color: var(--text-muted); text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
+            <li><a href="/jujutsu" style="color: var(--text-muted); text-decoration: none;">Hokutoryu Ju-Jutsu</a></li>
+            <li><a href="/junnut" style="color: var(--text-muted); text-decoration: none;">Junnu Ju-Jutsu (7–14v)</a></li>
+            <li><a href="/kenjutsu" style="color: var(--text-muted); text-decoration: none;">Kenjutsu (Miekkailu)</a></li>
+            <li><a href="/diesel" style="color: var(--text-muted); text-decoration: none;">Diesel-jutsu</a></li>
+            <li><a href="/maksut" style="color: var(--text-muted); text-decoration: none;">Hinnasto &amp; Liikuntaedut</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 style="color: #fff; margin-bottom: 16px;">Harjoitussali (Dojo)</h4>
+          <h3 style="color: #fff; margin-bottom: 16px;">Harjoitussali (Dojo)</h3>
           <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">
             <strong>Äimäkuja 6 A, 90400 Oulu</strong><br>
             <i class="fa-solid fa-envelope" style="color: var(--brand-red); margin-right: 6px;"></i> info@oulunjujutsu.com<br>
@@ -344,7 +359,7 @@
         </div>
 
         <div>
-          <h4 style="color: #fff; margin-bottom: 16px;">Seuraa meitä</h4>
+          <h3 style="color: #fff; margin-bottom: 16px;">Seuraa meitä</h3>
           <div class="social-links" style="display: flex; gap: 12px;">
             <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -357,7 +372,7 @@
         <div>&copy; 2026 Jujutsu Oulu Ry. Kaikki oikeudet pidätetään.</div>
         <div style="display: flex; gap: 16px;">
           <a href="sitemap.xml" style="color: var(--text-dim); text-decoration: none;">Sivustokartta</a>
-          <a href="index-en.html" style="color: var(--text-dim); text-decoration: none;">English Version</a>
+          <a href="/en" style="color: var(--text-dim); text-decoration: none;">English Version</a>
         </div>
       </div>
     </div>

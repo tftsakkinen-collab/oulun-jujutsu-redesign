@@ -95,15 +95,17 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('assets/oulunjujutsu-www-hero2.webp');"></div>
-    <div class="hero-overlay"></div>
-    
+  <section class="hero-section">
     <div class="container">
-      <div class="hero-content" style="max-width: 840px;">
-        <div class="hero-text-card">
-          
+      <!-- Bright, clear Hero image banner without dark overlay -->
+      <div class="hero-image-wrapper">
+        <img src="assets/oulunjujutsu-www-hero2.webp" alt="Ju-Jutsu Oulu Training" class="hero-main-img" fetchpriority="high">
+      </div>
 
+      <!-- Hero content placed below hero image -->
+      <div class="hero-content-below">
+        <!-- Unified Card for H1 & Subtitle Ingress -->
+        <div class="hero-text-card">
           <h1 class="hero-title brand-font" style="letter-spacing: 0.02em;">
             Protect Yourself &amp; Loved Ones. <span>Real-World Self-Defense in Oulu.</span>
           </h1>
@@ -113,6 +115,7 @@
           </p>
         </div>
 
+        <!-- Hero Action Buttons -->
         <div class="hero-actions">
           <button class="btn btn-primary open-enroll-modal">
             <i class="fa-solid fa-shield-halved"></i> Reserve 2-Week Free Trial
@@ -122,27 +125,12 @@
           </a>
         </div>
 
-        <!-- Live Schedule & Google Rating -->
-        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px;">
-          <div class="live-schedule-banner">
-            <span class="live-dot"></span>
-            <span>Training at Äimäkuja: Mon 18:30 (Juniors), Mon 19:30, Tue 18:00 &amp; Thu 19:30</span>
-          </div>
-
-          <div style="display: flex; align-items: center; gap: 12px; padding: 10px 20px; background: rgba(255,255,255,0.04); border-radius: var(--radius-full); border: 1px solid var(--border-glass);">
-            <i class="fa-brands fa-google" style="color: #ea4335; font-size: 1.1rem;"></i>
-            <span style="color: #f59e0b; font-size: 0.95rem;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
-            <span style="color: #fff; font-size: 0.88rem; font-weight: 600;">4.6 / 5.0 Rating on Google</span>
-          </div>
-        
-          <!-- Social Links Strip (Visible immediately) -->
-          <div class="hero-social-strip" style="margin-top: 24px; display: inline-flex; align-items: center; gap: 14px; padding: 8px 18px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-glass); border-radius: 99px;">
-            <span style="font-size: 0.85rem; font-weight: 700; color: #94a3b8;">Seuraa meitä somessa:</span>
-            <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" style="color: #fff; font-size: 1.1rem; margin-right: 4px;" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            
-          </div>
+        <!-- Social Links Strip -->
+        <div class="hero-social-strip">
+          <span class="hero-social-label">Follow us:</span>
+          <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" title="Facebook" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" title="Instagram" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" title="YouTube" style="color: #fff; font-size: 1.1rem;"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
     </div>

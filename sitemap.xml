@@ -3,63 +3,63 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.oulunjujutsu.com/index.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en"/>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/jujutsu.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/jujutsu</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/junnut.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/junnut</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/kenjutsu.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/kenjutsu</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/diesel.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/diesel</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/maksut.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/maksut</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/itsepuolustus-oulu.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/itsepuolustus-oulu</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.oulunjujutsu.com/index-en.html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://www.oulunjujutsu.com/en</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en"/>
   </url>
 
 </urlset>
