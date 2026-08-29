@@ -1,30 +1,31 @@
-/* Oulu · Jujutsu Design Skin Tokens (3-Phase Theming - Dark-First Default) */
+/* Oulu · Jujutsu Design Skin Tokens (WCAG AA 100% Solid High Contrast) */
 
 :root {
-  --bg: oklch(15% .006 25);
-  --surface: oklch(19% .008 25);
-  --text: oklch(96% .008 40);
-  --muted: oklch(72% .015 40);
-  --border: oklch(32% .012 25);
-  --primary: oklch(58% .20 25);          /* kurinalainen krimsoni */
-  --primary-hover: oklch(64% .19 25);
-  --primary-ink: oklch(98% 0 0);
-  --steel: oklch(72% .03 240);
+  --bg: rgb(15, 17, 21);
+  --surface: rgb(26, 30, 38);
+  --surface-hover: rgb(34, 40, 50);
+  --text: rgb(255, 255, 255);
+  --muted: rgb(205, 215, 225);
+  --border: rgb(65, 75, 90);
+  --primary: rgb(255, 115, 125);
+  --primary-hover: rgb(255, 145, 155);
+  --primary-ink: rgb(15, 17, 21);
+  --steel: rgb(135, 195, 255);
   --ring: var(--primary);
   --radius: 6px;
   --focus: 50% 30%;
 
-  /* Legacy aliases mapped to tokens */
+  /* Aliases */
   --bg-black: var(--bg);
   --bg-dark: var(--bg);
   --bg-card: var(--surface);
-  --bg-card-hover: oklch(23% .008 25);
-  --bg-glass: oklch(19% .008 25 / 0.85);
+  --bg-card-hover: var(--surface-hover);
+  --bg-glass: var(--surface);
   --brand-red: var(--primary);
   --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(217, 38, 64, 0.35);
+  --brand-red-glow: rgba(255, 115, 125, 0.4);
   --brand-blue: var(--steel);
-  --accent-gold: oklch(80% .14 85);
+  --accent-gold: rgb(255, 205, 65);
   --text-main: var(--text);
   --text-muted: var(--muted);
   --text-dim: var(--muted);
@@ -32,86 +33,59 @@
   --border-active: var(--primary);
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: oklch(97% .004 40);
-    --surface: oklch(100% 0 0);
-    --text: oklch(20% .01 25);
-    --muted: oklch(42% .015 30);
-    --border: oklch(85% .008 40);
-    --primary: oklch(50% .20 25);
-    --primary-hover: oklch(44% .19 25);
-    --primary-ink: oklch(99% 0 0);
-    --steel: oklch(45% .03 240);
-
-    --bg-black: var(--bg);
-    --bg-dark: var(--bg);
-    --bg-card: var(--surface);
-    --bg-card-hover: oklch(94% .004 40);
-    --bg-glass: oklch(100% 0 0 / 0.9);
-    --brand-red: var(--primary);
-    --brand-red-hover: var(--primary-hover);
-    --brand-red-glow: rgba(200, 30, 50, 0.25);
-    --brand-blue: var(--steel);
-    --accent-gold: oklch(55% .15 85);
-    --text-main: var(--text);
-    --text-muted: var(--muted);
-    --text-dim: var(--muted);
-    --border-glass: var(--border);
-    --border-active: var(--primary);
-  }
-}
-
-:root[data-theme="light"] {
-  --bg: oklch(97% .004 40);
-  --surface: oklch(100% 0 0);
-  --text: oklch(20% .01 25);
-  --muted: oklch(42% .015 30);
-  --border: oklch(85% .008 40);
-  --primary: oklch(50% .20 25);
-  --primary-hover: oklch(44% .19 25);
-  --primary-ink: oklch(99% 0 0);
-  --steel: oklch(45% .03 240);
-
-  --bg-black: var(--bg);
-  --bg-dark: var(--bg);
-  --bg-card: var(--surface);
-  --bg-card-hover: oklch(94% .004 40);
-  --bg-glass: oklch(100% 0 0 / 0.9);
-  --brand-red: var(--primary);
-  --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(200, 30, 50, 0.25);
-  --brand-blue: var(--steel);
-  --accent-gold: oklch(55% .15 85);
-  --text-main: var(--text);
-  --text-muted: var(--muted);
-  --text-dim: var(--muted);
-  --border-glass: var(--border);
-  --border-active: var(--primary);
-}
-
-:root[data-theme="dark"] {
-  --bg: oklch(15% .006 25);
-  --surface: oklch(19% .008 25);
-  --text: oklch(96% .008 40);
-  --muted: oklch(72% .015 40);
-  --border: oklch(32% .012 25);
-  --primary: oklch(58% .20 25);
-  --primary-hover: oklch(64% .19 25);
-  --primary-ink: oklch(98% 0 0);
-  --steel: oklch(72% .03 240);
+[data-theme="dark"] {
+  --bg: rgb(15, 17, 21);
+  --surface: rgb(26, 30, 38);
+  --surface-hover: rgb(34, 40, 50);
+  --text: rgb(255, 255, 255);
+  --muted: rgb(205, 215, 225);
+  --border: rgb(65, 75, 90);
+  --primary: rgb(255, 115, 125);
+  --primary-hover: rgb(255, 145, 155);
+  --primary-ink: rgb(15, 17, 21);
+  --steel: rgb(135, 195, 255);
   --ring: var(--primary);
 
   --bg-black: var(--bg);
   --bg-dark: var(--bg);
   --bg-card: var(--surface);
-  --bg-card-hover: oklch(23% .008 25);
-  --bg-glass: oklch(19% .008 25 / 0.85);
+  --bg-card-hover: var(--surface-hover);
+  --bg-glass: var(--surface);
   --brand-red: var(--primary);
   --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(217, 38, 64, 0.35);
+  --brand-red-glow: rgba(255, 115, 125, 0.4);
   --brand-blue: var(--steel);
-  --accent-gold: oklch(80% .14 85);
+  --accent-gold: rgb(255, 205, 65);
+  --text-main: var(--text);
+  --text-muted: var(--muted);
+  --text-dim: var(--muted);
+  --border-glass: var(--border);
+  --border-active: var(--primary);
+}
+
+[data-theme="light"] {
+  --bg: rgb(250, 250, 250);
+  --surface: rgb(255, 255, 255);
+  --surface-hover: rgb(240, 242, 245);
+  --text: rgb(15, 23, 42);
+  --muted: rgb(45, 60, 80);
+  --border: rgb(200, 208, 220);
+  --primary: rgb(190, 10, 25);
+  --primary-hover: rgb(160, 8, 20);
+  --primary-ink: rgb(255, 255, 255);
+  --steel: rgb(15, 75, 155);
+  --ring: var(--primary);
+
+  --bg-black: var(--bg);
+  --bg-dark: var(--bg);
+  --bg-card: var(--surface);
+  --bg-card-hover: var(--surface-hover);
+  --bg-glass: var(--surface);
+  --brand-red: var(--primary);
+  --brand-red-hover: var(--primary-hover);
+  --brand-red-glow: rgba(190, 10, 25, 0.2);
+  --brand-blue: var(--steel);
+  --accent-gold: rgb(130, 75, 0);
   --text-main: var(--text);
   --text-muted: var(--muted);
   --text-dim: var(--muted);
