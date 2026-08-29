@@ -421,7 +421,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 32px;">
-          <a href="https://maps.google.com/?q=Jujutsu+Oulu+Ry" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25); color: var(--text); text-decoration: none; font-size: 1.05rem; font-weight: 600; background: rgba(255,255,255,0.05); transition: all 0.2s ease;">
+          <a href="https://maps.google.com/?q=Jujutsu+Oulu+Ry" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.25); color: var(--text); text-decoration: none; font-size: 1.05rem; font-weight: 600; background: rgba(255,255,255,0.05); transition: all 0.2s ease;">
             <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.2rem;"></i> Lue lisää arvosteluita — klikkaa tästä
           </a>
         </div>
@@ -505,22 +505,22 @@
             
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_nimi" style="display: block; margin-bottom: 6px; color: var(--text); font-weight: 600;">Etunimi ja sukunimi *</label>
-              <input type="text" id="index_nimi" name="nimi" autocomplete="name" class="form-control" placeholder="Matti Meikäläinen" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
+              <input type="text" id="index_nimi" name="nimi" autocomplete="name" class="form-control" placeholder="Matti Meikäläinen" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_email" style="display: block; margin-bottom: 6px; color: var(--text); font-weight: 600;">Sähköpostiosoite *</label>
-              <input type="email" id="index_email" name="sahkoposti" autocomplete="email" inputmode="email" class="form-control" placeholder="matti@esimerkki.fi" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
+              <input type="email" id="index_email" name="sahkoposti" autocomplete="email" inputmode="email" class="form-control" placeholder="matti@esimerkki.fi" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
             </div>
 
             <div class="form-group" style="margin-bottom: 16px;">
               <label for="index_phone" style="display: block; margin-bottom: 6px; color: var(--text); font-weight: 600;">Puhelinnumero *</label>
-              <input type="tel" id="index_phone" name="puhelin" autocomplete="tel" inputmode="tel" class="form-control" placeholder="041 327 4967" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
+              <input type="tel" id="index_phone" name="puhelin" autocomplete="tel" inputmode="tel" class="form-control" placeholder="041 327 4967" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); color: var(--text);">
             </div>
 
             <div class="form-group" style="margin-bottom: 24px;">
               <label for="index_ryhma" style="display: block; margin-bottom: 6px; color: var(--text); font-weight: 600;">Valitse lajiryhmä *</label>
-              <select id="index_ryhma" name="ryhma" class="form-control" required style="width: 100%; padding: 12px; border-radius: 8px; background: rgba(18,22,30,0.95); border: 1px solid var(--border-glass); color: var(--text);">
+              <select id="index_ryhma" name="ryhma" class="form-control" required style="width: 100%; padding: 12px; border-radius: var(--radius-sm); background: rgba(18,22,30,0.95); border: 1px solid var(--border-glass); color: var(--text);">
                 <option value="Hokutoryu Ju-Jutsu (Aikuiset 15v+)" selected>Hokutoryu Ju-Jutsu (Aikuiset 15v+)</option>
                 <option value="Hokutoryu Diesel-jutsu">Hokutoryu Diesel-jutsu (Kuntojutsu)</option>
                 <option value="Kenjutsu (Miekkailu)">Kenjutsu (Miekkailu)</option>
@@ -660,13 +660,13 @@
 
 
 <!-- Kysy koutsilta - Telegram-modal & Floating Button -->
-<div id="floating-koutsi-btn" onclick="openInstructorModal()" style=" cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+<div id="floating-koutsi-btn" onclick="openInstructorModal()" style=" cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   <span>Kysy koutsilta</span>
 </div>
 
 <div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 32px; max-width: 480px; width: 100%; position: relative; color: var(--text); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+  <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 32px; max-width: 480px; width: 100%; position: relative; color: var(--text); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
     <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
     
     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
@@ -682,20 +682,20 @@
     <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
       <div style="margin-bottom: 16px;">
         <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
-        <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
+        <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
       </div>
 
       <div style="margin-bottom: 16px;">
         <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
-        <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
+        <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
       </div>
 
       <div style="margin-bottom: 20px;">
         <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Kysymyksesi koutsille *</label>
-        <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem; resize: vertical;"></textarea>
+        <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem; resize: vertical;"></textarea>
       </div>
 
-      <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: 8px; border: none; background: #00AEEF; color: #ffffff !important; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: #ffffff !important; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
         <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
       </button>
     </form>

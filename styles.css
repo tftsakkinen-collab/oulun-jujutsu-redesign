@@ -1,3 +1,5 @@
+@import "./design-system/index.css";
+
 /* ==========================================================================
    Jujutsu Oulu Ry - Modern & Graphically Updated Brand Design System 2026
    Official Colors: Brand Red #FF0915, Deep Black #0B0B0B, Gold Belt Accent var(--warning)
@@ -33,10 +35,10 @@
   --font-body: var(--font-body);
 
   /* Radii & Animaatiot */
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 28px;
-  --radius-full: 9999px;
+  --radius-sm: .25rem;
+  --radius: .375rem;
+  --radius: .375rem;
+  --radius-pill: 999px;
 
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -433,7 +435,7 @@ p {
   max-width: 1100px;
   height: 420px;
   margin: 0 auto 32px auto;
-  border-radius: 16px;
+  border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255, 9, 21, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -467,7 +469,7 @@ p {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 32px 38px !important;
-  border-radius: 16px !important;
+  border-radius: var(--radius) !important;
   border-top: 4px solid var(--primary) !important;
   border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -2183,7 +2185,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .checklist-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: rgba(255, 9, 21, 0.12);
   border: 1px solid var(--brand-red);
   color: var(--brand-red);
@@ -2233,7 +2235,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .belt-badge {
   width: 60px;
   height: 18px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
@@ -2549,7 +2551,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .fitness-icon {
   width: 50px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: rgba(255, 9, 21, 0.12);
   border: 1px solid rgba(255, 9, 21, 0.3);
   color: var(--brand-red);
@@ -2726,7 +2728,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .direction-icon {
   width: 42px;
   height: 42px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: rgba(255, 9, 21, 0.15);
   border: 1px solid var(--brand-red);
   color: var(--brand-red);
@@ -2758,7 +2760,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   font-weight: 700;
   font-size: 0.78rem;
   padding: 2px 8px;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   margin: 2px 2px 0 0;
 }
 
@@ -2936,7 +2938,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .nav-option-btn {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border-radius: var(--radius);
   padding: 20px 22px;
   text-align: left;
   color: var(--text);
@@ -3041,7 +3043,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 8px 18px;
-  border-radius: 9999px;
+  border-radius: var(--radius-pill);
   backdrop-filter: blur(10px);
 }
 
@@ -3192,7 +3194,7 @@ header ul, header ol, header li,
   font-size: 1.6rem !important;
   cursor: pointer !important;
   padding: 8px 12px !important;
-  border-radius: 8px !important;
+  border-radius: var(--radius-sm) !important;
   transition: background 0.2s ease !important;
   z-index: 100006 !important;
 }
@@ -3235,7 +3237,7 @@ header ul, header ol, header li,
     color: var(--muted) !important;
     text-decoration: none !important;
     padding: 6px 12px !important;
-    border-radius: 8px !important;
+    border-radius: var(--radius-sm) !important;
     transition: all 0.2s ease !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -3254,7 +3256,7 @@ header ul, header ol, header li,
     padding: 4px 10px !important;
     background: var(--surface); !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 99px !important;
+    border-radius: var(--radius-pill) !important;
     font-size: 0.8rem !important;
     font-weight: 700 !important;
   }
@@ -3276,7 +3278,7 @@ header ul, header ol, header li,
     padding: 8px 18px !important;
     font-size: 0.85rem !important;
     font-weight: 700 !important;
-    border-radius: 99px !important;
+    border-radius: var(--radius-pill) !important;
     white-space: nowrap !important;
   }
 }
@@ -3338,7 +3340,7 @@ header ul, header ol, header li,
     font-weight: 600 !important;
     color: var(--text-main) !important;
     text-decoration: none !important;
-    border-radius: 12px !important;
+    border-radius: var(--radius) !important;
     background: rgba(255, 255, 255, 0.03) !important;
     border: 1px solid rgba(255, 255, 255, 0.06) !important;
     white-space: nowrap !important;
@@ -3360,7 +3362,7 @@ header ul, header ol, header li,
     padding: 8px 24px !important;
     background: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 99px !important;
+    border-radius: var(--radius-pill) !important;
     font-size: 0.95rem !important;
     font-weight: 700 !important;
   }
@@ -3388,7 +3390,7 @@ header ul, header ol, header li,
     padding: 14px 24px !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
-    border-radius: 99px !important;
+    border-radius: var(--radius-pill) !important;
     white-space: nowrap !important;
     margin-top: 6px !important;
   }
@@ -3481,7 +3483,7 @@ input, select, textarea {
 :focus-visible {
   outline: 3px solid #ffffff !important;
   outline-offset: 3px !important;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 /* P3-5: Reduced motion support */
@@ -3520,7 +3522,7 @@ input, select, textarea {
   gap: 28px;
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border-radius: var(--radius);
   padding: 24px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
   margin-bottom: 32px;
@@ -3546,7 +3548,7 @@ input, select, textarea {
   height: 310px;
   min-height: 310px;
   max-height: 320px;
-  border-radius: 14px;
+  border-radius: var(--radius);
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -3603,7 +3605,7 @@ input, select, textarea {
 .instructor-qa-box {
   background: rgba(9, 12, 18, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  border-radius: var(--radius);
   padding: 18px;
   margin-top: 14px;
 }
@@ -3627,7 +3629,7 @@ input, select, textarea {
 .qa-item-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
+  border-radius: var(--radius);
   padding: 12px 16px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -3704,7 +3706,7 @@ input, select, textarea {
 .taustajoukot-card {
   background: rgba(18, 24, 38, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
+  border-radius: var(--radius);
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -3725,7 +3727,7 @@ input, select, textarea {
 .taustajoukot-img-wrapper {
   width: 170px;
   height: 210px;
-  border-radius: 16px;
+  border-radius: var(--radius);
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.18);
   margin-bottom: 20px;
@@ -3760,7 +3762,7 @@ input, select, textarea {
   font-size: 0.85rem;
   font-weight: 600;
   padding: 5px 14px;
-  border-radius: 20px;
+  border-radius: var(--radius);
   margin-bottom: 14px;
 }
 

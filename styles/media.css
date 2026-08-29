@@ -14,7 +14,7 @@
 .portrait {
   --ratio: 1/1;
   --focus: 50% 22%;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .frame--hero {
