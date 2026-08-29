@@ -744,3 +744,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Single ESC & Link-Click handler for Mobile Nav
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.nav-toggle-checkbox').forEach(function(cb) {
+      cb.checked = false;
+    });
+  }
+});
