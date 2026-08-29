@@ -1,0 +1,96 @@
+/* Oulu · Jujutsu Design Skin Tokens (3-Phase Theming) */
+
+:root {
+  --bg: oklch(15% .006 25);
+  --surface: oklch(19% .008 25);
+  --text: oklch(95% .008 40);
+  --muted: oklch(68% .015 40);
+  --border: oklch(30% .012 25);
+  --primary: oklch(58% .20 25);          /* kurinalainen krimsoni */
+  --primary-hover: oklch(64% .19 25);
+  --primary-ink: oklch(14% .02 25);
+  --steel: oklch(70% .03 240);
+  --ring: var(--primary);
+  --radius: 6px;                          /* teräväkulmaisempi kuin SaaS */
+  --focus: 50% 30%;                       /* kuvarajauksen oletusfokus */
+
+  /* Legacy aliases mapped to tokens */
+  --brand-red: var(--primary);
+  --brand-red-hover: var(--primary-hover);
+  --brand-blue: var(--steel);
+  --accent-gold: oklch(80% .14 85);
+  --bg-dark: var(--bg);
+  --bg-card: var(--surface);
+  --text-main: var(--text);
+  --text-muted: var(--muted);
+  --border-glass: var(--border);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: oklch(97% .004 40);
+    --surface: oklch(100% 0 0);
+    --text: oklch(20% .01 25);
+    --muted: oklch(45% .015 30);
+    --border: oklch(89% .008 40);
+    --primary: oklch(50% .20 25);
+    --primary-hover: oklch(44% .19 25);
+    --primary-ink: oklch(99% 0 0);
+    --steel: oklch(55% .03 240);
+
+    --brand-red: var(--primary);
+    --brand-red-hover: var(--primary-hover);
+    --brand-blue: var(--steel);
+    --accent-gold: oklch(65% .15 85);
+    --bg-dark: var(--bg);
+    --bg-card: var(--surface);
+    --text-main: var(--text);
+    --text-muted: var(--muted);
+    --border-glass: var(--border);
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: oklch(97% .004 40);
+  --surface: oklch(100% 0 0);
+  --text: oklch(20% .01 25);
+  --muted: oklch(45% .015 30);
+  --border: oklch(89% .008 40);
+  --primary: oklch(50% .20 25);
+  --primary-hover: oklch(44% .19 25);
+  --primary-ink: oklch(99% 0 0);
+  --steel: oklch(55% .03 240);
+
+  --brand-red: var(--primary);
+  --brand-red-hover: var(--primary-hover);
+  --brand-blue: var(--steel);
+  --accent-gold: oklch(65% .15 85);
+  --bg-dark: var(--bg);
+  --bg-card: var(--surface);
+  --text-main: var(--text);
+  --text-muted: var(--muted);
+  --border-glass: var(--border);
+}
+
+:root[data-theme="dark"] {
+  --bg: oklch(15% .006 25);
+  --surface: oklch(19% .008 25);
+  --text: oklch(95% .008 40);
+  --muted: oklch(68% .015 40);
+  --border: oklch(30% .012 25);
+  --primary: oklch(58% .20 25);
+  --primary-hover: oklch(64% .19 25);
+  --primary-ink: oklch(14% .02 25);
+  --steel: oklch(70% .03 240);
+  --ring: var(--primary);
+
+  --brand-red: var(--primary);
+  --brand-red-hover: var(--primary-hover);
+  --brand-blue: var(--steel);
+  --accent-gold: oklch(80% .14 85);
+  --bg-dark: var(--bg);
+  --bg-card: var(--surface);
+  --text-main: var(--text);
+  --text-muted: var(--muted);
+  --border-glass: var(--border);
+}

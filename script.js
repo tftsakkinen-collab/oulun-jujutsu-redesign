@@ -731,3 +731,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+// Light/Dark Theme Toggle Handler
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleBtn = document.getElementById('themeToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('oj-theme', next); } catch (e) {}
+    });
+  }
+});
