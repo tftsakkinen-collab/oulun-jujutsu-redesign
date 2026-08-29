@@ -1,0 +1,81 @@
+/* Oulu · Jujutsu Mobile & Fluid Layout Design System */
+
+:root {
+  --step-0: clamp(1rem, .96rem + .2vw, 1.1rem);
+  --step-1: clamp(1.2rem, 1.1rem + .5vw, 1.4rem);
+  --step-2: clamp(1.45rem, 1.25rem + 1vw, 1.9rem);
+  --step-3: clamp(1.8rem, 1.45rem + 1.8vw, 2.6rem);
+  --step-4: clamp(2.2rem, 1.6rem + 3vw, 3.5rem);
+  --container: 72rem;
+  --gutter: clamp(1rem, 5vw, 2.5rem);
+  --section-y: clamp(2.5rem, 8vw, 5rem);
+}
+
+body {
+  font-size: var(--step-0);
+}
+
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+
+section, .section {
+  padding-block: var(--section-y);
+  position: relative;
+  overflow-x: clip;
+}
+
+/* Touch Targets >= 44px */
+a, button, [role="button"], input, select, textarea, summary {
+  min-height: 44px;
+}
+
+button, [role="button"], .icon-btn {
+  min-width: 44px;
+}
+
+nav a, footer a, .nav-link, .footer-links a {
+  display: inline-flex;
+  align-items: center;
+  padding-block: .6rem;
+  min-height: 44px;
+}
+
+html, body {
+  overflow-x: clip;
+}
+
+[class*="blob"], [class*="glow"] {
+  pointer-events: none;
+}
+
+/* CSS-Only Mobile Menu (JS-independent fallback) */
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle-checkbox:checked ~ .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: var(--surface) !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 1rem !important;
+    z-index: 100 !important;
+  }
+}
+
+/* Floating Koutsilta Button Safe Area & Positioning */
+#floating-koutsi-btn {
+  position: fixed;
+  bottom: calc(105px + env(safe-area-inset-bottom, 0px));
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  z-index: 99;
+}

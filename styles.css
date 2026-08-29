@@ -1,15 +1,15 @@
 /* ==========================================================================
    Jujutsu Oulu Ry - Modern & Graphically Updated Brand Design System 2026
-   Official Colors: Brand Red #FF0915, Deep Black #0B0B0B, Gold Belt Accent #F59E0B
+   Official Colors: Brand Red #FF0915, Deep Black #0B0B0B, Gold Belt Accent var(--warning)
    Typography: Open Sans (Primary Display, Heading & Body)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 :root {
   /* 4 Vakioväriä (2 Pääväriä, 2 Sivuväriä) */
-  --brand-red: #ff2d38;             /* Pääväri 1: Brändipunainen */
-  --brand-red-hover: #e50914;       /* Punaisen hover-sävy */
+  --brand-red: var(--accent);             /* Pääväri 1: Brändipunainen */
+  --brand-red-hover: var(--accent);       /* Punaisen hover-sävy */
   --brand-red-glow: rgba(255, 45, 56, 0.45);
   
   --bg-black: #0b0b0b;              /* Pääväri 2: Syvä Musta */
@@ -20,17 +20,17 @@
   --border-glass: rgba(255, 255, 255, 0.08);
   --border-active: rgba(255, 45, 56, 0.6);
 
-  --accent-gold: #f59e0b;           /* Sivuväri 1: Tehostekulta */
-  --accent-belt: #6c3600;
+  --accent-gold: var(--warning);           /* Sivuväri 1: Tehostekulta */
+  --accent-belt: var(--border);
 
   --text-main: #ffffff;             /* Päätekstiväri: Valkoinen */
-  --text-muted: #94a3b8;            /* Sivuväri 2: Muted Slate Neutraali */
-  --text-dim: #94a3b8;
+  --text-muted: var(--text-muted);            /* Sivuväri 2: Muted Slate Neutraali */
+  --text-dim: var(--text-muted);
 
   /* Yhtenäistetty Typografia (Open Sans Kaikkialla) */
-  --font-brand-display: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-brand-display: var(--font-display);
+  --font-heading: var(--font-display);
+  --font-body: var(--font-body);
 
   /* Radii & Animaatiot */
   --radius-sm: 10px;
@@ -218,13 +218,13 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-red) 0%, #e50914 100%);
+  background: linear-gradient(135deg, var(--brand-red) 0%, var(--accent) 100%);
   color: var(--text);
   box-shadow: 0 0 25px var(--brand-red-glow);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #ff2d38 0%, var(--brand-red-hover) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--brand-red-hover) 100%);
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 35px rgba(255, 9, 21, 0.75);
 }
@@ -253,7 +253,7 @@ p {
   border-radius: var(--radius-full);
   background: rgba(255, 9, 21, 0.12);
   border: 1px solid rgba(255, 9, 21, 0.35);
-  color: #ff2d38;
+  color: var(--accent);
   letter-spacing: 0.03em;
   box-shadow: 0 0 15px rgba(255, 9, 21, 0.2);
 }
@@ -1451,7 +1451,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 
   .mobile-action-btn.primary {
     flex: 2;
-    background: linear-gradient(135deg, var(--brand-red) 0%, #e50914 100%);
+    background: linear-gradient(135deg, var(--brand-red) 0%, var(--accent) 100%);
     border: none;
     color: var(--text);
     font-size: 0.85rem;
@@ -1539,7 +1539,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .yt-card:hover .yt-play-icon {
-  background: #ff2d38;
+  background: var(--accent);
   transform: translate(-50%, -50%) scale(1.15);
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
 }
@@ -2043,13 +2043,13 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .btn-gcal {
-  background: #f59e0b;
+  background: var(--warning);
   color: var(--text);
   border: 1px solid rgba(245, 158, 11, 0.4);
 }
 
 .btn-gcal:hover {
-  background: #f59e0b;
+  background: var(--warning);
   color: var(--text);
 }
 
@@ -2244,7 +2244,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .belt-green { background: #22c55e; }
 .belt-blue { background: #2563eb; }
 .belt-brown { background: #78350f; }
-.belt-black { background: var(--bg)000; border: 1px solid #e50914; }
+.belt-black { background: var(--bg)000; border: 1px solid var(--accent); }
 
 .belt-info {
   flex: 1;
@@ -2519,7 +2519,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .lead-pass-btn:hover {
-  background: #e50914;
+  background: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255, 9, 21, 0.4);
 }
@@ -2649,7 +2649,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .comp-cross {
-  color: #ff2d38;
+  color: var(--accent);
   font-size: 1.1rem;
 }
 
@@ -4812,6 +4812,55 @@ a[href^="mailto:"] {
 .hero-card *,
 .hero-box * {
   background-image: none !important;
+}
+
+.hero-text-card span,
+.hero-text-card h1 span {
+  color: rgb(255, 205, 65) !important;
+}
+
+/* Unified .glass Class Aliases */
+.liquid-glass,
+.glass-panel,
+.glass-pill,
+.glass-card,
+.clinical-panel {
+  background: color-mix(in oklab, var(--surface) 70%, transparent) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+  border: 1px solid color-mix(in oklab, var(--text) 12%, transparent) !important;
+}
+
+/* ==========================================================================
+   STRICT 100% WCAG AA PERFECT CONTRAST RULES FOR KYU BADGES & INSTRUCTORS
+   ========================================================================== */
+
+.kyu-badge,
+.dan-badge,
+.belt-badge,
+span.badge,
+.badge {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  font-weight: 700 !important;
+}
+
+.instructor-card strong,
+.instructor-card h3,
+.instructor-card p,
+.instructor-card span,
+.instructor-card div {
+  color: var(--text) !important;
+}
+
+/* Strict 100% WCAG AA Hero Text Card White Text Rule */
+.hero-text-card,
+.hero-text-card p,
+.hero-text-card strong,
+.hero-text-card h1,
+.hero-text-card div {
+  color: #ffffff !important;
 }
 
 .hero-text-card span,

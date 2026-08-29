@@ -1,94 +1,60 @@
-/* Oulu · Jujutsu Design Skin Tokens (WCAG AA 100% Solid High Contrast) */
+/* Oulu · Jujutsu Canonical Design Tokens (OKLCH Dark-First) */
 
 :root {
-  --bg: rgb(15, 17, 21);
-  --surface: rgb(26, 30, 38);
-  --surface-hover: rgb(34, 40, 50);
-  --text: rgb(255, 255, 255);
-  --muted: rgb(205, 215, 225);
-  --border: rgb(65, 75, 90);
-  --primary: rgb(255, 115, 125);
-  --primary-hover: rgb(255, 145, 155);
-  --primary-ink: rgb(15, 17, 21);
-  --steel: rgb(135, 195, 255);
-  --ring: var(--primary);
-  --radius: 6px;
-  --focus: 50% 30%;
-
-  /* Aliases */
-  --bg-black: var(--bg);
-  --bg-dark: var(--bg);
-  --bg-card: var(--surface);
-  --bg-card-hover: var(--surface-hover);
-  --bg-glass: var(--surface);
-  --brand-red: var(--primary);
-  --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(255, 115, 125, 0.4);
-  --brand-blue: var(--steel);
-  --accent-gold: rgb(255, 205, 65);
-  --text-main: var(--text);
-  --text-muted: var(--muted);
-  --text-dim: var(--muted);
-  --border-glass: var(--border);
-  --border-active: var(--primary);
+  --bg: oklch(15% .006 25);
+  --surface: oklch(19% .008 25);
+  --surface-2: oklch(24% .01 25);
+  --text: oklch(95% .008 40);
+  --text-muted: oklch(72% .02 45);
+  --border: oklch(30% .012 25);
+  --ring: var(--accent);
+  --radius: .375rem;
+  --glass-blur: 14px;
+  --success: oklch(72% .14 155);
+  --warning: oklch(80% .13 80);
+  --danger: oklch(62% .21 25);
+  --info: oklch(75% .12 235);
+  --accent: oklch(62% .21 25);
+  --accent-ink: oklch(99% 0 0);
+  --accent-quiet: oklch(26% .08 25);
+  --on-accent-quiet: oklch(82% .12 25);
 }
 
-[data-theme="dark"] {
-  --bg: rgb(15, 17, 21);
-  --surface: rgb(26, 30, 38);
-  --surface-hover: rgb(34, 40, 50);
-  --text: rgb(255, 255, 255);
-  --muted: rgb(205, 215, 225);
-  --border: rgb(65, 75, 90);
-  --primary: rgb(255, 115, 125);
-  --primary-hover: rgb(255, 145, 155);
-  --primary-ink: rgb(15, 17, 21);
-  --steel: rgb(135, 195, 255);
-  --ring: var(--primary);
-
-  --bg-black: var(--bg);
-  --bg-dark: var(--bg);
-  --bg-card: var(--surface);
-  --bg-card-hover: var(--surface-hover);
-  --bg-glass: var(--surface);
-  --brand-red: var(--primary);
-  --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(255, 115, 125, 0.4);
-  --brand-blue: var(--steel);
-  --accent-gold: rgb(255, 205, 65);
-  --text-main: var(--text);
-  --text-muted: var(--muted);
-  --text-dim: var(--muted);
-  --border-glass: var(--border);
-  --border-active: var(--primary);
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: oklch(97% .004 40);
+    --surface: oklch(100% 0 0);
+    --surface-2: oklch(96.5% .006 40);
+    --text: oklch(20% .01 25);
+    --text-muted: oklch(45% .015 30);
+    --border: oklch(89% .008 40);
+    --accent: oklch(50% .20 25);
+    --accent-quiet: oklch(94% .04 25);
+    --on-accent-quiet: oklch(45% .18 25);
+  }
 }
 
-[data-theme="light"] {
-  --bg: rgb(250, 250, 250);
-  --surface: rgb(255, 255, 255);
-  --surface-hover: rgb(240, 242, 245);
-  --text: rgb(15, 23, 42);
-  --muted: rgb(45, 60, 80);
-  --border: rgb(200, 208, 220);
-  --primary: rgb(190, 10, 25);
-  --primary-hover: rgb(160, 8, 20);
-  --primary-ink: rgb(255, 255, 255);
-  --steel: rgb(15, 75, 155);
-  --ring: var(--primary);
+:root[data-theme="light"] {
+  --bg: oklch(97% .004 40);
+  --surface: oklch(100% 0 0);
+  --surface-2: oklch(96.5% .006 40);
+  --text: oklch(20% .01 25);
+  --text-muted: oklch(45% .015 30);
+  --border: oklch(89% .008 40);
+  --accent: oklch(50% .20 25);
+  --accent-quiet: oklch(94% .04 25);
+  --on-accent-quiet: oklch(45% .18 25);
+}
 
-  --bg-black: var(--bg);
-  --bg-dark: var(--bg);
-  --bg-card: var(--surface);
-  --bg-card-hover: var(--surface-hover);
-  --bg-glass: var(--surface);
-  --brand-red: var(--primary);
-  --brand-red-hover: var(--primary-hover);
-  --brand-red-glow: rgba(190, 10, 25, 0.2);
-  --brand-blue: var(--steel);
-  --accent-gold: rgb(130, 75, 0);
-  --text-main: var(--text);
-  --text-muted: var(--muted);
-  --text-dim: var(--muted);
-  --border-glass: var(--border);
-  --border-active: var(--primary);
+.glass {
+  background: color-mix(in oklab, var(--surface) 70%, transparent);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background: var(--surface);
+  }
 }
