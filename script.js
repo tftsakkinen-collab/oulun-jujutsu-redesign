@@ -753,3 +753,44 @@ document.addEventListener('keydown', function(e) {
     });
   }
 });
+
+// Phase 5: Reveal Observer & Accessible Form Inline Blur Validation
+document.addEventListener('DOMContentLoaded', function() {
+  // IntersectionObserver Reveal
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-reveal]').forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
+  // Form Inline Blur Validation
+  var forms = document.querySelectorAll('form');
+  forms.forEach(function(form) {
+    var inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(function(input) {
+      input.addEventListener('blur', function() {
+        var errEl = form.querySelector('#err-' + input.name) || input.nextElementSibling;
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          input.setAttribute('aria-invalid', 'true');
+          if (errEl && errEl.classList.contains('field-error')) {
+            errEl.classList.add('active');
+          }
+        } else {
+          input.removeAttribute('aria-invalid');
+          if (errEl && errEl.classList.contains('field-error')) {
+            errEl.classList.remove('active');
+          }
+        }
+      });
+    });
+  });
+});
