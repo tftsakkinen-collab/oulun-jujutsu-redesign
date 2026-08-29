@@ -12,18 +12,18 @@
   --brand-red-hover: var(--accent);       /* Punaisen hover-sävy */
   --brand-red-glow: rgba(255, 45, 56, 0.45);
   
-  --bg-black: #0b0b0b;              /* Pääväri 2: Syvä Musta */
-  --bg-card: rgba(18, 22, 30, 0.85);
-  --bg-card-hover: rgba(28, 36, 50, 0.95);
-  --bg-glass: rgba(15, 18, 26, 0.75);
+  --bg-black: var(--bg);              /* Pääväri 2: Syvä Musta */
+  --bg-card: var(--surface);
+  --bg-card-hover: var(--surface-2);
+  --bg-glass: var(--surface);
 
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(255, 45, 56, 0.6);
+  --border-glass: var(--border);
+  --border-active: var(--accent);
 
   --accent-gold: var(--warning);           /* Sivuväri 1: Tehostekulta */
   --accent-belt: var(--border);
 
-  --text-main: #ffffff;             /* Päätekstiväri: Valkoinen */
+  --text-main: var(--text);             /* Päätekstiväri: Valkoinen */
   --text-muted: var(--text-muted);            /* Sivuväri 2: Muted Slate Neutraali */
   --text-dim: var(--text-muted);
 
