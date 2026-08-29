@@ -1,0 +1,90 @@
+/* Oulu · Jujutsu Self-Hosted Typography */
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/big-shoulders-display-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/big-shoulders-display-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/source-sans-3-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/source-sans-3-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/source-sans-3-600.woff2') format('woff2');
+}
+
+/* Fallback Metric Adjustments to Prevent CLS */
+@font-face {
+  font-family: 'DisplayFallback';
+  src: local('Impact'), local('Arial Black');
+  ascent-override: 90%;
+  descent-override: 20%;
+  size-adjust: 100%;
+}
+
+@font-face {
+  font-family: 'BodyFallback';
+  src: local('Arial'), local('Helvetica Neue'), local('sans-serif');
+  ascent-override: 95%;
+  descent-override: 25%;
+  size-adjust: 100%;
+}
+
+:root {
+  --font-display: 'Big Shoulders Display', 'DisplayFallback', sans-serif;
+  --font-body: 'Source Sans 3', 'BodyFallback', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font, .section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(2.2rem, 6.5vw, 3.8rem); line-height: 1.05; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.25; }
+h4 { font-size: 1.25rem; line-height: 1.3; }
+
+.time-val, .price-val, .tabular-nums {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
