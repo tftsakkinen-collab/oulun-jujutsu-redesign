@@ -31,7 +31,9 @@
   <!-- Fonts & Icons -->
   <!-- CSS -->
     <link rel="stylesheet" href="styles/tokens.css"> 
-  <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/typography.css"> 
+  <link rel="stylesheet" href="styles/media.css">
+
 
   <link rel="stylesheet" href="styles.css">
 
@@ -108,7 +110,10 @@
     <div class="container">
       <!-- Bright, clear Hero image banner without dark overlay -->
       <div class="hero-image-wrapper">
-        <img src="assets/oulunjujutsu-www-hero2.webp" alt="Ju-Jutsu Oulu Training" class="hero-main-img" fetchpriority="high">
+        <picture>
+          <source srcset="assets/img/hero.webp" type="image/webp">
+          <img src="assets/img/hero.jpg" alt="Oulun Ju-jutsuklubi harjoitukset" class="frame frame--hero" width="1920" height="1200" fetchpriority="high" decoding="async">
+        </picture>
       </div>
 
       <!-- Hero content placed below hero image -->

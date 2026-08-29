@@ -164,11 +164,7 @@ body {
   display: block;
 }
 
-.cards-grid > .glass-panel > div > div:first-child img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
+.cards-grid > .glass-panel > div > div:first-child 
 
 .glass-panel::before {
   content: '';
@@ -443,16 +439,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.hero-main-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  display: block;
-  filter: none !important;
-  opacity: 1 !important;
-  transition: transform 0.6s ease;
-}
+.hero-main-
 
 .hero-image-wrapper:hover .hero-main-img {
   transform: scale(1.02);
@@ -859,7 +846,7 @@ p {
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(45deg);
+  ;
 }
 
 .faq-answer {
@@ -1299,11 +1286,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   max-width: 100% !important;
 }
 
-.logo img {
-  width: clamp(28px, 5.5vw, 36px) !important;
-  height: clamp(28px, 5.5vw, 36px) !important;
-  flex-shrink: 0 !important;
-}
+.logo 
 
 .header-social-links {
   display: flex;
@@ -1660,16 +1643,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   overflow: hidden !important;
 }
 
-.gallery-img-wrapper img {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center 20% !important;
-  transition: transform 0.5s ease !important;
-}
+.gallery-img-wrapper 
 
 .gallery-item:hover {
   border-color: rgba(255, 9, 21, 0.5);
@@ -1792,7 +1766,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 .lightbox-close:hover {
   background: var(--brand-red);
   border-color: var(--brand-red);
-  transform: rotate(90deg) scale(1.1);
+   scale(1.1);
 }
 
 .lightbox-img {
@@ -2127,7 +2101,7 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
 }
 
 .faq-item.active .faq-question i {
-  transform: rotate(180deg);
+  ;
 }
 
 .faq-answer {
@@ -3199,13 +3173,7 @@ header ul, header ol, header li,
   z-index: 100006 !important;
 }
 
-.logo img {
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 50% !important;
-  border: 2px solid var(--brand-red) !important;
-  object-fit: cover !important;
-}
+.logo 
 
 .logo span {
   color: var(--brand-red) !important;
@@ -3472,13 +3440,7 @@ img {
   background: var(--bg) !important;
 }
 
-.coach-avatar-mask img, .instructor-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: 50% 25% !important;
-  display: block !important;
-}
+.coach-avatar-mask img, .instructor-
 
 .hero-overlay {
   display: none !important;
@@ -3502,9 +3464,7 @@ h1, .hero-title {
   .hero:hover .hero-bg,
   .yt-card:hover .yt-thumb-img,
   .gallery-item:hover img,
-  .course-card:hover .card-img-wrapper img {
-    transform: none !important;
-  }
+  .course-card:hover .card-img-wrapper 
 }
 
 
@@ -3718,11 +3678,7 @@ input, select, textarea {
     width: 100%;
     margin: 0 auto;
   }
-  .instructor-portrait-img {
-    height: 100% !important;
-    width: 100% !important;
-    object-fit: cover !important;
-  }
+  .instructor-portrait-
 }
 
 /* ==========================================================================

@@ -1,0 +1,29 @@
+/* Oulu · Jujutsu Frame & Media System */
+
+.frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--ratio, 4/3);
+  object-fit: cover;
+  object-position: var(--focus, 50% 30%);
+  border-radius: var(--radius, 6px);
+  background: var(--surface);
+}
+
+.portrait {
+  --ratio: 1/1;
+  --focus: 50% 22%;
+  border-radius: 8px;
+}
+
+.frame--hero {
+  --ratio: 16/10;
+  --focus: 50% 40%;
+  border-radius: 0;
+}
+
+.frame--junnu {
+  --ratio: 4/5;
+  --focus: 50% 30%;
+}
