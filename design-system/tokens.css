@@ -1,4 +1,9 @@
 :root {
+  --font-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-roboto);
+  --font-body: var(--font-roboto);
+  --font-heading: var(--font-roboto);
+  --font-sans: var(--font-roboto);
   --bg: oklch(98.5% .003 240);
   --surface: oklch(100% 0 0);
   --surface-2: oklch(96.5% .004 240);

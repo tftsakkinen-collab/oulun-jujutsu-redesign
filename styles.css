@@ -30,9 +30,9 @@
   --text-dim: var(--text-muted);
 
   /* Yhtenäistetty Typografia (Open Sans Kaikkialla) */
-  --font-brand-display: var(--font-display);
-  --font-heading: var(--font-display);
-  --font-body: var(--font-body);
+  --font-brand-display: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --font-heading: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
 
   /* Radii & Animaatiot */
   --radius-sm: .25rem;
@@ -4934,4 +4934,9 @@ html[data-theme="light"] .hero-title span,
 body[data-theme="light"] .hero-title span {
   color: var(--accent) !important;
   -webkit-text-fill-color: var(--accent) !important;
+}
+
+/* 100% UNIFIED ROBOTO TYPOGRAPHY GUARANTEE */
+*, *::before, *::after {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
