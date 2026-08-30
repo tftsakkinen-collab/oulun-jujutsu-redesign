@@ -4711,6 +4711,57 @@ strong, b, .strong {
   border: 1px solid var(--border) !important;
 }
 
+.nav-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text) !important;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  white-space: normal;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-red);
+  background: var(--surface);
+}
+
+/* Dedicated main discipline links */
+.nav-link-highlight {
+  background: rgba(255, 9, 21, 0.12);
+  border: 1px solid rgba(255, 9, 21, 0.3);
+  color: var(--text) !important;
+  font-weight: 700;
+}
+
+.nav-link-highlight:hover {
+  background: rgba(255, 9, 21, 0.25);
+  border-color: var(--brand-red);
+}
+
+/* Dedicated Language Switcher Component */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  background: var(--surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: normal;
+}
+
+.lang-switcher a {
+  color: var(--text) !important;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
 /* Contact Block Items */
 .contact-method-card div,
 .contact-method-card p,
