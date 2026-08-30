@@ -3254,7 +3254,7 @@ header ul, header ol, header li,
     align-items: center !important;
     gap: 4px !important;
     padding: 4px 10px !important;
-    background: var(--surface); !important;
+    background: var(--surface) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: var(--radius-pill) !important;
     font-size: 0.8rem !important;
@@ -4105,23 +4105,23 @@ html {
 
 .hero-text-card h1,
 .hero-text-card .hero-title {
-  color: var(--text); !important;
+  color: var(--text) !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
 }
 
 .hero-text-card p,
 .hero-text-card .hero-subtitle {
-  color: #cbd5e1 !important;
+  color: var(--text) !important;
 }
 
 :root[data-theme="light"] .hero-text-card h1,
 :root[data-theme="light"] .hero-text-card .hero-title {
-  color: var(--text); !important;
+  color: var(--text) !important;
 }
 
 :root[data-theme="light"] .hero-text-card p,
 :root[data-theme="light"] .hero-text-card .hero-subtitle {
-  color: #cbd5e1 !important;
+  color: var(--text) !important;
 }
 
 /* Floating Chat Button Positioning Above Mobile CTA Bar */
@@ -4349,17 +4349,11 @@ input, select, textarea, .form-input {
 
 .hero-text-card h1,
 .hero-text-card .hero-title,
-:root[data-theme="light"] .hero-text-card h1,
-:root[data-theme="light"] .hero-text-card .hero-title {
-  color: rgb(255, 255, 255) !important;
-}
+:root[data-theme="light"] .hero-text-card h1, :root[data-theme="light"] .hero-text-card .hero-title { color: var(--text) !important; }
 
 .hero-text-card p,
 .hero-text-card .hero-subtitle,
-:root[data-theme="light"] .hero-text-card p,
-:root[data-theme="light"] .hero-text-card .hero-subtitle {
-  color: rgb(215, 225, 235) !important;
-}
+:root[data-theme="light"] .hero-text-card p, :root[data-theme="light"] .hero-text-card .hero-subtitle { color: var(--text) !important; }
 
 /* 3. Schedule Time Badges & Badges */
 .time-badge,
@@ -4919,4 +4913,25 @@ span.badge,
 .hero-text-card span,
 .hero-text-card h1 span {
   color: rgb(255, 205, 65) !important;
+}
+
+/* ABSOLUTE GUARANTEE LIGHT MODE HERO TITLE & SUBTITLE COLOR */
+:root[data-theme="light"] .hero-title,
+[data-theme="light"] .hero-title,
+html[data-theme="light"] .hero-title,
+body[data-theme="light"] .hero-title,
+:root[data-theme="light"] .hero-subtitle,
+[data-theme="light"] .hero-subtitle,
+html[data-theme="light"] .hero-subtitle,
+body[data-theme="light"] .hero-subtitle {
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+}
+
+:root[data-theme="light"] .hero-title span,
+[data-theme="light"] .hero-title span,
+html[data-theme="light"] .hero-title span,
+body[data-theme="light"] .hero-title span {
+  color: var(--accent) !important;
+  -webkit-text-fill-color: var(--accent) !important;
 }
