@@ -1637,16 +1637,6 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   display: none !important;
 }
 
-.gallery-img-wrapper {
-  position: relative !important;
-  width: 100% !important;
-  padding-top: 133.33% !important;
-  aspect-ratio: 3 / 4 !important;
-  overflow: hidden !important;
-}
-
-.gallery-img-wrapper 
-
 .gallery-item:hover {
   border-color: rgba(255, 9, 21, 0.5);
   transform: translateY(-6px);
@@ -4885,4 +4875,71 @@ span.badge,
 a[href^="mailto:"] {
   color: var(--accent) !important;
   font-weight: 700 !important;
+}
+
+
+/* FontAwesome Icon Font Protection */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-light,
+.fa-thin,
+.fa-duotone,
+.fa-brands,
+[class*="fa-"],
+i.fa-solid,
+i.fa-brands,
+i.fa-regular {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "FontAwesome" !important;
+}
+
+/* Gallery Grid Image Display Fix */
+.gallery-img-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  padding-top: 133.33% !important;
+  aspect-ratio: 3 / 4 !important;
+  overflow: hidden !important;
+  background: rgba(22, 27, 38, 0.8) !important;
+}
+
+.gallery-img-wrapper img,
+.gallery-item img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s ease !important;
+}
+
+/* FontAwesome Icon Font & Pseudo-Element Protection */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-light,
+.fa-thin,
+.fa-duotone,
+.fa-brands,
+[class*="fa-"],
+[class*="fa-"]::before,
+[class*="fa-"]::after,
+i[class*="fa-"],
+i[class*="fa-"]::before,
+i[class*="fa-"]::after,
+i::before,
+i::after {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "FontAwesome" !important;
 }
