@@ -4798,101 +4798,66 @@ strong, b, .strong {
   color: var(--text) !important;
 }
 
-/* Badges, Pills & Payment Badges */
-.badge, .badge-pulse, .card-tag, .hero-badge-pill, .payment-logo-badge, .payment-logo-badge span {
-  background: var(--surface) !important;
+/* ==========================================================================
+   CANONICAL PREMIUM DARK THEME STYLING & HIGH CONTRAST RULES
+   ========================================================================== */
+
+body {
+  background-color: var(--bg) !important;
   color: var(--text) !important;
-  border: 1px solid var(--border) !important;
-  font-weight: 700 !important;
 }
 
-/* Mail Links & Contact Text */
-a[href^="mailto:"] {
-  color: var(--primary) !important;
-  font-weight: 800 !important;
-}
-
-/* ==========================================================================
-   100% WCAG AA ZERO ERROR PERFECT COMPLIANCE (ALL 8 PAGES PASS 100%)
-   ========================================================================== */
-
-[style*="background: #1e3a8a"],
-[style*="background: #1d4ed8"] {
-  background: #1e3a8a !important;
-  color: #ffffff !important;
-  font-weight: 800 !important;
-}
-
-.badge,
-.hero-badge-pill,
-.card-tag {
-  background: var(--surface) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--border) !important;
-  font-weight: 700 !important;
-}
-
-/* ==========================================================================
-   PERFECT 100% ZERO ERRORS ON ALL 8 PAGES (FINAL DIESEL ACCENT FIX)
-   ========================================================================== */
-
-.hero-text-card span,
-.hero-text-card h1 span {
-  color: rgb(255, 205, 65) !important;
-}
-
-/* ==========================================================================
-   PERFECT HERO TEXT CARD SOLID COMPOSITING (ZERO CONTRAST ERRORS)
-   ========================================================================== */
-
-.hero-text-card,
-.hero-card,
-.hero-box {
-  background: rgb(15, 23, 42) !important;
-  background-color: rgb(15, 23, 42) !important;
-  background-image: none !important;
-  border: 1px solid rgb(60, 70, 90) !important;
-  color: rgb(255, 255, 255) !important;
-}
-
-.hero-text-card *,
-.hero-card *,
-.hero-box * {
-  background-image: none !important;
-}
-
-.hero-text-card span,
-.hero-text-card h1 span {
-  color: rgb(255, 205, 65) !important;
-}
-
-/* Unified .glass Class Aliases */
+/* Glass Panels & Hero Cards */
 .liquid-glass,
 .glass-panel,
 .glass-pill,
 .glass-card,
-.clinical-panel {
-  background: color-mix(in oklab, var(--surface) 70%, transparent) !important;
-  backdrop-filter: blur(var(--glass-blur)) !important;
-  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
-  border: 1px solid color-mix(in oklab, var(--text) 12%, transparent) !important;
+.clinical-panel,
+.hero-text-card,
+.hero-card,
+.hero-box {
+  background: var(--surface) !important;
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
 }
 
-/* ==========================================================================
-   STRICT 100% WCAG AA PERFECT CONTRAST RULES FOR KYU BADGES & INSTRUCTORS
-   ========================================================================== */
+.hero-text-card h1,
+.hero-text-card .hero-title,
+.hero-title,
+h1 {
+  color: var(--text) !important;
+  -webkit-text-fill-color: initial !important;
+}
 
+.hero-text-card h1 span,
+.hero-title span,
+h1 span {
+  color: var(--accent) !important;
+}
+
+.hero-text-card p,
+.hero-subtitle {
+  color: var(--text-muted) !important;
+}
+
+/* Badges & Tags */
 .kyu-badge,
 .dan-badge,
 .belt-badge,
 span.badge,
-.badge {
-  background: var(--surface) !important;
+.badge,
+.badge-pulse,
+.card-tag,
+.hero-badge-pill,
+.payment-logo-badge {
+  background: var(--surface-2) !important;
   color: var(--text) !important;
   border: 1px solid var(--border) !important;
   font-weight: 700 !important;
 }
 
+/* Instructor Cards */
 .instructor-card strong,
 .instructor-card h3,
 .instructor-card p,
@@ -4901,42 +4866,23 @@ span.badge,
   color: var(--text) !important;
 }
 
-/* Strict 100% WCAG AA Hero Text Card White Text Rule */
-.hero-text-card,
-.hero-text-card p,
-.hero-text-card strong,
-.hero-text-card h1,
-.hero-text-card div {
-  color: #ffffff !important;
+/* Header & Navigation Links */
+.site-header {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border) !important;
 }
 
-.hero-text-card span,
-.hero-text-card h1 span {
-  color: rgb(255, 205, 65) !important;
+.nav-link {
+  color: var(--text-muted) !important;
 }
 
-/* ABSOLUTE GUARANTEE LIGHT MODE HERO TITLE & SUBTITLE COLOR */
-:root[data-theme="light"] .hero-title,
-[data-theme="light"] .hero-title,
-html[data-theme="light"] .hero-title,
-body[data-theme="light"] .hero-title,
-:root[data-theme="light"] .hero-subtitle,
-[data-theme="light"] .hero-subtitle,
-html[data-theme="light"] .hero-subtitle,
-body[data-theme="light"] .hero-subtitle {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text) !important;
-  -webkit-text-fill-color: var(--text) !important;
+  border-bottom: 2px solid var(--accent) !important;
 }
 
-:root[data-theme="light"] .hero-title span,
-[data-theme="light"] .hero-title span,
-html[data-theme="light"] .hero-title span,
-body[data-theme="light"] .hero-title span {
+a[href^="mailto:"] {
   color: var(--accent) !important;
-  -webkit-text-fill-color: var(--accent) !important;
-}
-
-/* 100% UNIFIED ROBOTO TYPOGRAPHY GUARANTEE */
-*, *::before, *::after {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 700 !important;
 }

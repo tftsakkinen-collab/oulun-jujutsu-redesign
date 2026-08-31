@@ -4,15 +4,20 @@
   --font-body: var(--font-roboto);
   --font-heading: var(--font-roboto);
   --font-sans: var(--font-roboto);
-  --bg: oklch(98.5% .003 240);
-  --surface: oklch(100% 0 0);
-  --surface-2: oklch(96.5% .004 240);
-  --surface-elevated: oklch(98% .005 240);
-  --text: oklch(20% .02 250);
-  --text-muted: oklch(45% .02 250);
+
+  /* Canonical Premium Dark Theme (Default) */
+  --bg: oklch(14% .015 250);
+  --surface: oklch(19% .018 250);
+  --surface-2: oklch(23% .020 250);
+  --surface-elevated: oklch(21% .019 250);
+  --text: oklch(96% .005 240);
+  --text-muted: oklch(75% .015 240);
   --muted: var(--text-muted);
-  --border: oklch(90% .008 250);
+  --border: rgba(255, 255, 255, 0.12);
+  --primary: oklch(60% 0.22 25);
+  --accent: oklch(60% 0.22 25);
   --ring: var(--accent);
+
   --radius-sm: .5rem;
   --radius: .875rem;
   --radius-pill: 999px;
@@ -30,40 +35,23 @@
   --step-2: clamp(1.45rem, 1.25rem + 1vw, 1.9rem);
   --step-3: clamp(1.8rem, 1.45rem + 1.8vw, 2.6rem);
   --step-4: clamp(2.2rem, 1.6rem + 3vw, 3.5rem);
-  --success: oklch(48% .13 155);
-  --warning: oklch(70% .14 75);
-  --danger: oklch(52% .20 25);
-  --info: oklch(52% .13 235);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: oklch(17% .02 250);
-    --surface: oklch(21% .022 250);
-    --surface-2: oklch(25% .024 250);
-    --surface-elevated: oklch(23% .022 250);
-    --text: oklch(95% .01 240);
-    --text-muted: oklch(72% .02 245);
-    --muted: var(--text-muted);
-    --border: oklch(32% .02 250);
-    --success: oklch(72% .14 155);
-    --warning: oklch(80% .13 80);
-    --danger: oklch(70% .18 25);
-    --info: oklch(75% .12 235);
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: oklch(17% .02 250);
-  --surface: oklch(21% .022 250);
-  --surface-2: oklch(25% .024 250);
-  --surface-elevated: oklch(23% .022 250);
-  --text: oklch(95% .01 240);
-  --text-muted: oklch(72% .02 245);
-  --muted: var(--text-muted);
-  --border: oklch(32% .02 250);
   --success: oklch(72% .14 155);
   --warning: oklch(80% .13 80);
   --danger: oklch(70% .18 25);
   --info: oklch(75% .12 235);
+}
+
+:root[data-theme="light"] {
+  --bg: oklch(98.5% .003 240);
+  --surface: oklch(100% 0 0);
+  --surface-2: oklch(96.5% .004 240);
+  --surface-elevated: oklch(98% .005 240);
+  --text: oklch(20% .02 250);
+  --text-muted: oklch(45% .02 250);
+  --muted: var(--text-muted);
+  --border: oklch(90% .008 250);
+  --success: oklch(48% .13 155);
+  --warning: oklch(70% .14 75);
+  --danger: oklch(52% .20 25);
+  --info: oklch(52% .13 235);
 }
