@@ -24,11 +24,6 @@
       "permanent": true
     },
     {
-      "source": "/peruskurssi(.html)?",
-      "destination": "/jujutsu",
-      "permanent": true
-    },
-    {
       "source": "/juniorit(.html)?",
       "destination": "/junnut",
       "permanent": true
