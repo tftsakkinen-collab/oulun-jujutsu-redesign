@@ -794,3 +794,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+  // PDF Mainos Modal Logic
+  const pdfModal = document.getElementById('pdfMainosModal');
+  const openPdfBtns = document.querySelectorAll('.open-pdf-modal');
+  const closePdfBtn = document.getElementById('closePdfModal');
+
+  if (pdfModal && openPdfBtns.length > 0) {
+    openPdfBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        pdfModal.style.display = 'flex';
+        pdfModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+  }
+
+  if (pdfModal && closePdfBtn) {
+    closePdfBtn.addEventListener('click', () => {
+      pdfModal.style.display = 'none';
+      pdfModal.setAttribute('aria-hidden', 'true');
+    });
+
+    pdfModal.addEventListener('click', (e) => {
+      if (e.target === pdfModal) {
+        pdfModal.style.display = 'none';
+        pdfModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && pdfModal.style.display === 'flex') {
+        pdfModal.style.display = 'none';
+        pdfModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
