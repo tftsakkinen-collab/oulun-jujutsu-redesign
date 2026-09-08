@@ -4994,16 +4994,17 @@ i::after {
    ========================================================================== */
 .today-training-section {
   position: relative;
-  margin: -16px auto 36px auto;
+  margin: 0 auto 32px auto;
   z-index: 20;
-  padding: 0 16px;
+  padding: 0;
+  width: 100%;
+  max-width: 1100px;
 }
 
 .today-training-card {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 24px;
-  background: rgba(13, 18, 30, 0.92) !important;
+  width: 100%;
+  padding: 22px 26px;
+  background: rgba(13, 18, 30, 0.94) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -5017,7 +5018,7 @@ i::after {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -5089,53 +5090,49 @@ i::after {
 
 .today-sessions-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 16px;
 }
 
 .today-session-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 14px;
-  padding: 14px 18px;
+  padding: 18px 20px;
   border-radius: var(--radius-sm);
-  background: rgba(20, 26, 42, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(20, 26, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 145px;
 }
 
 .today-session-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.today-session-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .today-session-time {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.95rem;
   font-weight: 800;
   color: #ffffff;
   white-space: nowrap;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 5px 11px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.today-session-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 0;
-}
-
-.today-session-main {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.02em;
 }
 
 .today-discipline-badge {
@@ -5144,7 +5141,7 @@ i::after {
   gap: 6px;
   font-size: 0.85rem;
   font-weight: 700;
-  padding: 3px 9px;
+  padding: 4px 10px;
   border-radius: 6px;
   white-space: nowrap;
 }
@@ -5154,86 +5151,105 @@ i::after {
   line-height: 1;
 }
 
+.today-session-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.today-group-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
 .today-group-desc {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #cbd5e1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.45;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-break: break-word;
 }
 
 .today-session-loc {
-  font-size: 0.8rem;
-  color: #94a3b8;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Category Pill Styling */
 /* Peruskurssi: red pill + flame */
 .session-pill-peruskurssi.today-session-item {
-  border-color: rgba(255, 42, 59, 0.4);
-  background: linear-gradient(135deg, rgba(255, 42, 59, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+  border-color: rgba(255, 42, 59, 0.45);
+  background: linear-gradient(135deg, rgba(255, 42, 59, 0.16) 0%, rgba(20, 26, 42, 0.9) 100%);
 }
 .today-discipline-badge.session-pill-peruskurssi {
-  background: rgba(255, 42, 59, 0.22);
-  border: 1px solid rgba(255, 42, 59, 0.55);
+  background: rgba(255, 42, 59, 0.24);
+  border: 1px solid rgba(255, 42, 59, 0.6);
   color: #ff4d56;
 }
 
 /* Kenjutsu: gold pill + swords */
 .session-pill-kenjutsu.today-session-item {
-  border-color: rgba(234, 179, 8, 0.4);
-  background: linear-gradient(135deg, rgba(234, 179, 8, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+  border-color: rgba(234, 179, 8, 0.45);
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.16) 0%, rgba(20, 26, 42, 0.9) 100%);
 }
 .today-discipline-badge.session-pill-kenjutsu {
-  background: rgba(234, 179, 8, 0.22);
-  border: 1px solid rgba(234, 179, 8, 0.55);
+  background: rgba(234, 179, 8, 0.24);
+  border: 1px solid rgba(234, 179, 8, 0.6);
   color: #facc15;
 }
 
 /* Värivyöt / Hokutoryu: blue pill */
 .session-pill-varivyot.today-session-item {
-  border-color: rgba(59, 130, 246, 0.4);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+  border-color: rgba(59, 130, 246, 0.45);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.16) 0%, rgba(20, 26, 42, 0.9) 100%);
 }
 .today-discipline-badge.session-pill-varivyot {
-  background: rgba(59, 130, 246, 0.22);
-  border: 1px solid rgba(59, 130, 246, 0.55);
+  background: rgba(59, 130, 246, 0.24);
+  border: 1px solid rgba(59, 130, 246, 0.6);
   color: #60a5fa;
 }
 
 /* Junnut: green/cyan pill */
 .session-pill-junnut.today-session-item {
-  border-color: rgba(16, 185, 129, 0.4);
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+  border-color: rgba(16, 185, 129, 0.45);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(20, 26, 42, 0.9) 100%);
 }
 .today-discipline-badge.session-pill-junnut {
-  background: rgba(16, 185, 129, 0.22);
-  border: 1px solid rgba(16, 185, 129, 0.55);
+  background: rgba(16, 185, 129, 0.24);
+  border: 1px solid rgba(16, 185, 129, 0.6);
   color: #34d399;
 }
 
 /* Diesel-jutsu: orange pill */
 .session-pill-diesel.today-session-item {
-  border-color: rgba(249, 115, 22, 0.4);
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+  border-color: rgba(249, 115, 22, 0.45);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.16) 0%, rgba(20, 26, 42, 0.9) 100%);
 }
 .today-discipline-badge.session-pill-diesel {
-  background: rgba(249, 115, 22, 0.22);
-  border: 1px solid rgba(249, 115, 22, 0.55);
+  background: rgba(249, 115, 22, 0.24);
+  border: 1px solid rgba(249, 115, 22, 0.6);
   color: #fb923c;
 }
 
 /* Vapaavuoro: neutral pill */
 .session-pill-vapaa.today-session-item {
-  border-color: rgba(148, 163, 184, 0.25);
-  background: rgba(20, 26, 42, 0.65);
+  border-color: rgba(148, 163, 184, 0.3);
+  background: rgba(20, 26, 42, 0.7);
 }
 .today-discipline-badge.session-pill-vapaa {
-  background: rgba(148, 163, 184, 0.18);
-  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(148, 163, 184, 0.2);
+  border: 1px solid rgba(148, 163, 184, 0.4);
   color: #cbd5e1;
 }
 
@@ -5272,8 +5288,8 @@ i::after {
 
 @media (max-width: 768px) {
   .today-training-section {
-    margin: -10px auto 30px auto;
-    padding: 0 12px;
+    margin: 0 auto 20px auto;
+    padding: 0 4px;
   }
   .today-training-card {
     padding: 16px;
@@ -5283,16 +5299,7 @@ i::after {
     align-items: flex-start;
   }
   .today-session-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .today-session-time {
-    width: 100%;
-    justify-content: flex-start;
-  }
-  .today-group-desc {
-    white-space: normal;
+    padding: 14px 16px;
   }
 }
 

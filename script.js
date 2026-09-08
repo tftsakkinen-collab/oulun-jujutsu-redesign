@@ -246,27 +246,40 @@ document.addEventListener('DOMContentLoaded', () => {
       'Vapaavuoro': 'Open Practice'
     };
 
+    function parseGroupInfo(groupStr) {
+      if (!groupStr) return { title: '', desc: '' };
+      const match = groupStr.match(/^([^(]+)(?:\((.*)\))?$/);
+      if (match) {
+        const title = match[1].trim();
+        const desc = match[2] ? match[2].trim() : '';
+        return { title, desc };
+      }
+      return { title: groupStr.trim(), desc: '' };
+    }
+
     todayList.innerHTML = '';
     todaySessions.forEach(session => {
       const meta = getSessionMeta(session);
       const displayLaji = isEn ? (lajiMapEn[session.laji] || session.laji) : session.laji;
+      const groupInfo = parseGroupInfo(session.group);
       const card = document.createElement('div');
       card.className = `today-session-item ${meta.pillClass}`;
       card.innerHTML = `
-        <div class="today-session-time">
-          <i class="fa-regular fa-clock" aria-hidden="true"></i>
-          <span>${session.time}</span>
+        <div class="today-session-top">
+          <span class="today-session-time">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <span>${session.time}</span>
+          </span>
+          <span class="today-discipline-badge ${meta.pillClass}">
+            <span class="icon-indicator">${meta.icon}</span> ${displayLaji}
+          </span>
         </div>
-        <div class="today-session-details">
-          <div class="today-session-main">
-            <span class="today-discipline-badge ${meta.pillClass}">
-              <span class="icon-indicator">${meta.icon}</span> ${displayLaji}
-            </span>
-            <span class="today-group-desc">${session.group}</span>
-          </div>
-          <div class="today-session-loc">
-            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${session.location || 'Äimäkuja 6 A'}
-          </div>
+        <div class="today-session-body">
+          <div class="today-group-title">${groupInfo.title}</div>
+          ${groupInfo.desc ? `<div class="today-group-desc">${groupInfo.desc}</div>` : ''}
+        </div>
+        <div class="today-session-loc">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${session.location || 'Äimäkuja 6 A'}
         </div>
       `;
       todayList.appendChild(card);

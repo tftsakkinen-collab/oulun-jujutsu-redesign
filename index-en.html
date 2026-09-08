@@ -120,6 +120,80 @@
         </picture>
       </div>
 
+      <!-- Today's Training - Live Status Bar (Positioned right below hero image before course callouts) -->
+      <div id="today-training" class="today-training-section">
+        <div class="today-training-card glass-panel">
+          <div class="today-training-header">
+            <div class="today-status-badge">
+              <span class="pulse-indicator" aria-hidden="true"></span>
+              <span class="status-title">TODAY'S TRAINING</span>
+              <span class="today-date-display" id="todayDateDisplay">Tuesday 8.9.</span>
+            </div>
+            <a href="#schedule" class="all-schedules-link">
+              View Full Schedule <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="today-sessions-list" id="todaySessionsList">
+            <div class="today-session-item session-pill-peruskurssi">
+              <div class="today-session-top">
+                <span class="today-session-time">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span>18:00–19:00</span>
+                </span>
+                <span class="today-discipline-badge session-pill-peruskurssi">
+                  <span class="icon-indicator">🔥</span> Hokutoryu Ju-Jutsu
+                </span>
+              </div>
+              <div class="today-session-body">
+                <div class="today-group-title">Beginners' Course</div>
+                <div class="today-group-desc">Starts Tue Sep 15 (Free 3-week trial)</div>
+              </div>
+              <div class="today-session-loc">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A (Dojo)
+              </div>
+            </div>
+
+            <div class="today-session-item session-pill-varivyot">
+              <div class="today-session-top">
+                <span class="today-session-time">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span>19:00–20:00</span>
+                </span>
+                <span class="today-discipline-badge session-pill-varivyot">
+                  <span class="icon-indicator">🛡️</span> Hokutoryu Ju-Jutsu
+                </span>
+              </div>
+              <div class="today-session-body">
+                <div class="today-group-title">Color Belts</div>
+                <div class="today-group-desc">Autumn Season Sessions (from Sep 15)</div>
+              </div>
+              <div class="today-session-loc">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A (Dojo)
+              </div>
+            </div>
+
+            <div class="today-session-item session-pill-kenjutsu">
+              <div class="today-session-top">
+                <span class="today-session-time">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  <span>20:00–21:00</span>
+                </span>
+                <span class="today-discipline-badge session-pill-kenjutsu">
+                  <span class="icon-indicator">⚔️</span> Kenjutsu
+                </span>
+              </div>
+              <div class="today-session-body">
+                <div class="today-group-title">All Ranks</div>
+                <div class="today-group-desc">From Sep 15 • SporttiAppro Sep 22</div>
+              </div>
+              <div class="today-session-loc">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A (Dojo)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Hero content placed below hero image -->
       <div class="hero-content-below">
         <!-- Unified Card for H1 & Subtitle Ingress -->
@@ -173,80 +247,6 @@
         <div class="trust-badge-pill">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           <span>ePassi • Smartum • Edenred</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Today's Training - Live Status Bar -->
-  <section id="today-training" class="today-training-section">
-    <div class="container">
-      <div class="today-training-card glass-panel">
-        <div class="today-training-header">
-          <div class="today-status-badge">
-            <span class="pulse-indicator" aria-hidden="true"></span>
-            <span class="status-title">TODAY'S TRAINING</span>
-            <span class="today-date-display" id="todayDateDisplay">Tuesday 8.9.</span>
-          </div>
-          <a href="#schedule" class="all-schedules-link">
-            View Full Schedule <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="today-sessions-list" id="todaySessionsList">
-          <!-- Tuesday Sessions (Dynamic JS update & instant static render) -->
-          <div class="today-session-item session-pill-peruskurssi">
-            <div class="today-session-time">
-              <i class="fa-regular fa-clock" aria-hidden="true"></i>
-              <span>18:00–19:00</span>
-            </div>
-            <div class="today-session-details">
-              <div class="today-session-main">
-                <span class="today-discipline-badge session-pill-peruskurssi">
-                  <span class="icon-indicator">🔥</span> Hokutoryu Ju-Jutsu
-                </span>
-                <span class="today-group-desc">Beginners' Course (Starts Sep 15)</span>
-              </div>
-              <div class="today-session-loc">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A
-              </div>
-            </div>
-          </div>
-
-          <div class="today-session-item session-pill-varivyot">
-            <div class="today-session-time">
-              <i class="fa-regular fa-clock" aria-hidden="true"></i>
-              <span>19:00–20:00</span>
-            </div>
-            <div class="today-session-details">
-              <div class="today-session-main">
-                <span class="today-discipline-badge session-pill-varivyot">
-                  <span class="icon-indicator">🛡️</span> Hokutoryu Ju-Jutsu
-                </span>
-                <span class="today-group-desc">Color Belts</span>
-              </div>
-              <div class="today-session-loc">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A
-              </div>
-            </div>
-          </div>
-
-          <div class="today-session-item session-pill-kenjutsu">
-            <div class="today-session-time">
-              <i class="fa-regular fa-clock" aria-hidden="true"></i>
-              <span>20:00–21:00</span>
-            </div>
-            <div class="today-session-details">
-              <div class="today-session-main">
-                <span class="today-discipline-badge session-pill-kenjutsu">
-                  <span class="icon-indicator">⚔️</span> Kenjutsu
-                </span>
-                <span class="today-group-desc">All Ranks</span>
-              </div>
-              <div class="today-session-loc">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Äimäkuja 6 A
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
