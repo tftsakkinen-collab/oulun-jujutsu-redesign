@@ -73,3 +73,6 @@ Tämä dokumentti kirjaa kaikki merkittävät arkkitehtuuri-, koodaus- ja UI/UX-
 2. **Välimuistin ohitus & nopea päivitys (`vercel.json`, HTML-tiedostot):**
    - `vercel.json`: CSS- ja JS-tiedostojen välimuistiksi määritetty `public, max-age=0, must-revalidate`.
    - Lisätty versioparametri `?v=20260908` CSS- ja JS-linkkeihin.
+3. **Sijainnin nosto & tekstien täysi näkyvyys:**
+   - Siirretty livepalkki ylemmäksi heti Hero-pääkuvan alapuolelle ennen Peruskurssin ilmoitusbanneria.
+   - Uudistettu korttien asettelu: poistettu tekstit katkaiseva ellipsis (`...`), jolloin kaikki tekstit, päivämäärät ja lisätiedot näkyvät selkeästi kertasilmäyksellä.
