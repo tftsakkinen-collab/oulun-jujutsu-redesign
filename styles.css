@@ -166,8 +166,6 @@ body {
   display: block;
 }
 
-.cards-grid > .glass-panel > div > div:first-child 
-
 .glass-panel::before {
   content: '';
   position: absolute;
@@ -433,17 +431,62 @@ p {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  height: 420px;
   margin: 0 auto 32px auto;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255, 9, 21, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #090c12;
 }
 
-.hero-main-
+@media (min-width: 769px) {
+  .hero-image-wrapper {
+    height: 420px;
+  }
+  .hero-image-wrapper picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-image-wrapper img,
+  .hero-image-wrapper .frame--hero,
+  .hero-image-wrapper .hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+}
 
-.hero-image-wrapper:hover .hero-main-img {
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 auto 20px auto !important;
+  }
+  .hero-image-wrapper picture {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .hero-image-wrapper img,
+  .hero-image-wrapper .frame--hero,
+  .hero-image-wrapper .hero-main-img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    object-position: center 30% !important;
+    display: block !important;
+  }
+}
+
+.hero-image-wrapper:hover img,
+.hero-image-wrapper:hover .hero-main-img,
+.hero-image-wrapper:hover .frame--hero {
   transform: scale(1.02);
 }
 
@@ -1287,8 +1330,6 @@ p, li, span { word-break: break-word; overflow-wrap: break-word; }
   white-space: nowrap !important;
   max-width: 100% !important;
 }
-
-.logo 
 
 .header-social-links {
   display: flex;
@@ -3165,8 +3206,6 @@ header ul, header ol, header li,
   z-index: 100006 !important;
 }
 
-.logo 
-
 .logo span {
   color: var(--brand-red) !important;
 }
@@ -3432,7 +3471,11 @@ img {
   background: var(--bg) !important;
 }
 
-.coach-avatar-mask img, .instructor-
+.coach-avatar-mask img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
 
 .hero-overlay {
   display: none !important;
@@ -3456,7 +3499,9 @@ h1, .hero-title {
   .hero:hover .hero-bg,
   .yt-card:hover .yt-thumb-img,
   .gallery-item:hover img,
-  .course-card:hover .card-img-wrapper 
+  .course-card:hover .card-img-wrapper {
+    transform: none !important;
+  }
 }
 
 
@@ -3670,7 +3715,6 @@ input, select, textarea {
     width: 100%;
     margin: 0 auto;
   }
-  .instructor-portrait-
 }
 
 /* ==========================================================================
@@ -4902,10 +4946,11 @@ i.fa-regular {
 .gallery-img-wrapper {
   position: relative !important;
   width: 100% !important;
-  padding-top: 133.33% !important;
   aspect-ratio: 3 / 4 !important;
+  padding: 0 !important;
   overflow: hidden !important;
   background: rgba(22, 27, 38, 0.8) !important;
+  border-radius: var(--radius-sm);
 }
 
 .gallery-img-wrapper img,
@@ -4943,3 +4988,311 @@ i::before,
 i::after {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "FontAwesome" !important;
 }
+
+/* ==========================================================================
+   TODAY'S TRAINING LIVE BAR (TÄMÄN PÄIVÄN TREENIT)
+   ========================================================================== */
+.today-training-section {
+  position: relative;
+  margin: -16px auto 36px auto;
+  z-index: 20;
+  padding: 0 16px;
+}
+
+.today-training-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background: rgba(13, 18, 30, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(0, 230, 153, 0.08);
+}
+
+.today-training-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.today-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pulse-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00e699;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 230, 153, 0.7);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 230, 153, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(0, 230, 153, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 230, 153, 0);
+  }
+}
+
+.status-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #00e699;
+  text-transform: uppercase;
+}
+
+.today-date-display {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.all-schedules-link {
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease, color 0.2s ease;
+  font-weight: 600;
+}
+
+.all-schedules-link:hover {
+  color: #ffffff;
+  gap: 9px;
+}
+
+.today-sessions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.today-session-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 26, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.today-session-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.today-session-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.today-session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.today-session-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.today-discipline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.icon-indicator {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.today-group-desc {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.today-session-loc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Category Pill Styling */
+/* Peruskurssi: red pill + flame */
+.session-pill-peruskurssi.today-session-item {
+  border-color: rgba(255, 42, 59, 0.4);
+  background: linear-gradient(135deg, rgba(255, 42, 59, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+}
+.today-discipline-badge.session-pill-peruskurssi {
+  background: rgba(255, 42, 59, 0.22);
+  border: 1px solid rgba(255, 42, 59, 0.55);
+  color: #ff4d56;
+}
+
+/* Kenjutsu: gold pill + swords */
+.session-pill-kenjutsu.today-session-item {
+  border-color: rgba(234, 179, 8, 0.4);
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+}
+.today-discipline-badge.session-pill-kenjutsu {
+  background: rgba(234, 179, 8, 0.22);
+  border: 1px solid rgba(234, 179, 8, 0.55);
+  color: #facc15;
+}
+
+/* Värivyöt / Hokutoryu: blue pill */
+.session-pill-varivyot.today-session-item {
+  border-color: rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+}
+.today-discipline-badge.session-pill-varivyot {
+  background: rgba(59, 130, 246, 0.22);
+  border: 1px solid rgba(59, 130, 246, 0.55);
+  color: #60a5fa;
+}
+
+/* Junnut: green/cyan pill */
+.session-pill-junnut.today-session-item {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+}
+.today-discipline-badge.session-pill-junnut {
+  background: rgba(16, 185, 129, 0.22);
+  border: 1px solid rgba(16, 185, 129, 0.55);
+  color: #34d399;
+}
+
+/* Diesel-jutsu: orange pill */
+.session-pill-diesel.today-session-item {
+  border-color: rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.14) 0%, rgba(20, 26, 42, 0.8) 100%);
+}
+.today-discipline-badge.session-pill-diesel {
+  background: rgba(249, 115, 22, 0.22);
+  border: 1px solid rgba(249, 115, 22, 0.55);
+  color: #fb923c;
+}
+
+/* Vapaavuoro: neutral pill */
+.session-pill-vapaa.today-session-item {
+  border-color: rgba(148, 163, 184, 0.25);
+  background: rgba(20, 26, 42, 0.65);
+}
+.today-discipline-badge.session-pill-vapaa {
+  background: rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: #cbd5e1;
+}
+
+/* Empty State */
+.today-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+}
+.today-empty-state .empty-icon {
+  font-size: 1.8rem;
+  color: #64748b;
+}
+.today-empty-state .empty-text {
+  flex: 1;
+  min-width: 220px;
+}
+.today-empty-state .empty-text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+.today-empty-state .empty-text p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .today-training-section {
+    margin: -10px auto 30px auto;
+    padding: 0 12px;
+  }
+  .today-training-card {
+    padding: 16px;
+  }
+  .today-training-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .today-session-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .today-session-time {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .today-group-desc {
+    white-space: normal;
+  }
+}
+

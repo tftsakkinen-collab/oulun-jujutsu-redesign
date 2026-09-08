@@ -131,6 +131,151 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSchedule('all');
   }
 
+  // 3.1 Tämän Päivän Treenit - Live-tilapalkki
+  function initTodayTrainingBar() {
+    const todayList = document.getElementById('todaySessionsList');
+    const todayDateDisplay = document.getElementById('todayDateDisplay');
+    if (!todayList && !todayDateDisplay) return;
+
+    const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = su, 1 = ma, 2 = ti, 3 = ke, 4 = to, 5 = pe, 6 = la
+    const dayKeyMap = ['su', 'ma', 'ti', 'ke', 'to', 'pe', 'la'];
+    const currentDayKey = dayKeyMap[dayOfWeek];
+
+    const fiDays = ['Sunnuntai', 'Maanantai', 'Tiistai', 'Keskiviikko', 'Torstai', 'Perjantai', 'Lauantai'];
+    const enDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    const dayName = isEn ? enDays[dayOfWeek] : fiDays[dayOfWeek];
+    const dateFormatted = `${dayName} ${now.getDate()}.${now.getMonth() + 1}.`;
+    if (todayDateDisplay) {
+      todayDateDisplay.textContent = dateFormatted;
+    }
+
+    const allData = getScheduleData();
+    const todaySessions = allData.filter(item => item.day === currentDayKey);
+    const scheduleAnchor = isEn ? '#schedule' : '#aikataulut';
+
+    if (!todayList) return;
+
+    if (todaySessions.length === 0) {
+      // Etsi seuraava harjoituspäivä
+      let nextDayName = '';
+      let nextDayInfo = '';
+      for (let offset = 1; offset <= 7; offset++) {
+        const nextIdx = (dayOfWeek + offset) % 7;
+        const nextKey = dayKeyMap[nextIdx];
+        const nextSessions = allData.filter(item => item.day === nextKey);
+        if (nextSessions.length > 0) {
+          nextDayName = isEn ? enDays[nextIdx] : fiDays[nextIdx];
+          nextDayInfo = `${nextSessions[0].time} (${nextSessions[0].laji})`;
+          break;
+        }
+      }
+
+      todayList.innerHTML = `
+        <div class="today-empty-state">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span class="empty-icon"><i class="fa-regular fa-calendar-xmark" aria-hidden="true"></i></span>
+            <div class="empty-text">
+              <strong>${isEn ? 'No guided training sessions scheduled for today.' : 'Ei ohjattuja harjoituksia tänään.'}</strong>
+              <p>${isEn ? `Next sessions: ${nextDayName} at ${nextDayInfo}` : `Seuraavat treenit: ${nextDayName.toLowerCase()}na klo ${nextDayInfo}`}</p>
+            </div>
+          </div>
+          <a href="${scheduleAnchor}" class="btn btn-secondary btn-sm" style="margin-left: auto;">
+            ${isEn ? 'View Full Schedule' : 'Katso koko lukujärjestys'} <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+      `;
+      return;
+    }
+
+    function getSessionMeta(session) {
+      const groupLower = (session.group || '').toLowerCase();
+      const lajiLower = (session.laji || '').toLowerCase();
+
+      if (groupLower.includes('peruskurssi') || session.isPeruskurssi) {
+        return {
+          pillClass: 'session-pill-peruskurssi',
+          icon: '🔥',
+          label: isEn ? 'Beginners' : 'Peruskurssi'
+        };
+      }
+      if (session.type === 'kenjutsu' || lajiLower.includes('kenjutsu')) {
+        return {
+          pillClass: 'session-pill-kenjutsu',
+          icon: '⚔️',
+          label: 'Kenjutsu'
+        };
+      }
+      if (session.type === 'junnut' || lajiLower.includes('junnu')) {
+        return {
+          pillClass: 'session-pill-junnut',
+          icon: '🥋',
+          label: isEn ? 'Juniors' : 'Junnut'
+        };
+      }
+      if (session.type === 'diesel' || lajiLower.includes('diesel')) {
+        return {
+          pillClass: 'session-pill-diesel',
+          icon: '🏋️',
+          label: 'Diesel-jutsu'
+        };
+      }
+      if (session.type === 'vapaa' || lajiLower.includes('vapaa')) {
+        return {
+          pillClass: 'session-pill-vapaa',
+          icon: '🔓',
+          label: isEn ? 'Open mat' : 'Vapaavuoro'
+        };
+      }
+      return {
+        pillClass: 'session-pill-varivyot',
+        icon: '🛡️',
+        label: isEn ? 'Color Belts' : 'Värivyöt'
+      };
+    }
+
+    const lajiMapEn = {
+      'Junnu-jutsu': 'Junior Ju-Jutsu',
+      'Junnu Ju-Jutsu': 'Junior Ju-Jutsu',
+      'Hokutoryu': 'Hokutoryu Ju-Jutsu',
+      'Hokutoryu Ju-Jutsu': 'Hokutoryu Ju-Jutsu',
+      'Kenjutsu': 'Kenjutsu',
+      'Diesel-jutsu': 'Diesel-jutsu',
+      'Vapaavuoro': 'Open Practice'
+    };
+
+    todayList.innerHTML = '';
+    todaySessions.forEach(session => {
+      const meta = getSessionMeta(session);
+      const displayLaji = isEn ? (lajiMapEn[session.laji] || session.laji) : session.laji;
+      const card = document.createElement('div');
+      card.className = `today-session-item ${meta.pillClass}`;
+      card.innerHTML = `
+        <div class="today-session-time">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          <span>${session.time}</span>
+        </div>
+        <div class="today-session-details">
+          <div class="today-session-main">
+            <span class="today-discipline-badge ${meta.pillClass}">
+              <span class="icon-indicator">${meta.icon}</span> ${displayLaji}
+            </span>
+            <span class="today-group-desc">${session.group}</span>
+          </div>
+          <div class="today-session-loc">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${session.location || 'Äimäkuja 6 A'}
+          </div>
+        </div>
+      `;
+      todayList.appendChild(card);
+    });
+  }
+
+  initTodayTrainingBar();
+
+
   // 4. Official Hokutoryu HQ YouTube Videos (fBs6K2HCAJ8)
   const videos = {
     video1: {
