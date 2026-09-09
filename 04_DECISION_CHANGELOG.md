@@ -76,3 +76,27 @@ Tämä dokumentti kirjaa kaikki merkittävät arkkitehtuuri-, koodaus- ja UI/UX-
 3. **Sijainnin nosto & tekstien täysi näkyvyys:**
    - Siirretty livepalkki ylemmäksi heti Hero-pääkuvan alapuolelle ennen Peruskurssin ilmoitusbanneria.
    - Uudistettu korttien asettelu: poistettu tekstit katkaiseva ellipsis (`...`), jolloin kaikki tekstit, päivämäärät ja lisätiedot näkyvät selkeästi kertasilmäyksellä.
+
+---
+
+## [2026-09-09] /en 404 NOT_FOUND -reitityksen korjaus
+
+### Konteksti ja Juurisyy
+- Käyttäjä ilmoitti virheestä osoitteessa `oulunjujutsu.com/en`: Vercel palautti `404: NOT_FOUND (Code: NOT_FOUND)`.
+- **Juurisyy:**
+  - `vercel.json`-tiedostossa oli `cleanUrls: true` ja toimimaton `rewrites`-sääntö kohteeseen `/index-en.html`. Vercel ei cleanUrls-tilassa pystynyt yhdistämään reittiä tiedostoon, jolla on `.html`-pääte.
+  - Samaan aikaan muut sivuston alasivut (`diesel.html`, `junnut.html`, `jujutsu.html` jne.) toimivat puhtaasti omien tiedostonimiensä kautta ilman rewritejä (`/diesel` -> `diesel.html`).
+  - Sivuston sisäiset linkit olivat epäyhtenäiset: osa viittasi `/en`, osa vanhaan `index-en.html`.
+
+### Tehdyt Ratkaisut ja Muutokset
+1. **Tiedoston uudelleennimeäminen (`en.html`):**
+   - Siirretty `index-en.html` suoraan tiedostoksi `en.html`. Vercelin `cleanUrls: true` tarjoilee tämän natiivisti ja varmasti osoitteessa `/en`.
+   - Päivitetty kanoninen URL, Open Graph ja Schema.org JSON-LD osoittamaan `https://www.oulunjujutsu.com/en`.
+   - Päivitetty navigaation ja footerin linkit puhtaiksi URL-osoitteiksi (`/en`, `/`, `/peruskurssi`, `/jujutsu` jne.).
+2. **Reitityksen siistiminen (`vercel.json`):**
+   - Poistettu toimimaton `rewrites`-lohko.
+   - Säilytetty 308 Permanent Redirect vanhasta `/index-en(.html)?` kohteeseen `/en` vanhoja kirjanmerkkejä ja hakukoneita varten.
+3. **Linkkien ja skriptien päivitys:**
+   - Päivitetty `index.html` ja `peruskurssi.html` (hreflang, kielikytkin, footer) viittaamaan suoraan `/en`.
+   - Varmistettu `script.js`:n `isEn`-tarkistukset tukemaan reittiä `/en`.
+

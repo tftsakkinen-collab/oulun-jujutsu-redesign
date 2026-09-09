@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     targetBody.innerHTML = '';
 
     const data = getScheduleData();
-    const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+    const isEn = document.documentElement.lang === 'en' || window.location.pathname.startsWith('/en') || window.location.pathname.includes('index-en');
     const dayMapEn = { 'ma': 'MON', 'ti': 'TUE', 'ke': 'WED', 'to': 'THU', 'pe': 'FRI', 'la': 'SAT', 'su': 'SUN' };
     const lajiMapEn = { 'Junnu-jutsu': 'Junior Ju-Jutsu', 'Junnu Ju-Jutsu': 'Junior Ju-Jutsu', 'Hokutoryu': 'Hokutoryu Ju-Jutsu', 'Hokutoryu Ju-Jutsu': 'Hokutoryu Ju-Jutsu', 'Kenjutsu': 'Kenjutsu', 'Diesel-jutsu': 'Diesel-jutsu', 'Vapaavuoro': 'Open Practice' };
 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const todayDateDisplay = document.getElementById('todayDateDisplay');
     if (!todayList && !todayDateDisplay) return;
 
-    const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+    const isEn = document.documentElement.lang === 'en' || window.location.pathname.startsWith('/en') || window.location.pathname.includes('index-en');
     const now = new Date();
     const dayOfWeek = now.getDay(); // 0 = su, 1 = ma, 2 = ti, 3 = ke, 4 = to, 5 = pe, 6 = la
     const dayKeyMap = ['su', 'ma', 'ti', 'ke', 'to', 'pe', 'la'];
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const action = form.getAttribute('action');
       if (!action || !action.startsWith('http')) {
-        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.startsWith('/en') || window.location.pathname.includes('index-en');
         showToast(isEn ? 'Form action missing. Please contact us directly by phone: +358 41 327 4967.' : 'Ilmoittautumisvirhe: lomakkeen osoite puuttuu. Voit ilmoittautua puhelimitse: 041 327 4967.');
         return;
       }
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalOverlay) modalOverlay.classList.remove('active');
         form.reset();
         
-        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.startsWith('/en') || window.location.pathname.includes('index-en');
         if (isEn) {
           showToast(`Thank you for registering, ${nameVal}! 🥋 We will email you shortly (${emailVal || 'at your email'}). Welcome to training!`);
         } else {
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } catch (err) {
         console.error('Form submission error:', err);
-        const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('index-en');
+        const isEn = document.documentElement.lang === 'en' || window.location.pathname.startsWith('/en') || window.location.pathname.includes('index-en');
         showToast(isEn ? 'Network error sending registration. Please call us at +358 41 327 4967 or email info@oulunjujutsu.com.' : 'Lähetys epäonnistui verkkovirheen vuoksi. Voit ilmoittautua puhelimitse: 041 327 4967 tai sähköpostitse: info@oulunjujutsu.com.');
       }
     });
