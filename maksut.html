@@ -14,16 +14,45 @@
     })();
   </script>
 
+  <!-- Microsoft Clarity Analytics -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "yd40w2fv1p");
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
-  <title>Hinnasto & Maksutavat – Jujutsu Oulu Ry</title>
+  <title>Hinnasto &amp; Maksutavat – Jujutsu Oulu Ry</title>
   <meta name="description" content="Katso peruskurssien hinnat, opiskelija-alennukset (UniMove 75 €) ja vyökoemaksut. Hyväksymme ePassin, Smartumin, Edenredin ja Tyky-setelit.">
   <link rel="canonical" href="https://www.oulunjujutsu.com/maksut">
   <link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/maksut">
   <link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en">
 
-  <link rel="icon" href="https://www.oulunjujutsu.com/favicon.ico" type="image/x-icon">
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="assets/oulunjujutsu-logo.png">
+  <link rel="apple-touch-icon" href="assets/oulunjujutsu-logo.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.oulunjujutsu.com/maksut">
+  <meta property="og:title" content="Hinnasto &amp; Maksutavat – Jujutsu Oulu Ry">
+  <meta property="og:description" content="Katso peruskurssien hinnat, opiskelija-alennukset (UniMove) ja liikuntaedut ePassi, Smartum, Edenred.">
+  <meta property="og:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:site_name" content="Jujutsu Oulu Ry">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.oulunjujutsu.com/maksut">
+  <meta name="twitter:title" content="Hinnasto &amp; Maksutavat – Jujutsu Oulu Ry">
+  <meta name="twitter:description" content="Katso peruskurssien hinnat, opiskelija-alennukset (UniMove) ja liikuntaedut ePassi, Smartum, Edenred.">
+  <meta name="twitter:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -466,8 +495,8 @@
             <li><a href="/jujutsu">Hokutoryu Ju-Jutsu</a></li>
             <li><a href="/junnut">Junnu Ju-Jutsu</a></li>
             <li><a href="/kenjutsu">Kenjutsu</a></li>
-            <li><a href="/maksut">Maksut &amp; hinnasto</a></li>
-            <li><a href="index.html#aikataulut">Harjoitusajat</a></li>
+            <li><a href="/saannot">Seuran säännöt</a></li>
+            <li><a href="/tietosuoja">Tietosuojaseloste (GDPR)</a></li>
           </ul>
         </div>
 
@@ -490,9 +519,14 @@
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <p>&copy; 2026 Jujutsu Oulu Ry • Itsepuolustus Oulu. Kaikki oikeudet pidätetään.</p>
-        <p style="font-size: 0.85rem; color: var(--text-dim);">Äimäkuja 6 A, 90400 Oulu</p>
+        <div style="display: flex; gap: 16px; font-size: 0.85rem;">
+          <a href="/saannot" style="color: var(--text-muted); text-decoration: underline;">Seuran säännöt</a>
+          <a href="/tietosuoja" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja (GDPR)</a>
+          <a href="sitemap.xml" style="color: var(--text-dim); text-decoration: none;">Sivustokartta</a>
+          <a href="/en" style="color: var(--text-dim); text-decoration: none;">English Version</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -547,104 +581,90 @@
             </select>
           </div>
 
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
             <i class="fa-solid fa-paper-plane"></i> Lähetä ilmoittautuminen (2 viikon ilmainen kokeilu)
           </button>
-          <div style="font-size: 0.8rem; color: var(--text-dim); text-align: center; margin-top: 10px;">
-            Tai suoraan sähköpostitse: <a href="mailto:info@oulunjujutsu.com" style="color: var(--brand-red);">info@oulunjujutsu.com</a>
+          <div style="margin-top: 14px; text-align: center; font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 6px;">
+            <i class="fa-solid fa-lock" style="color: #10b981;"></i> 256-bit SSL-suojattu yhteydenotto | <a href="#" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja</a>
           </div>
         </form>
     </div>
   </div>
 
-<!-- Floating Kysy koutsilta Button -->
-<div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  <span>Kysy koutsilta</span>
-</div>
+  <!-- Floating Kysy koutsilta Button -->
+  <div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>Kysy koutsilta</span>
+  </div>
 
-
-
-<!-- Kysy koutsilta - Telegram-modal -->
-
-<div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 32px; max-width: 480px; width: 100%; position: relative; color: var(--text); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-    <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
-    
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-      <div style="background: #00AEEF; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text); font-size: 1.2rem;">
-        <i class="fa-solid fa-user-ninja"></i>
+  <!-- Kysy koutsilta - Telegram-modal -->
+  <div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: var(--surface); color: var(--text) !important; border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); max-width: 480px; width: 100%; position: relative;">
+      <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div style="background: rgba(0, 174, 239, 0.2); color: #00AEEF; font-size: 1.4rem; padding: 10px 14px; border-radius: var(--radius-sm);">
+          <i class="fa-solid fa-user-ninja"></i>
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.25rem; color: var(--text);">Kysy koutsilta</h3>
+          <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Viestisi menee suoraan koutsin puhelimeen</p>
+        </div>
       </div>
-      <div>
-        <h3 style="margin: 0; font-size: 1.25rem; color: var(--text);">Kysy koutsilta</h3>
-        <p style="margin: 0; font-size: 0.85rem; color: var(--text);">Saat vastauksen suoraan koutsin puhelimeen</p>
-      </div>
-    </div>
-    
-    <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
-        <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
-      </div>
+      
+      <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
+        <input type="text" id="inst-website" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
+          <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem;">
+        </div>
 
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
-        <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
+          <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Kysymyksesi koutsille *</label>
+          <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: var(--text); font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
+        </button>
+        <div style="margin-top: 10px; text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+          <i class="fa-solid fa-lock" style="color: #10b981;"></i> 256-bit SSL-suojattu | <a href="#" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja</a>
+        </div>
+      </form>
+
+      <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
+        <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
+        <h4 style="margin: 0 0 8px 0; color: var(--text);">Kiitos kysymyksestä!</h4>
+        <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
       </div>
-
-      <div style="margin-bottom: 20px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Kysymyksesi koutsille *</label>
-        <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem; resize: vertical;"></textarea>
-      </div>
-
-      <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: #ffffff !important; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
-        <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
-      </button>
-    </form>
-
-    <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
-      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
-      <h4 style="margin: 0 0 8px 0; color: var(--text);">Kiitos kysymyksestä!</h4>
-      <p style="margin: 0; color: var(--text); font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
     </div>
   </div>
-</div>
 
-<script>
-function openInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'flex'; }
-}
-function closeInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'none'; }
-}
-async function submitInstructorQuestion(e) {
-  e.preventDefault();
-  const name = document.getElementById('inst-name').value;
-  const contact = document.getElementById('inst-contact').value;
-  const question = document.getElementById('inst-question').value;
-  const btn = document.getElementById('inst-submit-btn');
-  
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Lähetetään...';
-
-  try {
-    const res = await fetch('/api/ask-instructor', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, contact, question })
-    });
-    
-    document.getElementById('instructor-form').style.display = 'none';
-    document.getElementById('inst-success-msg').style.display = 'block';
-  } catch (err) {
-    alert('Viestin lähetyksessä tapahtui virhe. Yritä uudelleen!');
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille';
-  }
-}
-</script>
+  <!-- Privacy Policy (Tietosuojaseloste) Modal -->
+  <div id="privacyModal" class="modal-overlay" aria-hidden="true" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-content glass-panel" style="max-width: 600px; padding: 32px; max-height: 85vh; overflow-y: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+        <h3 style="margin: 0; font-size: 1.4rem; color: var(--text);"><i class="fa-solid fa-user-shield" style="color: var(--brand-red); margin-right: 8px;"></i> Tietosuojaseloste (GDPR)</h3>
+        <button onclick="closePrivacyModal()" style="background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;" aria-label="Sulje">&times;</button>
+      </div>
+      <div style="font-size: 0.92rem; color: var(--text); line-height: 1.6;">
+        <p><strong>Rekisterinpitäjä:</strong> Jujutsu Oulu Ry (Äimäkuja 6 A, 90400 Oulu)</p>
+        <p><strong>Käsiteltävät tiedot:</strong> Lomakkeilla kerätään nimesi, sähköpostiosoitteesi ja puhelinnumerosi ilmoittautumisten ja yhteydenottojen käsittelyä varten.</p>
+        <p><strong>Tietojen käyttö:</strong> Tietoja käytetään ainoastaan harjoituksiin ilmoittautumisen vahvistamiseen ja kysymyksiin vastaamiseen. Tietoja ei luovuteta kolmansille osapuolille eikä käytetä suoramarkkinointiin.</p>
+        <p><strong>Tietoturva:</strong> Yhteytesi on suojattu alan standardien mukaisella 256-bittisellä SSL/TLS-salauksella.</p>
+        <p><strong>Oikeutesi:</strong> Sinulla on oikeus pyytää omien tietojesi tarkistusta tai poistamista ottamalla yhteyttä seuran ohjaajiin.</p>
+      </div>
+      <div style="margin-top: 24px; text-align: right;">
+        <button onclick="closePrivacyModal()" class="btn btn-secondary" style="padding: 8px 20px;">Sulje</button>
+      </div>
+    </div>
+  </div>
 
 </body>
-</html>
+</html>

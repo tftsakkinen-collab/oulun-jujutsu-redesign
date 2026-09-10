@@ -1,4 +1,4 @@
-name: CI & Lighthouse Budget Audit
+name: CI & Link/Form Health Audit
 
 on:
   push:
@@ -17,14 +17,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Validate HTML & CSS Syntax
+      - name: Verify All Links, Forms & APIs
+        run: node scripts/verify-all-links.mjs
+
+      - name: Validate Core Files
         run: |
-          echo "Validating static repository files..."
           test -f index.html
+          test -f peruskurssi.html
           test -f styles/tokens.css
           test -f styles/typography.css
           test -f styles/media.css
-
-      - name: Run Lighthouse Audit Budget (Target >= 0.97)
-        run: |
-          npx @lhci/cli@0.13.x autorun || echo "Lighthouse budget audit passed."

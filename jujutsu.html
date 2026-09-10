@@ -14,8 +14,18 @@
     })();
   </script>
 
+  <!-- Microsoft Clarity Analytics -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "yd40w2fv1p");
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
   <title>Hokutoryu Ju-Jutsu Oulu – Realistinen Itsepuolustus</title>
   <meta name="description" content="Suomen johtava itsepuolustusjärjestelmä aikuille ja nuorille (15v+) Oulussa. Otteista vapautumiset, lyönnit, heitot ja lukot. Varaa ilmainen kokeilu!">
@@ -23,15 +33,26 @@
 
   <link rel="canonical" href="https://www.oulunjujutsu.com/jujutsu">
 
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="assets/oulunjujutsu-logo.png">
+  <link rel="apple-touch-icon" href="assets/oulunjujutsu-logo.png">
+  <link rel="manifest" href="manifest.json">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.oulunjujutsu.com/jujutsu">
-  <meta property="og:title" content="Hokutoryu Jujutsu Oulu Ry – Aikuisten Itsepuolustus & Budo">
-  <meta property="og:description" content="Kansainvälisesti arvostettu suomalainen itsepuolustusjärjestelmä. Tule kokemaan realistinen kamppailuharjoittelu Jujutsu Oulu Ryssa.">
+  <meta property="og:title" content="Hokutoryu Jujutsu Oulu Ry – Aikuisten Itsepuolustus &amp; Budo">
+  <meta property="og:description" content="Kansainvälisesti arvostettu suomalainen itsepuolustusjärjestelmä. Tule kokemaan realistinen kamppailuharjoittelu Jujutsu Oulu Ry:ssä.">
   <meta property="og:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:site_name" content="Jujutsu Oulu Ry">
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.oulunjujutsu.com/favicon.ico" type="image/x-icon">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.oulunjujutsu.com/jujutsu">
+  <meta name="twitter:title" content="Hokutoryu Jujutsu Oulu Ry – Aikuisten Itsepuolustus &amp; Budo">
+  <meta name="twitter:description" content="Kansainvälisesti arvostettu suomalainen itsepuolustusjärjestelmä. Tule kokemaan realistinen kamppailuharjoittelu Jujutsu Oulu Ry:ssä.">
+  <meta name="twitter:image" content="https://www.oulunjujutsu.com/assets/oulunjujutsu-www-hero2.webp">
 
   <!-- Google Fonts: Open Sans -->
   <!-- FontAwesome Icons -->
@@ -54,7 +75,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Hokutoryu Ju-Jutsu",
-          "item": "https://www.oulunjujutsu.com/jujutsu"
+          "item": "https://www.oulunjujutsu.com/jujutsu.html"
         }
       ]
     },
@@ -63,7 +84,7 @@
       "name": "Hokutoryu Ju-Jutsu -peruskurssi & Jatkokurssit Oulussa",
       "description": "Suomalainen itsepuolustusjärjestelmä. Otteista irrottautumiset, lyönnit, potkut, heitot, rannelukot ja mattohallinta Äimäkujalla.",
       "provider": {
-        "@type": "SportsActivityLocation",
+        "@type": "SportsClub",
         "name": "Jujutsu Oulu Ry",
         "url": "https://www.oulunjujutsu.com/"
       },
@@ -73,6 +94,27 @@
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mitä Hokutoryu Ju-Jutsu on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hokutoryu Ju-Jutsu on Soke Auvo Niinikedon kehittämä suoraviivainen suomalainen itsepuolustusjärjestelmä, joka yhdistää lyönnit, potkut, heitot, lukot ja maahanviennit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten peruskurssille ilmoittaudutaan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ilmoittautua voi verkkosivujen lomakkeella. Ensimmäiset 3 viikkoa saa treenata ilman maksua ja sitoutumista."
+          }
+        }
+      ]
     }
   ]
 }
@@ -235,9 +277,9 @@
               <button class="btn btn-primary open-enroll-modal" style="padding: 14px 28px; font-size: 1.05rem;">
                 <i class="fa-solid fa-user-plus"></i> Ilmoittaudu peruskurssille
               </button>
-              <button class="btn btn-secondary open-pdf-modal" style="padding: 14px 24px; font-size: 1rem; background: rgba(255,255,255,0.08); border: 1px solid var(--border);">
+              <a href="assets/Oulu-Jujutsu-peruskurssimainos-092026-2.pdf" target="_blank" rel="noopener" class="btn btn-secondary open-pdf-modal" style="padding: 14px 24px; font-size: 1rem; background: rgba(255,255,255,0.08); border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 8px;">
                 <i class="fa-solid fa-file-pdf" style="color: #ff4d56;"></i> Katso kurssimainos (PDF)
-              </button>
+              </a>
             </div>
           </div>
 
@@ -827,6 +869,8 @@
       <div class="footer-bottom" style="border-top: 1px solid var(--border-glass); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.88rem; color: var(--text);">
         <div>&copy; 2026 Jujutsu Oulu Ry. Kaikki oikeudet pidätetään.</div>
         <div style="display: flex; gap: 16px;">
+          <a href="/saannot" style="color: var(--text-muted); text-decoration: underline;">Seuran säännöt</a>
+          <a href="/tietosuoja" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja (GDPR)</a>
           <a href="sitemap.xml" style="color: var(--text); text-decoration: none;">Sivustokartta</a>
           <a href="/en" style="color: var(--text); text-decoration: none;">English Version</a>
         </div>
@@ -848,9 +892,9 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Soita</span>
     </a>
-    <a href="#" class="mobile-action-btn primary open-enroll-modal">
-      <i class="fa-solid fa-shield-cat"></i>
-      <span>Ilmainen kokeilu</span>
+    <a href="peruskurssi.html" class="mobile-action-btn primary">
+      <i class="fa-solid fa-fire"></i>
+      <span>Tutustu peruskurssiin</span>
     </a>
     <a href="index.html#aikataulut" class="mobile-action-btn">
       <i class="fa-regular fa-clock"></i>
@@ -859,14 +903,6 @@
   </div>
 
   <!-- JavaScript -->
-    <!-- Floating Social Sidebar Bar (Desktop) -->
-  <div class="floating-social-bar">
-    <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="Facebook" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-    <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-    <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"/></svg></a>
-    
-  </div>
-
   <script src="data/aikataulut.js" defer></script>
   <script src="script.js" defer></script>
 
@@ -876,25 +912,23 @@
   <span>Kysy koutsilta</span>
 </div>
 
-
-
 <!-- Kysy koutsilta - Telegram-modal -->
-
 <div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: var(--surface); color: var(--text) !important; border: 1px solid var(--border); font-weight: 800; padding: 2px 8px; border-radius: var(--radius-sm); font-size: 0.8rem;">
+  <div style="background: var(--surface); color: var(--text) !important; border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); max-width: 480px; width: 100%; position: relative;">
     <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
     
     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-      <div style="background: var(--surface); color: var(--text) !important; border: 1px solid var(--border); font-weight: 800; padding: 2px 8px; border-radius: var(--radius-sm); font-size: 0.8rem;">
+      <div style="background: rgba(0, 174, 239, 0.2); color: #00AEEF; font-size: 1.4rem; padding: 10px 14px; border-radius: var(--radius-sm);">
         <i class="fa-solid fa-user-ninja"></i>
       </div>
       <div>
         <h3 style="margin: 0; font-size: 1.25rem; color: var(--text);">Kysy koutsilta</h3>
-        <p style="margin: 0; font-size: 0.85rem; color: var(--text);">Saat vastauksen suoraan koutsin puhelimeen</p>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Viestisi menee suoraan koutsin puhelimeen</p>
       </div>
     </div>
     
     <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
+      <input type="text" id="inst-website" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
       <div style="margin-bottom: 16px;">
         <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
         <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem;">
@@ -913,50 +947,14 @@
       <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: var(--text); font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
         <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
       </button>
+      <div style="margin-top: 10px; text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+        <i class="fa-solid fa-lock" style="color: #10b981;"></i> 256-bit SSL-suojattu | <a href="#" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja</a>
+      </div>
     </form>
 
     <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
       <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
       <h4 style="margin: 0 0 8px 0; color: var(--text);">Kiitos kysymyksestä!</h4>
-      <p style="margin: 0; color: var(--text); font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
-    </div>
-  </div>
-</div>
-
-<script>
-function openInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'flex'; }
-}
-function closeInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'none'; }
-}
-async function submitInstructorQuestion(e) {
-  e.preventDefault();
-  const name = document.getElementById('inst-name').value;
-  const contact = document.getElementById('inst-contact').value;
-  const question = document.getElementById('inst-question').value;
-  const btn = document.getElementById('inst-submit-btn');
-  
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Lähetetään...';
-
-  try {
-    const res = await fetch('/api/ask-instructor', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, contact, question })
-    });
-    
-    document.getElementById('instructor-form').style.display = 'none';
-    document.getElementById('inst-success-msg').style.display = 'block';
-  } catch (err) {
-    alert('Viestin lähetyksessä tapahtui virhe. Yritä uudelleen!');
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille';
-  }
-}
 </script>
 
 </body>

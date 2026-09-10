@@ -62,11 +62,25 @@
 
   <url>
     <loc>https://www.oulunjujutsu.com/en</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fi" href="https://www.oulunjujutsu.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.oulunjujutsu.com/en"/>
+  </url>
+
+  <url>
+    <loc>https://www.oulunjujutsu.com/saannot</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.oulunjujutsu.com/tietosuoja</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

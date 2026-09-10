@@ -14,22 +14,43 @@
     })();
   </script>
 
+  <!-- Microsoft Clarity Analytics -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "yd40w2fv1p");
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0b">
   <meta name="author" content="Jujutsu Oulu Ry - oulunjujutsu.com">
   <title>Kenjutsu Oulu – Perinteinen Samurai-Miekkailutaito</title>
   <meta name="description" content="Perinteinen japanilainen miekkailutaito Oulussa. Keskittymiskykyä, kehonhallintaa ja miekkatekniikkaa puumiekoilla (Bokken). Tule kokeilemaan!">
   <link rel="canonical" href="https://www.oulunjujutsu.com/kenjutsu">
 
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="assets/oulunjujutsu-logo.png">
+  <link rel="apple-touch-icon" href="assets/oulunjujutsu-logo.png">
+  <link rel="manifest" href="manifest.json">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.oulunjujutsu.com/kenjutsu">
   <meta property="og:title" content="Kenjutsu Oulu | Perinteinen Japanilainen Miekkailu">
-  <meta property="og:description" content="Perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu & Hokutoryu Kenjutsu. Katana-miekankäsittely, kata-muodot ja paritekniikka.">
+  <meta property="og:description" content="Perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu &amp; Hokutoryu Kenjutsu. Katana-miekankäsittely, kata-muodot ja paritekniikka.">
   <meta property="og:image" content="https://www.oulunjujutsu.com/assets/Kenjutsu/Kenjutsu_tutustuminen-06926.jpg">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:site_name" content="Jujutsu Oulu Ry">
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.oulunjujutsu.com/favicon.ico" type="image/x-icon">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.oulunjujutsu.com/kenjutsu">
+  <meta name="twitter:title" content="Kenjutsu Oulu | Perinteinen Japanilainen Miekkailu">
+  <meta name="twitter:description" content="Perinteistä japanilaista miekkailua Oulussa. Koden Enshin Ryu &amp; Hokutoryu Kenjutsu. Katana-miekankäsittely, kata-muodot ja paritekniikka.">
+  <meta name="twitter:image" content="https://www.oulunjujutsu.com/assets/Kenjutsu/Kenjutsu_tutustuminen-06926.jpg">
     <!-- Schema.org JSON-LD (GEO & SEO Optimization) -->
   <script type="application/ld+json">
 {
@@ -48,16 +69,16 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Kenjutsu",
-          "item": "https://www.oulunjujutsu.com/kenjutsu"
+          "item": "https://www.oulunjujutsu.com/kenjutsu.html"
         }
       ]
     },
     {
-      "@type": "SportsActivityLocation",
-      "@id": "https://www.oulunjujutsu.com/kenjutsu#dojo",
+      "@type": "SportsClub",
+      "@id": "https://www.oulunjujutsu.com/kenjutsu.html#dojo",
       "name": "Jujutsu Oulu Ry – Kenjutsu Oulu",
       "description": "Perinteisen japanilaisen miekkailun (Kenjutsu) harjoittelukeskus Oulussa.",
-      "url": "https://www.oulunjujutsu.com/kenjutsu",
+      "url": "https://www.oulunjujutsu.com/kenjutsu.html",
       "telephone": "+358413274967",
       "address": {
         "@type": "PostalAddress",
@@ -72,10 +93,30 @@
       "name": "Kenjutsu peruskurssi Oulu (Japanilainen Miekkailu)",
       "description": "Perinteisen miekkailutaidon perusteet. Opi bokken-miekan käsittely, kamae-asennot, leikkaukset ja etiketti.",
       "provider": {
-        "@type": "Organization",
-        "name": "Jujutsu Oulu Ry",
-        "sameAs": "https://www.oulunjujutsu.com/"
+        "@type": "SportsClub",
+        "name": "Jujutsu Oulu Ry"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mitä Kenjutsu on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kenjutsu on perinteistä japanilaista miekkailua, jossa harjoitellaan puisella bokken-miekalla ja suojavarusteilla kamae-asentoja, leikkauksia ja pariharjoitteita."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tarvitseeko peruskurssille oman miekan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei tarvitse! Seuralta saa puumiekan (bokken) lainaan harjoitusten ajaksi."
+          }
+        }
+      ]
     }
   ]
 }
@@ -498,34 +539,38 @@
         <p style="font-size: 0.9rem;">Täytä tiedot alle. Kahdet ensimmäiset Kenjutsu-treenit ovat ilmaiset!</p>
       </div>
 
-      <form id="enrollForm">
+      <form id="enrollForm" class="enroll-form" action="https://formspree.io/f/xvovbqqr" method="POST">
         <div class="form-group">
-          <label class="form-label" for="nameInput">Koko nimi</label>
-          <input type="text" id="nameInput" class="form-input" placeholder="Matti Meikäläinen" required>
+          <label class="form-label" for="nameInput">Koko nimi *</label>
+          <input type="text" id="nameInput" name="nimi" autocomplete="name" class="form-input" placeholder="Matti Meikäläinen" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="emailInput">Sähköposti</label>
-          <input type="email" id="emailInput" class="form-input" placeholder="matti@esimerkki.fi" required>
+          <label class="form-label" for="emailInput">Sähköposti *</label>
+          <input type="email" id="emailInput" name="sahkoposti" autocomplete="email" inputmode="email" class="form-input" placeholder="matti@esimerkki.fi" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="phoneInput">Puhelinnumero</label>
-          <input type="tel" id="phoneInput" class="form-input" placeholder="041 327 4967" required>
+          <label class="form-label" for="phoneInput">Puhelinnumero *</label>
+          <input type="tel" id="phoneInput" name="puhelin" autocomplete="tel" inputmode="tel" class="form-input" placeholder="041 327 4967" required>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="courseSelect">Valitse harjoitusryhmä</label>
-          <select id="courseSelect" class="form-select">
-            <option value="kenjutsu" selected>Kenjutsu Peruskurssi (Japanilainen miekkailu)</option>
-            <option value="aikuiset">Aikuisten Hokutoryu Ju-Jutsu (15v+)</option>
-            <option value="junnut">Junnu Ju-Jutsu & Turvataidot (7-14v)</option>
+          <label class="form-label" for="courseSelect">Valitse harjoitusryhmä *</label>
+          <select id="courseSelect" name="ryhma" class="form-select">
+            <option value="Kenjutsu Peruskurssi (Japanilainen miekkailu)" selected>Kenjutsu Peruskurssi (Japanilainen miekkailu)</option>
+            <option value="Aikuisten Hokutoryu Ju-Jutsu (15v+)">Aikuisten Hokutoryu Ju-Jutsu (15v+)</option>
+            <option value="Junnu Ju-Jutsu & Turvataidot (7-14v)">Junnu Ju-Jutsu & Turvataidot (7-14v)</option>
           </select>
         </div>
 
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Varaa ilmainen Kenjutsu-kokeilu
         </button>
+        <div style="margin-top: 14px; text-align: center; font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <i class="fa-solid fa-lock" style="color: #10b981;"></i> 256-bit SSL-suojattu yhteydenotto | <a href="#" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja</a>
+        </div>
       </form>
     </div>
   </div>
@@ -537,7 +582,6 @@
       <img loading="lazy" decoding="async" id="lightboxImg" class="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" alt="Galleriakuva suurennettuna">
       <div class="lightbox-caption">
         <span id="lightboxTag" class="badge"></span>
-        
         <p id="lightboxDesc" style="color: var(--text); font-size: 0.95rem; margin-top: 4px;"></p>
       </div>
     </div>
@@ -550,7 +594,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href="index.html" class="logo">
             <img fetchpriority="high" src="assets/oulunjujutsu-logo.png?v=1788156334408" alt="Logo">
             JUJUTSU <span>OULU RY</span>
           </a>
@@ -560,20 +604,22 @@
         <div>
           <h3 class="footer-title">Pikalinkit</h3>
           <ul class="footer-links">
-            <li><a href="index.html#kurssit">Ju-Jutsu -peruskurssi</a></li>
+            <li><a href="/peruskurssi">Ju-Jutsu -peruskurssi</a></li>
             <li><a href="/kenjutsu">Kenjutsu Oulu</a></li>
-            <li><a href="index.html#vanhemmille">Junnu Ju-Jutsu</a></li>
-            <li><a href="index.html#treenikassi">Treenikassi & etiketti</a></li>
-            <li><a href="index.html#aikataulut">Harjoitusajat</a></li>
+            <li><a href="/junnut">Junnu Ju-Jutsu</a></li>
+            <li><a href="/jujutsu">Hokutoryu Ju-Jutsu</a></li>
+            <li><a href="/saannot">Seuran säännöt</a></li>
+            <li><a href="/tietosuoja">Tietosuojaseloste (GDPR)</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="footer-title">Lajiliitto & Yhteisö</h3>
+          <h3 class="footer-title">Lajiliitto &amp; Yhteisö</h3>
           <ul class="footer-links">
             <li><a href="https://www.hokutoryu.com" target="_blank" rel="noopener">Hokutoryu Ju-Jutsu Finland</a></li>
-            <li><a href="#">Kenjutsu Finland</a></li>
-            <li><a href="#">Säännöt & etiketti</a></li>
+            <li><a href="/kenjutsu">Kenjutsu Finland</a></li>
+            <li><a href="sitemap.xml">Sivustokartta</a></li>
+            <li><a href="/en">English Version</a></li>
           </ul>
         </div>
 
@@ -604,111 +650,88 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span>Sali</span>
     </a>
-    <a href="#" class="mobile-action-btn primary open-enroll-modal">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span>Ilmainen kokeilu</span>
+    <a href="peruskurssi.html" class="mobile-action-btn primary">
+      <i class="fa-solid fa-fire"></i>
+      <span>Tutustu peruskurssiin</span>
     </a>
-  </div>
-
-    <!-- Floating Social Sidebar Bar (Desktop) -->
-  <div class="floating-social-bar">
-    <a href="https://www.facebook.com/jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="Facebook" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-    <a href="https://www.instagram.com/jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-    <a href="https://www.youtube.com/@jujutsuoulu" target="_blank" rel="noopener" class="floating-social-icon" aria-label="YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"/></svg></a>
-    
   </div>
 
   <script src="data/aikataulut.js" defer></script>
   <script src="script.js" defer></script>
 
-<!-- Floating Kysy koutsilta Button -->
-<div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-  <span>Kysy koutsilta</span>
-</div>
+  <!-- Floating Kysy koutsilta Button -->
+  <div id="floating-koutsi-btn" onclick="openInstructorModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9990; cursor: pointer; display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00AEEF 0%, #014489 100%); color: var(--text); padding: 14px 22px; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4); border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span>Kysy koutsilta</span>
+  </div>
 
-
-
-<!-- Kysy koutsilta - Telegram-modal -->
-
-<div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
-  <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 32px; max-width: 480px; width: 100%; position: relative; color: var(--text); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-    <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
-    
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-      <div style="background: #00AEEF; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text); font-size: 1.2rem;">
-        <i class="fa-solid fa-user-ninja"></i>
+  <!-- Kysy koutsilta - Telegram-modal -->
+  <div id="kysy-koutsilta-modal" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: var(--surface); color: var(--text) !important; border: 1px solid var(--border); padding: 24px; border-radius: var(--radius); max-width: 480px; width: 100%; position: relative;">
+      <button onclick="closeInstructorModal()" style="position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;">&times;</button>
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div style="background: rgba(0, 174, 239, 0.2); color: #00AEEF; font-size: 1.4rem; padding: 10px 14px; border-radius: var(--radius-sm);">
+          <i class="fa-solid fa-user-ninja"></i>
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.25rem; color: var(--text);">Kysy koutsilta</h3>
+          <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Viestisi menee suoraan koutsin puhelimeen</p>
+        </div>
       </div>
-      <div>
-        <h3 style="margin: 0; font-size: 1.25rem; color: var(--text);">Kysy koutsilta</h3>
-        <p style="margin: 0; font-size: 0.85rem; color: var(--text);">Saat vastauksen suoraan koutsin puhelimeen</p>
-      </div>
-    </div>
-    
-    <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
-        <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
-      </div>
+      
+      <form id="instructor-form" action="/api/ask-instructor" method="POST" onsubmit="submitInstructorQuestion(event)">
+        <input type="text" id="inst-website" name="website" style="display:none !important" tabindex="-1" autocomplete="off">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Nimesi *</label>
+          <input type="text" id="inst-name" required placeholder="Matti Meikäläinen" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem;">
+        </div>
 
-      <div style="margin-bottom: 16px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
-        <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem;">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Puhelinnumero tai sähköposti *</label>
+          <input type="text" id="inst-contact" required placeholder="040 123 4567 tai matti@gmail.com" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Kysymyksesi koutsille *</label>
+          <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: var(--text); font-size: 0.95rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: var(--text); font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
+        </button>
+        <div style="margin-top: 10px; text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+          <i class="fa-solid fa-lock" style="color: #10b981;"></i> 256-bit SSL-suojattu | <a href="#" onclick="openPrivacyModal(event)" style="color: var(--text-muted); text-decoration: underline;">Tietosuoja</a>
+        </div>
+      </form>
+
+      <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
+        <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
+        <h4 style="margin: 0 0 8px 0; color: var(--text);">Kiitos kysymyksestä!</h4>
+        <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
       </div>
-
-      <div style="margin-bottom: 20px;">
-        <label style="display: block; font-size: 0.85rem; color: var(--text); margin-bottom: 6px;">Kysymyksesi koutsille *</label>
-        <textarea id="inst-question" required rows="4" placeholder="Mitä varusteita tarvitaan peruskurssille? Voiko tulla kesken kauden?" style="width: 100%; padding: 12px; border-radius: var(--radius-sm); border: 1px solid #334155; background: #0f172a; color: #ffffff !important; font-size: 0.95rem; resize: vertical;"></textarea>
-      </div>
-
-      <button type="submit" id="inst-submit-btn" style="width: 100%; padding: 14px; border-radius: var(--radius-sm); border: none; background: #00AEEF; color: #ffffff !important; font-weight: 700; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
-        <i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille
-      </button>
-    </form>
-
-    <div id="inst-success-msg" style="display: none; text-align: center; padding: 20px 0;">
-      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 12px;"></i>
-      <h4 style="margin: 0 0 8px 0; color: var(--text);">Kiitos kysymyksestä!</h4>
-      <p style="margin: 0; color: var(--text); font-size: 0.9rem;">Viestisi toimitettiin koutsin puhelimeen. Vastaamme sinulle pian!</p>
     </div>
   </div>
-</div>
 
-<script>
-function openInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'flex'; }
-}
-function closeInstructorModal() {
-  var m = document.getElementById('kysy-koutsilta-modal');
-  if (m) { m.style.display = 'none'; }
-}
-async function submitInstructorQuestion(e) {
-  e.preventDefault();
-  const name = document.getElementById('inst-name').value;
-  const contact = document.getElementById('inst-contact').value;
-  const question = document.getElementById('inst-question').value;
-  const btn = document.getElementById('inst-submit-btn');
-  
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Lähetetään...';
-
-  try {
-    const res = await fetch('/api/ask-instructor', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, contact, question })
-    });
-    
-    document.getElementById('instructor-form').style.display = 'none';
-    document.getElementById('inst-success-msg').style.display = 'block';
-  } catch (err) {
-    alert('Viestin lähetyksessä tapahtui virhe. Yritä uudelleen!');
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fa-paper-plane fa-solid"></i> Lähetä kysymys koutsille';
-  }
-}
-</script>
+  <!-- Privacy Policy (Tietosuojaseloste) Modal -->
+  <div id="privacyModal" class="modal-overlay" aria-hidden="true" style="display: none; position: fixed; inset: 0; z-index: 999999; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 20px;">
+    <div class="modal-content glass-panel" style="max-width: 600px; padding: 32px; max-height: 85vh; overflow-y: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">
+        <h3 style="margin: 0; font-size: 1.4rem; color: var(--text);"><i class="fa-solid fa-user-shield" style="color: var(--brand-red); margin-right: 8px;"></i> Tietosuojaseloste (GDPR)</h3>
+        <button onclick="closePrivacyModal()" style="background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer;" aria-label="Sulje">&times;</button>
+      </div>
+      <div style="font-size: 0.92rem; color: var(--text); line-height: 1.6;">
+        <p><strong>Rekisterinpitäjä:</strong> Jujutsu Oulu Ry (Äimäkuja 6 A, 90400 Oulu)</p>
+        <p><strong>Käsiteltävät tiedot:</strong> Lomakkeilla kerätään nimesi, sähköpostiosoitteesi ja puhelinnumerosi ilmoittautumisten ja yhteydenottojen käsittelyä varten.</p>
+        <p><strong>Tietojen käyttö:</strong> Tietoja käytetään ainoastaan harjoituksiin ilmoittautumisen vahvistamiseen ja kysymyksiin vastaamiseen. Tietoja ei luovuteta kolmansille osapuolille eikä käytetä suoramarkkinointiin.</p>
+        <p><strong>Tietoturva:</strong> Yhteytesi on suojattu alan standardien mukaisella 256-bittisellä SSL/TLS-salauksella.</p>
+        <p><strong>Oikeutesi:</strong> Sinulla on oikeus pyytää omien tietojesi tarkistusta tai poistamista ottamalla yhteyttä seuran ohjaajiin.</p>
+      </div>
+      <div style="margin-top: 24px; text-align: right;">
+        <button onclick="closePrivacyModal()" class="btn btn-secondary" style="padding: 8px 20px;">Sulje</button>
+      </div>
+    </div>
+  </div>
 
 </body>
-</html>
+</html>

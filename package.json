@@ -1,0 +1,13 @@
+{
+  "name": "oulun-jujutsu-redesign",
+  "version": "1.0.0",
+  "description": "Oulun Ju-jutsuklubin kotisivut & ilmoittautumisjärjestelmä",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/verify-all-links.mjs",
+    "verify": "node scripts/verify-all-links.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

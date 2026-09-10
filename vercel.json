@@ -26,6 +26,21 @@
       "source": "/itsepuolustus(.html)?",
       "destination": "/itsepuolustus-oulu",
       "permanent": true
+    },
+    {
+      "source": "/terms(.html)?",
+      "destination": "/saannot",
+      "permanent": true
+    },
+    {
+      "source": "/privacy(.html)?",
+      "destination": "/tietosuoja",
+      "permanent": true
+    },
+    {
+      "source": "/ilmaisopas(.html)?",
+      "destination": "/peruskurssi#ilmaisopas-form",
+      "permanent": false
     }
   ],
   "headers": [

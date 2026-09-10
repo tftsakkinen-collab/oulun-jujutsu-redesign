@@ -1,5 +1,4 @@
-// Jujutsu Oulu Ry - Virallinen Harjoitusaikatauludata 2026
-window.aikataulutData = [
+var aikataulutData = [
   {
     day: 'ma',
     start: '18:30',
@@ -26,9 +25,10 @@ window.aikataulutData = [
     end: '19:00',
     time: '18:00–19:00',
     laji: 'Hokutoryu Ju-Jutsu',
-    group: 'Peruskurssi (Alkaa ti 15.9.2026)',
+    group: 'Peruskurssi',
     type: 'hokutoryu',
-    location: 'Äimäkuja 6 A'
+    location: 'Äimäkuja 6 A',
+    startDate: '2026-09-15'
   },
   {
     day: 'ti',
@@ -36,9 +36,10 @@ window.aikataulutData = [
     end: '20:00',
     time: '19:00–20:00',
     laji: 'Hokutoryu Ju-Jutsu',
-    group: 'Värivyöt (15.9. alkaen)',
+    group: 'Värivyöt',
     type: 'hokutoryu',
-    location: 'Äimäkuja 6 A'
+    location: 'Äimäkuja 6 A',
+    startDate: '2026-09-15'
   },
   {
     day: 'ti',
@@ -46,9 +47,10 @@ window.aikataulutData = [
     end: '21:00',
     time: '20:00–21:00',
     laji: 'Kenjutsu',
-    group: 'Kaikki vyöasteet (15.9. alkaen. SporttiAppro 22.9. max 10 hlö)',
+    group: 'Kaikki vyöasteet',
     type: 'kenjutsu',
-    location: 'Äimäkuja 6 A'
+    location: 'Äimäkuja 6 A',
+    startDate: '2026-09-15'
   },
   {
     day: 'to',
@@ -56,9 +58,10 @@ window.aikataulutData = [
     end: '20:30',
     time: '19:30–20:30',
     laji: 'Hokutoryu Ju-Jutsu',
-    group: 'Värivyöt (15.9. alkaen)',
+    group: 'Värivyöt',
     type: 'hokutoryu',
-    location: 'Äimäkuja 6 A'
+    location: 'Äimäkuja 6 A',
+    startDate: '2026-09-15'
   },
   {
     day: 'to',
@@ -66,9 +69,10 @@ window.aikataulutData = [
     end: '21:30',
     time: '20:30–21:30',
     laji: 'Hokutoryu Ju-Jutsu',
-    group: 'Peruskurssi (Alkaa ti 15.9.2026)',
+    group: 'Peruskurssi',
     type: 'hokutoryu',
-    location: 'Äimäkuja 6 A'
+    location: 'Äimäkuja 6 A',
+    startDate: '2026-09-15'
   },
   {
     day: 'pe',
@@ -121,8 +125,10 @@ window.aikataulutData = [
     location: 'Äimäkuja 6 A'
   }
 ];
-var aikataulutData = window.aikataulutData;
 
+if (typeof window !== 'undefined') {
+  window.aikataulutData = aikataulutData;
+}
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = window.aikataulutData;
+  module.exports = aikataulutData;
 }
